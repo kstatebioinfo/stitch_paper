@@ -16,20 +16,16 @@
 \gdef\HyperFirstAtBeginDocument#1{#1}
 \providecommand\HyField@AuxAddToFields[1]{}
 \providecommand\HyField@AuxAddToCoFields[2]{}
-\global\@namedef{num@address}{2}
+\global\@namedef{num@address}{1}
 \global\@namedef{num@author}{5}
-\citation{koon}
-\citation{khar}
-\citation{zvai}
-\citation{xjon}
-\citation{marg}
-\gdef\hy@title{A sample article title}
+\global\authorcorref@notsettrue
+\gdef\hy@title{Tools and pipelines for BioNano data: molecule assembly pipeline and FASTA super scaffolding tool}
 \thanksnewlabel{au1@email}{{sheltonj@ksu.edu}{1}}
 \thanksnewlabel{au2@email}{{cmgordon@ksu.edu}{1}}
 \thanksnewlabel{au3@email}{{nherndon@ksu.edu}{1}}
 \thanksnewlabel{au4@email}{{nanyan@ksu.edu}{1}}
 \thanksnewlabel{au5@email}{{sjbrown@ksu.edu}{1}}
-\thanksnewlabel{au5thanks}{{*}{1}}
+\thanksnewlabel{au1thanks}{{*}{1}}
 \thanksnewlabel{n1thanks}{{\textdagger }{1}}
 \@writefile{toc}{\contentsline {section}{Abstract}{1}{section*.1}}
 \gdef\hy@fauthor{Jennifer M Shelton}
@@ -37,6 +33,11 @@
 \gdef\hy@subject{}
 \gdef\hy@keywords{Genomic physical map, Bionano, Genome scaffolding, Genome validation}
 \newlabel{eqexpmuts}{{1}{1}{Sub-sub-sub heading for section}{equation.0.1}{}}
+\citation{koon}
+\citation{khar}
+\citation{zvai}
+\citation{xjon}
+\citation{marg}
 \bibstyle{bmc-mathphys}
 \bibdata{bmc_article}
 \bibcite{koon}{1}
@@ -44,12 +45,10 @@
 \bibcite{zvai}{3}
 \bibcite{xjon}{4}
 \bibcite{marg}{5}
-\thanksnewlabel{aff1thanks}{{1}{3}}
-\thanksnewlabel{aff2thanks}{{2}{3}}
 \@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces {\mathversion  {bold}\bfseries  Assembly workflow for assemble\_SGE\_cluster.pl.} (A) The Irys instrument produces tiff files that are converted into BNX text files. (B) Each chip produces one BNX file for each of two flowcells. (C) BNX files are split by scan and aligned to the sequence reference. Stretch (bases per pixel) is recalculated from the alignment. (D) Quality check graphs are created for each pre-adjusted flowcell BNX. (E) Adjusted flowcell BNXs are merged. (F) The first assemblies are run with a variety of p-value thresholds. (G) The best of the first assemblies (red oval) is chosen and a version of this assembly is produced with a variety of minimum molecule length filters.}}{3}{figure.1}}
 \@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces {\mathversion  {bold}\bfseries  Steps of the stitch.pl algorithm.} BNG CMAPs (blue) are shown aligned to \textit  {in silico} CMAPs (green). Alignments are indicated with grey lines. CMAP orientation for \textit  {in silico} CMAPs is indicated with a "+" or "-" for positive or negative orientation respectively. (A) The \textit  {in silico} CMAP is aligned as the reference. (B) The alignment is inverted and used as input for stitch.pl. (C) The alignments are filtered based on alignment length (purple) relative to total possible alignment length (black) and confidence. Here assuming all alignments have a high confidence score and the minimum percent aligned is 30\% two alignments fail for aligning over less than 30\% of the potential alignment length for that alignment. (D) Filtering produces an XMAP of high quality alignments with short (local) alignments removed. (E) High quality scaffolding alignments are filtered for longest and highest confidence alignment for each \textit  {in silico} CMAP. Third alignment (unshaded) is filtered because the second alignment is the longest alignment for {in silico} CMAP 2. (F) Passing alignments are used to super scaffold (captured gaps indicated in dark green). (G) Stitch is iterated and additional super scaffolding alignments are found using second best scaffolding alignments. (H) Iteration takes advantage of cases where \textit  {in silico} CMAPs scaffold BNG CMAPs as \textit  {in silico} CMAP 2 does. Stitch is run iteratively until super scaffolding alignments are found.}}{3}{figure.2}}
 \@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces {\mathversion  {bold}\bfseries  Putative haplotypes assembled as BNG CMAPs.} (A) Two BNG CMAPs (blue with molecule coverage shown in dark blue) align to the \textit  {in silico} CMAP of scaffold 131 (green with contigs overlaid as translucent colored squares). (B and C) Both BNG CMAPs are shown (blue) with molecule pileups (yellow). Both BNG CMAPs have similar label patterns except within the lower coverage region indicated with a black square.}}{3}{figure.3}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces {\mathversion  {bold}\bfseries  Histogram of gap lengths in Tcas5.1.} Positive and negative gaps lengths for Tcas5.1 added to the automated output of stitch.pl based on filtered scaffolding alignments. The majority of gap lengths added by stitch.pl, 66, were positive (red). The remaining 26 gaps had negative lengths (purple).}}{3}{figure.4}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces {\mathversion  {bold}\bfseries  Histogram of gap lengths in Tcas5.1.} Positive and negative gaps lengths for Tcas5.1 added to the automated output of stitch.pl based on filtered scaffolding alignments. The majority of gap lengths added by stitch.pl, 66, were positive (red). The remaining 26 gaps had negative lengths (purple).}}{4}{figure.4}}
 \@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces {\mathversion  {bold}\bfseries  Extremely small negative gap length for \textit  {in silico} CMAP of scaffold 81.} Two XMAP alignments for \textit  {in silico} CMAP of scaffold 81 are shown. BNG CMAPs (blue with molecule coverage shown in dark blue) align to the \textit  {in silico} CMAPs of scaffolds (green with contigs overlaid as translucent colored squares). Scaffolds 79-83 were placed within ChLG 5 and scaffolds 99-103 were placed with ChLG 7 by the \textit  {Tribolium} genetic map. (A) Half of the \textit  {in silico} CMAP of scaffold 81 aligns with its assigned ChLG (black arrow). (B) The other half aligns with ChLG 7 (red arrow) producing a negative gap length smaller than -20 (kb). The alignment that places scaffold 81 with ChLG 7 disagrees with the genetic map and was manually rejected for Tcas5.2.}}{4}{figure.5}}
 \@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces Assembly Results. Assembly metrics for Tcas5.0 (the starting scaffolded FASTA), the \textit  {in silico} CMAP, the BNG CMAP of assembled molecules and the final super scaffolded FASTA (Tcas5.2) produced using stitch.pl for the \textit  {Tribolium} genome.}}{4}{table.1}}
 \@writefile{lot}{\contentsline {table}{\numberline {2}{\ignorespaces Alignment of BNG assembly to reference genome. Breadth of alignment coverage (non-redundant alignment), length of total alignment (including redundant alignments) and percent of CMAP covered (non-redundantly) were calculated for the \textit  {in silico} CMAP and the BNG CMAP of the \textit  {Tribolium} genome the using xmap\_stats.pl.}}{4}{table.2}}
