@@ -49,7 +49,8 @@
 %%% Load packages
 %\usepackage{amsthm,amsmath}
 %\RequirePackage{natbib}
-%\RequirePackage{hyperref}
+\RequirePackage{hyperref}
+\usepackage{hyperref}
 \usepackage[utf8]{inputenc} %unicode support
 %\usepackage[applemac]{inputenc} %applemac support if unicode package fails
 %\usepackage[latin1]{inputenc} %UNIX support if unicode package fails
@@ -114,14 +115,29 @@
 
 \author[
    addressref={aff1},                   % id's of addresses, e.g. {aff1,aff2}
-   corref={aff1},                       % id of corresponding address, if any
-   noteref={n1},                        % id's of article notes, if any
-   email={jane.e.doe@cambridge.co.uk}   % email address
-]{\inits{JE}\fnm{Jane E} \snm{Doe}}
+   %noteref={n1},                        % id's of article notes, if any
+   email={sheltonj@ksu.edu}   % email address
+]{\inits{JM}\fnm{Jennifer M} \snm{Shelton}}
 \author[
-   addressref={aff1,aff2},
-   email={john.RS.Smith@cambridge.co.uk}
-]{\inits{JRS}\fnm{John RS} \snm{Smith}}
+addressref={aff1},                   % id's of addresses, e.g. {aff1,aff2}
+%noteref={n1},                        % id's of article notes, if any
+email={cmgordon@ksu.edu}   % email address
+]{\inits{MC}\fnm{Michelle C} \snm{Coleman}}
+\author[
+addressref={aff1},                   % id's of addresses, e.g. {aff1,aff2}
+%noteref={n1},                        % id's of article notes, if any
+email={nherndon@ksu.edu}   % email address
+]{\inits{N}\fnm{Nic} \snm{Herndon}}
+\author[
+addressref={aff1},                   % id's of addresses, e.g. {aff1,aff2}
+%noteref={n1},                        % id's of article notes, if any
+email={nanyan@ksu.edu}   % email address
+]{\inits{N}\fnm{Nanyan} \snm{Lu}}
+\author[
+   addressref={aff1},
+      corref={aff1},                       % id of corresponding address, if any
+   email={sjbrown@ksu.edu}
+]{\inits{SJ}\fnm{Susan J} \snm{Brown}}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%                                          %%
@@ -133,11 +149,11 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \address[id=aff1]{%                           % unique id
-  \orgname{Department of Zoology, Cambridge}, % university, etc
-  \street{Waterloo Road},                     %
+  \orgname{Department of Biology, Kansas State University}, % university, etc
+  %\street{Waterloo Road},                     %
   %\postcode{}                                % post or zip code
-  \city{London},                              % city
-  \cny{UK}                                    % country
+  \city{Manhattan},                              % city
+  \cny{KS, USA}                                    % country
 }
 \address[id=aff2]{%
   \orgname{Marine Ecology Department, Institute of Marine Sciences Kiel},
@@ -193,9 +209,10 @@ Text for this section.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{keyword}
-\kwd{sample}
-\kwd{article}
-\kwd{author}
+\kwd{Genomic physical map}
+\kwd{Bionano}
+\kwd{Genome scaffolding}
+\kwd{Genome validation}
 \end{keyword}
 
 % MSC classifications codes, if any
@@ -280,7 +297,55 @@ E\bigl[Z_1(vT_x)\bigr] &=& \frac{\mu}{r}\log x
 %
 Thus we observe that this expected value is finite for all $v>0$ (also see \cite{koon,khar,zvai,xjon,marg}).
 
+\section*{Availability and requirements}
 
+\subsection*{\textbf{Assembly scripts}}
+
+\textbf{Project name:} AssembleIrysCluster.pl
+
+\textbf{Project home page:} AssembleIrysCluster scripts are available on Github at \url{https://github.com/i5K-KINBRE-script-share/Irys-scaffolding}
+
+\textbf{Operating system(s):} SGE Linux (Gentoo) cluster
+
+\textbf{Programming language:} Perl, Rscript, Bash
+
+\textbf{License}: AssembleIrysCluster.pl is available free of charge to academic and non-profit institutions.
+
+\textbf{Any restrictions to use by non-academics:} Please contact authors for commercial use.
+
+\textbf{Dependencies:} AssembleIrysCluster.pl requires DRMAA job submission libraries. RefAligner and Assembler are also required and can be provided by request by Bionano Genomics \url{http://www.bionanogenomics.com/}.
+
+\subsection*{\textbf{Super scaffolding scripts}}
+
+\textbf{Project name:} stitch.pl
+
+\textbf{Project home page:} stitch scripts are available on Github at \url{https://github.com/i5K-KINBRE-script-share/stitch}
+
+\textbf{Operating system(s):} MAC and LINUX (tested on Gentoo and Ubuntu)
+
+\textbf{Programming language:} Perl, Bash
+
+\textbf{License}: stitch.pl is available free of charge to academic and non-profit institutions.
+
+\textbf{Any restrictions to use by non-academics:} Please contact authors for commercial use.
+
+\textbf{Dependencies:} stitch.pl requires BioPerl. RefAligner and Assembler are also required between iterations and can be provided by request by Bionano Genomics \url{http://www.bionanogenomics.com/}.
+
+\subsection*{\textbf{Map summary scripts}}
+
+\textbf{Project name:} cmap\_stats.pl and xmap\_stats.pl
+
+\textbf{Project home page:} all scripts are available on Github at \url{https://github.com/i5K-KINBRE-script-share/map\_editing}
+
+\textbf{Operating system(s):} MAC and LINUX (tested on Gentoo and Ubuntu)
+
+\textbf{Programming language:} Perl
+
+\textbf{License}: cmap\_stats.pl and xmap\_stats.pl are available free of charge to academic and non-profit institutions.
+
+\textbf{Any restrictions to use by non-academics:} Please contact authors for commercial use.
+
+\textbf{Dependencies:} cmap\_stats.pl and xmap\_stats.pl have no dependencies.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%                                          %%
