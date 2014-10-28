@@ -339,23 +339,23 @@ Thus we observe that this expected value is finite for all $v>0$ (also see \cite
 \section*{Figures}
   \begin{figure}[h!]
   	\caption{\csentence{Assembly workflow for assemble\_SGE\_cluster.pl.}
-  		1) The Irys instrument produces tiff files that are converted into BNX text files. 2) Each chip produces one BNX file for each of two flowcells. 3) BNX files are split by scan and aligned to the sequence reference. Stretch (bases per pixel) is recalculated from the alignment. 4) Quality check graphs are created for each pre-adjusted flowcell BNX. 5) Adjusted flowcell BNXs are merged. 6) The first assemblies are run with a variety of p-value thresholds. 7) The best of the first assemblies (red oval) is chosen and a version of this assembly is produced with a variety of minimum molecule length filters.}
+  		(A) The Irys instrument produces tiff files that are converted into BNX text files. (B) Each chip produces one BNX file for each of two flowcells. (C) BNX files are split by scan and aligned to the sequence reference. Stretch (bases per pixel) is recalculated from the alignment. (D) Quality check graphs are created for each pre-adjusted flowcell BNX. (E) Adjusted flowcell BNXs are merged. (F) The first assemblies are run with a variety of p-value thresholds. (G) The best of the first assemblies (red oval) is chosen and a version of this assembly is produced with a variety of minimum molecule length filters.}
   \end{figure}
   \begin{figure}[h!]
   \caption{\csentence{Steps of the stitch.pl algorithm.}
-      BNG CMAPs (blue) are shown aligned to \textit{in silico} CMAPs (green). Alignments are indicated with grey lines. CMAP orientation for \textit{in silico} CMAPs is indicated with a "+" or "-" for positive or negative orientation respectively. (a) The \textit{in silico} CMAP is aligned as the reference. (b) The alignment is inverted and used as input for stitch.pl. (c) The alignments are filtered based on alignment length (purple) relative to total possible alignment length (black) and confidence. Here assuming all alignments have a high confidence score and the minimum percent aligned is 30\% two alignments fail for aligning over less than 30\% of the potential alignment length for that alignment. (d) Filtering produces an XMAP of high quality alignments with short (local) alignments removed. (e) High quality scaffolding alignments are filtered for longest and highest confidence alignment for each \textit{in silico} CMAP. Third alignment (unshaded) is filtered because the second alignment is the longest alignment for {in silico} CMAP 2. (f) Passing alignments are used to super scaffold (captured gaps indicated in dark green). (g) Stitch is iterated and additional super scaffolding alignments are found using second best scaffolding alignments. (h) Iteration takes advantage of cases where \textit{in silico} CMAPs scaffold BNG CMAPs as \textit{in silico} CMAP 2 does. Stitch is run iteratively until super scaffolding alignments are found.}
+      BNG CMAPs (blue) are shown aligned to \textit{in silico} CMAPs (green). Alignments are indicated with grey lines. CMAP orientation for \textit{in silico} CMAPs is indicated with a "+" or "-" for positive or negative orientation respectively. (A) The \textit{in silico} CMAP is aligned as the reference. (B) The alignment is inverted and used as input for stitch.pl. (C) The alignments are filtered based on alignment length (purple) relative to total possible alignment length (black) and confidence. Here assuming all alignments have a high confidence score and the minimum percent aligned is 30\% two alignments fail for aligning over less than 30\% of the potential alignment length for that alignment. (D) Filtering produces an XMAP of high quality alignments with short (local) alignments removed. (E) High quality scaffolding alignments are filtered for longest and highest confidence alignment for each \textit{in silico} CMAP. Third alignment (unshaded) is filtered because the second alignment is the longest alignment for {in silico} CMAP 2. (F) Passing alignments are used to super scaffold (captured gaps indicated in dark green). (G) Stitch is iterated and additional super scaffolding alignments are found using second best scaffolding alignments. (H) Iteration takes advantage of cases where \textit{in silico} CMAPs scaffold BNG CMAPs as \textit{in silico} CMAP 2 does. Stitch is run iteratively until super scaffolding alignments are found.}
       \end{figure}      
 \begin{figure}[h!]
 	\caption{\csentence{Putative haplotypes assembled as BNG CMAPs.}
-		Two BNG CMAPs (blue with molecule coverage shown in dark blue) align to the \textit{in silico} CMAP of scaffold 131 (green with contigs overlaid as translucent colored squares) (left). Both BNG CMAPs are shown (blue) with molecule pileups (yellow) (right) Both BNG CMAPs have similar label patterns except within the lower coverage region indicated with a black square.}
+		(A) Two BNG CMAPs (blue with molecule coverage shown in dark blue) align to the \textit{in silico} CMAP of scaffold 131 (green with contigs overlaid as translucent colored squares). (B and C) Both BNG CMAPs are shown (blue) with molecule pileups (yellow). Both BNG CMAPs have similar label patterns except within the lower coverage region indicated with a black square.}
 \end{figure}  
 \begin{figure}[h!]
-	\caption{\csentence{Histogram of gap lengths.}
-		Positive and negative gaps lengths for the automated output of stitch.pl. The majority of gap lengths, 66, were positive (red). The remaining 26 gaps had negative lengths (purple).}
+	\caption{\csentence{Histogram of gap lengths in Tcas5.1.}
+		Positive and negative gaps lengths for Tcas5.1 added to the automated output of stitch.pl based on filtered scaffolding alignments. The majority of gap lengths added by stitch.pl, 66, were positive (red). The remaining 26 gaps had negative lengths (purple).}
       \end{figure}                      
 \begin{figure}[h!]
 	\caption{\csentence{Extremely small negative gap length for \textit{in silico} CMAP of scaffold 81.}
-		Two XMAP alignments for \textit{in silico} CMAP of scaffold 81 are shown. BNG CMAPs (blue with molecule coverage shown in dark blue) align to the \textit{in silico} CMAPs of scaffolds (green with contigs overlaid as translucent colored squares). Scaffolds 79-83 were placed within ChLG 5 and scaffolds 99-103 were placed with ChLG 7 by the \textit{Tribolium} genetic map. However half of scaffold 81 aligns with its assigned ChLG (black arrow) and the other half with ChLG 7 (red arrow) producing a negative gap length smaller than -20 (kb).}
+		Two XMAP alignments for \textit{in silico} CMAP of scaffold 81 are shown. BNG CMAPs (blue with molecule coverage shown in dark blue) align to the \textit{in silico} CMAPs of scaffolds (green with contigs overlaid as translucent colored squares). Scaffolds 79-83 were placed within ChLG 5 and scaffolds 99-103 were placed with ChLG 7 by the \textit{Tribolium} genetic map. (A) Half of the \textit{in silico} CMAP of scaffold 81 aligns with its assigned ChLG (black arrow). (B) The other half aligns with ChLG 7 (red arrow) producing a negative gap length smaller than -20 (kb). The alignment that places scaffold 81 with ChLG 7 disagrees with the genetic map and was manually rejected for Tcas5.2.}
       \end{figure}            
 
 
@@ -370,7 +370,7 @@ Thus we observe that this expected value is finite for all $v>0$ (also see \cite
 
 \section*{Tables}
 \begin{table}[h!]
-	\caption{Assembly Results. Assembly metrics for the starting scaffold FASTA, the \textit{in silico} CMAP, the BNG CMAP of assembled molecules and the super scaffolded FASTA produced using stitch.pl for the \textit{Tribolium} genome.}
+	\caption{Assembly Results. Assembly metrics for Tcas5.0 (the starting scaffolded FASTA), the \textit{in silico} CMAP, the BNG CMAP of assembled molecules and the final super scaffolded FASTA (Tcas5.2) produced using stitch.pl for the \textit{Tribolium} genome.}
 	\begin{tabular}{cccc}
 		\hline
 		& N50 (Mb)  & Number & Cumulative Length (Mb)\\ \hline
@@ -390,15 +390,24 @@ Thus we observe that this expected value is finite for all $v>0$ (also see \cite
       \end{tabular}
 \end{table}
 \begin{table}[h!]
-	\caption{Sample table title. This is where the description of the table should go.}
+	\caption{Chromosome linkage groups before and after super scaffolding. The number of scaffolds and contigs in the Tcas5.0 ChLG bins and the number of super scaffolds, scaffolds and contigs in the Tcas5.2 ChLG bins. The number of scaffolds or contigs that were unplaced in Tcas5.0 and placed with a ChLG in Tcas5.2 is also listed. }
 	\begin{tabular}{cccc}
 		\hline
-		& B1  &B2   & B3\\ \hline
-		A1 & 0.1 & 0.2 & 0.3\\
-		A2 & ... & ..  & .\\
-		A3 & ..  & .   & .\\ \hline
+		Chromosome linkage group (ChLG) & Tcas5.0 scaffolds  & Tcas5.2 super scaffolds & Unplaced scaffolds added in Tcas5.2\\ \hline
+		X & 13 & 2 & 2\\
+		2 & 18 & 10 & 1\\
+		3 & 29 & 20 & 4\\
+		4 & 6 & 2 & 2\\
+		5 & 17 & 4 & 1\\
+		6 & 12 & 6 & 6\\
+		7 & 15 & 6 & 0\\
+		8 & 14 & 8 & 1\\
+		9 & 21 & 9 & 0\\
+		10 & 12 & 11 & 2\\ \hline
+		Total & 157 & 78 & 19\\ \hline
 	\end{tabular}
 \end{table}
+
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
