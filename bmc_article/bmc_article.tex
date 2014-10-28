@@ -338,26 +338,26 @@ Thus we observe that this expected value is finite for all $v>0$ (also see \cite
 
 \section*{Figures}
   \begin{figure}[h!]
-  \caption{\csentence{Detailed steps for running stitch.pl.}
+  	\caption{\csentence{Assembly workflow for assemble\_SGE\_cluster.pl.}
+  		1) The Irys instrument produces tiff files that are converted into BNX text files. 2) Each chip produces one BNX file for each of two flowcells. 3) BNX files are split by scan and aligned to the sequence reference. Stretch (bases per pixel) is recalculated from the alignment. 4) Quality check graphs are created for each pre-adjusted flowcell BNX. 5) Adjusted flowcell BNXs are merged. 6) The first assemblies are run with a variety of p-value thresholds. 7) The best of the first assemblies (red oval) is chosen and a version of this assembly is produced with a variety of minimum molecule length filters.}
+  \end{figure}
+  \begin{figure}[h!]
+  \caption{\csentence{Steps of the stitch.pl algorithm.}
       BNG CMAPs (blue) are shown aligned to \textit{in silico} CMAPs (green). Alignments are indicated with grey lines. CMAP orientation for \textit{in silico} CMAPs is indicated with a "+" or "-" for positive or negative orientation respectively. (a) The \textit{in silico} CMAP is aligned as the reference. (b) The alignment is inverted and used as input for stitch.pl. (c) The alignments are filtered based on alignment length (purple) relative to total possible alignment length (black) and confidence. Here assuming all alignments have a high confidence score and the minimum percent aligned is 30\% two alignments fail for aligning over less than 30\% of the potential alignment length for that alignment. (d) Filtering produces an XMAP of high quality alignments with short (local) alignments removed. (e) High quality scaffolding alignments are filtered for longest and highest confidence alignment for each \textit{in silico} CMAP. Third alignment (unshaded) is filtered because the second alignment is the longest alignment for {in silico} CMAP 2. (f) Passing alignments are used to super scaffold (captured gaps indicated in dark green). (g) Stitch is iterated and additional super scaffolding alignments are found using second best scaffolding alignments. (h) Iteration takes advantage of cases where \textit{in silico} CMAPs scaffold BNG CMAPs as \textit{in silico} CMAP 2 does. Stitch is run iteratively until super scaffolding alignments are found.}
-      \end{figure}
-      
-      \begin{figure}[h!]
-      	\caption{\csentence{Histogram of gap lengths.}
-      		Positive and negative gaps lengths for the automated output of stitch.pl. The majority of gap lengths, 66, were positive (red). The remaining 26 gaps had negative lengths (purple).}
-      \end{figure}
+      \end{figure}      
 \begin{figure}[h!]
 	\caption{\csentence{Putative haplotypes assembled as BNG CMAPs.}
 		Two BNG CMAPs (blue with molecule coverage shown in dark blue) align to the \textit{in silico} CMAP of scaffold 131 (green with contigs overlaid as translucent colored squares) (left). Both BNG CMAPs are shown (blue) with molecule pileups (yellow) (right) Both BNG CMAPs have similar label patterns except within the lower coverage region indicated with a black square.}
-\end{figure}
+\end{figure}  
+\begin{figure}[h!]
+	\caption{\csentence{Histogram of gap lengths.}
+		Positive and negative gaps lengths for the automated output of stitch.pl. The majority of gap lengths, 66, were positive (red). The remaining 26 gaps had negative lengths (purple).}
+      \end{figure}                      
 \begin{figure}[h!]
 	\caption{\csentence{Extremely small negative gap length for \textit{in silico} CMAP of scaffold 81.}
-		Two XMAP alignments for \textit{in silico} CMAP of scaffold 81 are shown. BNG CMAPs (blue with molecule coverage shown in dark blue) align to the \textit{in silico} CMAPs of scaffolds (green with contigs overlaid as translucent colored squares). Scaffolds 79-83 were placed within ChLG 5 and scaffolds 99-103 were placed with ChLG 7 by the \textit{Tribolium} genetic map. However half of scaffold 81 aligns with its assigned ChLG and the other half with ChLG 7.}
-\end{figure}
-\begin{figure}[h!]
-  \caption{\csentence{Sample figure title.}
-      Figure legend text.}
-      \end{figure}
+		Two XMAP alignments for \textit{in silico} CMAP of scaffold 81 are shown. BNG CMAPs (blue with molecule coverage shown in dark blue) align to the \textit{in silico} CMAPs of scaffolds (green with contigs overlaid as translucent colored squares). Scaffolds 79-83 were placed within ChLG 5 and scaffolds 99-103 were placed with ChLG 7 by the \textit{Tribolium} genetic map. However half of scaffold 81 aligns with its assigned ChLG (black arrow) and the other half with ChLG 7 (red arrow) producing a negative gap length smaller than -20 (kb).}
+      \end{figure}            
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%                               %%
@@ -367,17 +367,39 @@ Thus we observe that this expected value is finite for all $v>0$ (also see \cite
 
 %% Use of \listoftables is discouraged.
 %%
+
 \section*{Tables}
 \begin{table}[h!]
-\caption{Sample table title. This is where the description of the table should go.}
+	\caption{Assembly Results. Assembly metrics for the starting scaffold FASTA, the \textit{in silico} CMAP, the BNG CMAP of assembled molecules and the super scaffolded FASTA produced using stitch.pl for the \textit{Tribolium} genome.}
+	\begin{tabular}{cccc}
+		\hline
+		& N50 (Mb)  & Number & Cumulative Length (Mb)\\ \hline
+		Genome FASTA & 1.16 & 2240 & 160.74\\
+		\textit{in silico} CMAP & 1.20 &  223 & 152.53\\
+		BNG CMAP & 1.35 &  216 & 200.47\\
+		Super scaffold FASTA & 4.46 & 2150 & 165.92\\ \hline
+	\end{tabular}
+\end{table}
+\begin{table}[h!]
+\caption{Alignment of BNG assembly to reference genome. Breadth of alignment coverage (non-redundant alignment), length of total alignment (including redundant alignments) and percent of CMAP covered (non-redundantly) were calculated for the \textit{in silico} CMAP and the BNG CMAP of the \textit{Tribolium} genome the using xmap\_stats.pl.}
       \begin{tabular}{cccc}
         \hline
-           & B1  &B2   & B3\\ \hline
-        A1 & 0.1 & 0.2 & 0.3\\
-        A2 & ... & ..  & .\\
-        A3 & ..  & .   & .\\ \hline
+           & Breadth of alignment coverage (Mb) & Length of total alignment (Mb) & Percent of CMAP aligned \\ \hline
+        \textit{in silico} CMAP from FASTA & 124.04 & 132.40 & 81 \\
+        BNG CMAP & 131.64 & 132.34 & 67 \\ \hline
       \end{tabular}
 \end{table}
+\begin{table}[h!]
+	\caption{Sample table title. This is where the description of the table should go.}
+	\begin{tabular}{cccc}
+		\hline
+		& B1  &B2   & B3\\ \hline
+		A1 & 0.1 & 0.2 & 0.3\\
+		A2 & ... & ..  & .\\
+		A3 & ..  & .   & .\\ \hline
+	\end{tabular}
+\end{table}
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%                               %%

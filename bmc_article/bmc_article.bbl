@@ -1,5 +1,7 @@
-\begin{thebibliography}{13}
-% BibTex style file: bmc-mathphys.bst (version 1.01), 2012-01-06
+%% BioMed_Central_Bib_Style_v1.01
+
+\begin{thebibliography}{5}
+% BibTex style file: bmc-mathphys.bst (version 2.1), 2014-07-24
 \ifx \bisbn   \undefined \def \bisbn  #1{ISBN #1}\fi
 \ifx \binits  \undefined \def \binits#1{#1}\fi
 \ifx \bauthor  \undefined \def \bauthor#1{#1}\fi
@@ -55,23 +57,6 @@
 \endbibitem
 
 %%% 2
-\bibitem{oreg}
-\begin{barticle}
-\bauthor{\bsnm{Orengo}, \binits{C.A.}},
-\bauthor{\bsnm{Bray}, \binits{J.E.}},
-\bauthor{\bsnm{Hubbard}, \binits{T.}},
-\bauthor{\bsnm{LoConte}, \binits{L.}},
-\bauthor{\bsnm{Sillitoe}, \binits{I.}}:
-\batitle{Analysis and assessment of ab initio three-dimensional prediction,
-  secondary structure, and contacts prediction}.
-\bjtitle{Proteins}
-\bvolume{Suppl 3},
-\bfpage{149}--\blpage{170}
-(\byear{1999})
-\end{barticle}
-\endbibitem
-
-%%% 3
 \bibitem{khar}
 \begin{botherref}
 \oauthor{\bsnm{Kharitonov}, \binits{S.A.}},
@@ -81,7 +66,7 @@ in press
 \end{botherref}
 \endbibitem
 
-%%% 4
+%%% 3
 \bibitem{zvai}
 \begin{barticle}
 \bauthor{\bsnm{Zvaifler}, \binits{N.J.}},
@@ -98,7 +83,7 @@ in press
 \end{barticle}
 \endbibitem
 
-%%% 5
+%%% 4
 \bibitem{xjon}
 \begin{bchapter}
 \bauthor{\bsnm{Jones}, \binits{X.}}:
@@ -112,43 +97,7 @@ pp. \bfpage{16}--\blpage{27}
 \end{bchapter}
 \endbibitem
 
-%%% 6
-\bibitem{schn}
-\begin{bchapter}
-\bauthor{\bsnm{Schnepf}, \binits{E.}}:
-\bctitle{From prey via endosymbiont to plastids: comparative studies in
-  dinoflagellates}.
-In: \beditor{\bsnm{Lewin}, \binits{R.A.}} (ed.)
-\bbtitle{Origins of Plastids}
-vol. \bseriesno{2},
-\bedition{2nd} edn.,
-pp. \bfpage{53}--\blpage{76}.
-\bpublisher{Chapman and Hall},
-\blocation{New York}
-(\byear{1993})
-\end{bchapter}
-\endbibitem
-
-%%% 7
-\bibitem{pond}
-\begin{botherref}
-Innovative Oncology
-\end{botherref}
-\endbibitem
-
-%%% 8
-\bibitem{smith}
-\begin{bbook}
-\beditor{\bsnm{Smith}, \binits{Y.}} (ed.):
-\bbtitle{Proceedings of the First National Conference on Porous Sieves: 27-30
-  June 1996; Baltimore}.
-\bpublisher{Butterworth-Heinemann},
-\blocation{Stoneham}
-(\byear{1996})
-\end{bbook}
-\endbibitem
-
-%%% 9
+%%% 5
 \bibitem{marg}
 \begin{bbook}
 \bauthor{\bsnm{Margulis}, \binits{L.}}:
@@ -159,51 +108,75 @@ Innovative Oncology
 \end{bbook}
 \endbibitem
 
-%%% 10
-\bibitem{hunn}
-\begin{bchapter}
-\bauthor{\bsnm{Hunninghake}, \binits{G.W.}},
-\bauthor{\bsnm{Gadek}, \binits{J.E.}}:
-\bctitle{The alveloar macrophage}.
-In: \beditor{\bsnm{Harris}, \binits{T.J.R.}} (ed.)
-\bbtitle{Cultured Human Cells and Tissues},
-pp. \bfpage{54}--\blpage{56}.
-\bpublisher{Academic Press},
-\blocation{New York}
-(\byear{1995}).
-\bcomment{Stoner G (Series Editor): Methods and Perspectives in Cell Biology,
-  vol 1}
-\end{bchapter}
-\endbibitem
-
-%%% 11
-\bibitem{advi}
-\begin{botherref}
-Advisory Committee on Genetic Modification:
-Annual Report.
-London
-(1999).
-Advisory Committee on Genetic Modification
-\end{botherref}
-\endbibitem
-
-%%% 12
-\bibitem{koha}
-\begin{botherref}
-\oauthor{\bsnm{Kohavi}, \binits{R.}}:
-Wrappers for performance enhancement and obvious decision graphs.
-PhD thesis,
-Stanford University, Computer Science Department
-(1995)
-\end{botherref}
-\endbibitem
-
-%%% 13
-\bibitem{mouse}
-\begin{botherref}
-The Mouse Tumor Biology Database.
-\url{http://tumor.informatics.jax.org/cancer\_links.html}
-\end{botherref}
-\endbibitem
-
 \end{thebibliography}
+
+\newcommand{\BMCxmlcomment}[1]{}
+
+\BMCxmlcomment{
+
+<refgrp>
+
+<bibl id="B1">
+  <title><p>BRCA1 protein products: functional motifs</p></title>
+  <aug>
+    <au><snm>Koonin</snm><fnm>E V</fnm></au>
+    <au><snm>Altschul</snm><fnm>S F</fnm></au>
+    <au><snm>Bork</snm><fnm>P</fnm></au>
+  </aug>
+  <source>Nat Genet</source>
+  <pubdate>1996</pubdate>
+  <volume>13</volume>
+  <fpage>266</fpage>
+  <lpage>267</lpage>
+</bibl>
+
+<bibl id="B2">
+  <title><p>Clinical aspects of exhaled nitric oxide</p></title>
+  <aug>
+    <au><snm>Kharitonov</snm><fnm>S A</fnm></au>
+    <au><snm>Barnes</snm><fnm>P J</fnm></au>
+  </aug>
+  <source>Eur Respir J</source>
+  <inpress />
+</bibl>
+
+<bibl id="B3">
+  <title><p>Mesenchymal cells, stromal derived factor-1 and rheumatoid
+  arthritis [abstract]</p></title>
+  <aug>
+    <au><snm>Zvaifler</snm><fnm>N J</fnm></au>
+    <au><snm>Burger</snm><fnm>J A</fnm></au>
+    <au><snm>Marinova Mutafchieva</snm><fnm>L</fnm></au>
+    <au><snm>Taylor</snm><fnm>P</fnm></au>
+    <au><snm>Maini</snm><fnm>R N</fnm></au>
+  </aug>
+  <source>Arthritis Rheum</source>
+  <pubdate>1999</pubdate>
+  <volume>42</volume>
+  <fpage>s250</fpage>
+</bibl>
+
+<bibl id="B4">
+  <title><p>Zeolites and synthetic mechanisms</p></title>
+  <aug>
+    <au><snm>Jones</snm><fnm>X</fnm></au>
+  </aug>
+  <source>Proceedings of the First National Conference on Porous Sieves: 27-30
+  June 1996; Baltimore</source>
+  <editor>Y Smith</editor>
+  <pubdate>1996</pubdate>
+  <fpage>16</fpage>
+  <lpage>27</lpage>
+</bibl>
+
+<bibl id="B5">
+  <title><p>Origin of Eukaryotic Cells</p></title>
+  <aug>
+    <au><snm>Margulis</snm><fnm>L</fnm></au>
+  </aug>
+  <publisher>New Haven: Yale University Press</publisher>
+  <pubdate>1970</pubdate>
+</bibl>
+
+</refgrp>
+} % end of \BMCxmlcomment
