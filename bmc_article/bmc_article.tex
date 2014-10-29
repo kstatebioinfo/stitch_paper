@@ -397,6 +397,10 @@ Thus we observe that this expected value is finite for all $v>0$ (also see \cite
 
 \section*{Figures}
   \begin{figure}[h!]
+  	\caption{\csentence{Data analysis steps.}
+  		(1) Autonoise converts TIFF images of molecules to (2) BNX text files. (3) Genome FASTA is \textit{in silico} labeled with fa2cmap\_multi producing (4) a CMAP. (5) AssembleIryscluster uses \textit{in silico} CMAPs, BNX files and estimated genome size to (6) adjust molecule stretch and set assembly parameters. (7) Assembler produces (8) a BNG CMAP. (9) RefAligner aligns the BNG CMAP to the \textit{in silico} CMAP producing (10) an XMAP. (11) XMAP, \textit{in silico} CMAP and BNG CMAP are used by stitch to produce a super scaffolded FASTA. (13) Until no more super scaffolds are created the super scaffold FASTA is \textit{in silico} labeled with fa2cmap\_multi producing (14) a CMAP that is aligned to (9) the BNG CMAP and steps 10-15 are iterated.}
+  \end{figure}
+  \begin{figure}[h!]
   	\caption{\csentence{Assembly workflow for assemble\_SGE\_cluster.pl.}
   		(A) The Irys instrument produces tiff files that are converted into BNX text files. (B) Each chip produces one BNX file for each of two flowcells. (C) BNX files are split by scan and aligned to the sequence reference. Stretch (bases per pixel) is recalculated from the alignment. (D) Quality check graphs are created for each pre-adjusted flowcell BNX. (E) Adjusted flowcell BNXs are merged. (F) The first assemblies are run with a variety of p-value thresholds. (G) The best of the first assemblies (red oval) is chosen and a version of this assembly is produced with a variety of minimum molecule length filters.}
   \end{figure}
