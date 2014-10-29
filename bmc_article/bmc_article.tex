@@ -248,48 +248,27 @@ Text for this section.
 %%%%%%%%%%%%%%%%
 %% Background %%
 %%
-\section*{Content}
-Text and results for this section, as per the individual journal's instructions for authors. %\cite{koon,oreg,khar,zvai,xjon,schn,pond,smith,marg,hunn,advi,koha,mouse}
+\section*{Background}
+In this article we present software that leverages physical maps assembled from ultra-long single molecule maps to improve the contiguity of the genome assemblies. We report the results of applying these tools to the \textit{Tribolium castaneum} genome.
 
-\section*{Section title}
-Text for this section \ldots
-\subsection*{Sub-heading for section}
-Text for this sub-heading \ldots
-\subsubsection*{Sub-sub heading for section}
-Text for this sub-sub-heading \ldots
-\paragraph*{Sub-sub-sub heading for section}
-Text for this sub-sub-sub-heading \ldots
-In this section we examine the growth rate of the mean of $Z_0$, $Z_1$ and $Z_2$. In
-addition, we examine a common modeling assumption and note the
-importance of considering the tails of the extinction time $T_x$ in
-studies of escape dynamics.
-We will first consider the expected resistant population at $vT_x$ for
-some $v>0$, (and temporarily assume $\alpha=0$)
-%
-\[
- E \bigl[Z_1(vT_x) \bigr]= E
-\biggl[\mu T_x\int_0^{v\wedge
-1}Z_0(uT_x)
-\exp \bigl(\lambda_1T_x(v-u) \bigr)\,du \biggr].
-\]
-%
-If we assume that sensitive cells follow a deterministic decay
-$Z_0(t)=xe^{\lambda_0 t}$ and approximate their extinction time as
-$T_x\approx-\frac{1}{\lambda_0}\log x$, then we can heuristically
-estimate the expected value as
-%
-\begin{eqnarray}\label{eqexpmuts}
-E\bigl[Z_1(vT_x)\bigr] &=& \frac{\mu}{r}\log x
-\int_0^{v\wedge1}x^{1-u}x^{({\lambda_1}/{r})(v-u)}\,du
-\nonumber\\
-&=& \frac{\mu}{r}x^{1-{\lambda_1}/{\lambda_0}v}\log x\int_0^{v\wedge
-1}x^{-u(1+{\lambda_1}/{r})}\,du
-\nonumber\\
-&=& \frac{\mu}{\lambda_1-\lambda_0}x^{1+{\lambda_1}/{r}v} \biggl(1-\exp \biggl[-(v\wedge1) \biggl(1+
-\frac{\lambda_1}{r}\biggr)\log x \biggr] \biggr).
-\end{eqnarray}
-%
-Thus we observe that this expected value is finite for all $v>0$ (also see \cite{koon,khar,zvai,xjon,marg}).
+\subsection*{Data formats}
+The tools described make use of three file formats developed by BNG. The Irys platform images ultra-long molecules of genomic DNA that are nick-labeled at 7 (bp) motifs using one or more nicking endonucleases and fluorescently labeled nucleotides. Molecules captured in the TIFF images are converted to BNX format text files that include label position for each molecule (steps 1 and 2 Figure 1). Consensus map (CMAP) files include the length and label position for long genomic regions that are either inferred from assembly of BNX molecules (steps 7 and 8 figure 1) or from \textit{in silico} labeling of a sequence-based assembly (steps 3 and 4 figure 1). The two types of CMAPs are referred to as BNG CMAPs and \textit{in silico} CMAPs respectively. The alignment of two CMAPs is stored as an XMAP alignment text file which includes alignment coordinantes and an alignment confidence score (step 10 Figure 1).
+
+\section*{Implementation}
+\subsection*{Assembly preparation}
+We have developed AssembleIrysCluster to prepare BNX files for assembly and write nine customized assembly scripts (sections C-G Figure 2).
+\subsubsection*{Molecule Stretch}
+The first stage of AssembleIrysCluster is to adjust molecule stretch (section C Figure 2). Imaged molecules are presumed to have 500 bases per pixel (bpp). Stretch, or bpp, can deviate from 500 (bpp) and this discrepancy can vary from scan to scan for a flowcell (ADD BPP GRAPH TO SUPPLEMENTARY FILES). Sequence-based assemblies are considered to be more accurate than raw BNX molecules in terms of label position. Therefore, BNX files are split by scan number, aligned to the \textit{in silico} CMAP and a empirical bpp value is determined. The bpp indicated by this alignment is used to adjust BNX bpp to 500. Optimal average flow cell signal-to-noise ratio and a low degree of genomic divergence between the samples used for the \textit{in silico} CMAP and BNX molecules have been associated with a characteristic pattern of empirically determined bpp when using the most recent flow cell model and chemistry (ADD BPP GRAPH TO SUPPLEMENTARY FILES HIGHLIGHT DIVERGENT AND SNR ISSUES VS SUCCESSFUL ALIGNMENT). Therefore bpp observed in alignments of scans are plotted as a QC graph (section D Figure 2). Once stretch has been evaluated and adjusted the split BNX files are merged (section E Figure 2).
+
+\subsubsection*{Customization of Assembly Scripts}
+The various assembly scripts are used to explore a range of parameters with the goal of selecting the optimal assembly for downstream analysis.
+
+\section*{Results and Discussion}
+Text
+
+\section*{Conclusions}
+Text
+
 
 \section*{Availability and requirements}
 
