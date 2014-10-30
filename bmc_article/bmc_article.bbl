@@ -1,6 +1,6 @@
 %% BioMed_Central_Bib_Style_v1.01
 
-\begin{thebibliography}{5}
+\begin{thebibliography}{1}
 % BibTex style file: bmc-mathphys.bst (version 2.1), 2014-07-24
 \ifx \bisbn   \undefined \def \bisbn  #1{ISBN #1}\fi
 \ifx \binits  \undefined \def \binits#1{#1}\fi
@@ -43,69 +43,26 @@
 \csname PreBibitemsHook\endcsname
 
 %%% 1
-\bibitem{koon}
-\begin{barticle}
-\bauthor{\bsnm{Koonin}, \binits{E.V.}},
-\bauthor{\bsnm{Altschul}, \binits{S.F.}},
-\bauthor{\bsnm{Bork}, \binits{P.}}:
-\batitle{Brca1 protein products: functional motifs}.
-\bjtitle{Nat Genet}
-\bvolume{13},
-\bfpage{266}--\blpage{267}
-(\byear{1996})
-\end{barticle}
-\endbibitem
-
-%%% 2
-\bibitem{khar}
+\bibitem{MHCLam}
 \begin{botherref}
-\oauthor{\bsnm{Kharitonov}, \binits{S.A.}},
-\oauthor{\bsnm{Barnes}, \binits{P.J.}}:
-Clinical Aspects of Exhaled Nitric Oxide.
-in press
+\oauthor{\bsnm{Lam}, \binits{E.T.}},
+\oauthor{\bsnm{Hastie}, \binits{A.}},
+\oauthor{\bsnm{Lin}, \binits{C.}},
+\oauthor{\bsnm{Ehrlich}, \binits{D.}},
+\oauthor{\bsnm{Das}, \binits{S.K.}},
+\oauthor{\bsnm{Austin}, \binits{M.D.}},
+\oauthor{\bsnm{Deshpande}, \binits{P.}},
+\oauthor{\bsnm{Cao}, \binits{H.}},
+\oauthor{\bsnm{Nagarajan}, \binits{N.}},
+\oauthor{\bsnm{Xiao}, \binits{M.}},
+\oauthor{\bsnm{Kwok}, \binits{P.}}:
+Genome mapping on nanochannel arrays for structural variation analysis and
+  sequence assembly.
+Nature Biotechnology
+\textbf{30}(8)
+(2012).
+doi:10.1038/nbt.2303
 \end{botherref}
-\endbibitem
-
-%%% 3
-\bibitem{zvai}
-\begin{barticle}
-\bauthor{\bsnm{Zvaifler}, \binits{N.J.}},
-\bauthor{\bsnm{Burger}, \binits{J.A.}},
-\bauthor{\bsnm{Marinova-Mutafchieva}, \binits{L.}},
-\bauthor{\bsnm{Taylor}, \binits{P.}},
-\bauthor{\bsnm{Maini}, \binits{R.N.}}:
-\batitle{Mesenchymal cells, stromal derived factor-1 and rheumatoid arthritis
-  [abstract]}.
-\bjtitle{Arthritis Rheum}
-\bvolume{42},
-\bfpage{250}
-(\byear{1999})
-\end{barticle}
-\endbibitem
-
-%%% 4
-\bibitem{xjon}
-\begin{bchapter}
-\bauthor{\bsnm{Jones}, \binits{X.}}:
-\bctitle{Zeolites and synthetic mechanisms}.
-In: \beditor{\bsnm{Smith}, \binits{Y.}} (ed.)
-\bbtitle{Proceedings of the First National Conference on Porous Sieves: 27-30
-  June 1996; Baltimore},
-pp. \bfpage{16}--\blpage{27}
-(\byear{1996}).
-\bcomment{Stoneham: Butterworth-Heinemann}
-\end{bchapter}
-\endbibitem
-
-%%% 5
-\bibitem{marg}
-\begin{bbook}
-\bauthor{\bsnm{Margulis}, \binits{L.}}:
-\bbtitle{Origin of Eukaryotic Cells}.
-\bpublisher{Yale University Press},
-\blocation{New Haven}
-(\byear{1970})
-\end{bbook}
 \endbibitem
 
 \end{thebibliography}
@@ -117,65 +74,26 @@ pp. \bfpage{16}--\blpage{27}
 <refgrp>
 
 <bibl id="B1">
-  <title><p>BRCA1 protein products: functional motifs</p></title>
+  <title><p>Genome mapping on nanochannel arrays for structural variation
+  analysis and sequence assembly</p></title>
   <aug>
-    <au><snm>Koonin</snm><fnm>E V</fnm></au>
-    <au><snm>Altschul</snm><fnm>S F</fnm></au>
-    <au><snm>Bork</snm><fnm>P</fnm></au>
+    <au><snm>Lam</snm><fnm>E T</fnm></au>
+    <au><snm>Hastie</snm><fnm>A</fnm></au>
+    <au><snm>Lin</snm><fnm>C</fnm></au>
+    <au><snm>Ehrlich</snm><fnm>D</fnm></au>
+    <au><snm>Das</snm><fnm>S K</fnm></au>
+    <au><snm>Austin</snm><fnm>M D</fnm></au>
+    <au><snm>Deshpande</snm><fnm>P</fnm></au>
+    <au><snm>Cao</snm><fnm>H</fnm></au>
+    <au><snm>Nagarajan</snm><fnm>N</fnm></au>
+    <au><snm>Xiao</snm><fnm>M</fnm></au>
+    <au><snm>Kwok</snm><fnm>P</fnm></au>
   </aug>
-  <source>Nat Genet</source>
-  <pubdate>1996</pubdate>
-  <volume>13</volume>
-  <fpage>266</fpage>
-  <lpage>267</lpage>
-</bibl>
-
-<bibl id="B2">
-  <title><p>Clinical aspects of exhaled nitric oxide</p></title>
-  <aug>
-    <au><snm>Kharitonov</snm><fnm>S A</fnm></au>
-    <au><snm>Barnes</snm><fnm>P J</fnm></au>
-  </aug>
-  <source>Eur Respir J</source>
-  <inpress />
-</bibl>
-
-<bibl id="B3">
-  <title><p>Mesenchymal cells, stromal derived factor-1 and rheumatoid
-  arthritis [abstract]</p></title>
-  <aug>
-    <au><snm>Zvaifler</snm><fnm>N J</fnm></au>
-    <au><snm>Burger</snm><fnm>J A</fnm></au>
-    <au><snm>Marinova Mutafchieva</snm><fnm>L</fnm></au>
-    <au><snm>Taylor</snm><fnm>P</fnm></au>
-    <au><snm>Maini</snm><fnm>R N</fnm></au>
-  </aug>
-  <source>Arthritis Rheum</source>
-  <pubdate>1999</pubdate>
-  <volume>42</volume>
-  <fpage>s250</fpage>
-</bibl>
-
-<bibl id="B4">
-  <title><p>Zeolites and synthetic mechanisms</p></title>
-  <aug>
-    <au><snm>Jones</snm><fnm>X</fnm></au>
-  </aug>
-  <source>Proceedings of the First National Conference on Porous Sieves: 27-30
-  June 1996; Baltimore</source>
-  <editor>Y Smith</editor>
-  <pubdate>1996</pubdate>
-  <fpage>16</fpage>
-  <lpage>27</lpage>
-</bibl>
-
-<bibl id="B5">
-  <title><p>Origin of Eukaryotic Cells</p></title>
-  <aug>
-    <au><snm>Margulis</snm><fnm>L</fnm></au>
-  </aug>
-  <publisher>New Haven: Yale University Press</publisher>
-  <pubdate>1970</pubdate>
+  <source>Nature Biotechnology</source>
+  <pubdate>2012</pubdate>
+  <volume>30</volume>
+  <issue>8</issue>
+  <note>doi:10.1038/nbt.2303</note>
 </bibl>
 
 </refgrp>

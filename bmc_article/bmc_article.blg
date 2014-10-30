@@ -20,52 +20,49 @@ Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Database file #1: bmc_article.bib
-Warning--entry type for "khar" isn't style-file defined
---line 85 of file bmc_article.bib
 Reallocated wiz_functions (elt_size=4) to 9000 items from 6000.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
-You've used 5 entries,
+You've used 1 entry,
             7128 wiz_defined-function locations,
-            1151 strings with 9684 characters,
-and the built_in function-call counts, 151657 in all, are:
-= -- 29220
-> -- 131
-< -- 68
-+ -- 18971
-- -- 53
-* -- 2975
-:= -- 25874
-add.period$ -- 6
-call.type$ -- 5
-change.case$ -- 69
-chr.to.int$ -- 125
-cite$ -- 5
-duplicate$ -- 406
-empty$ -- 1073
-format.name$ -- 135
-if$ -- 39490
+            1129 strings with 9348 characters,
+and the built_in function-call counts, 7677 in all, are:
+= -- 851
+> -- 50
+< -- 13
++ -- 128
+- -- 22
+* -- 754
+:= -- 1571
+add.period$ -- 2
+call.type$ -- 1
+change.case$ -- 17
+chr.to.int$ -- 1
+cite$ -- 1
+duplicate$ -- 148
+empty$ -- 543
+format.name$ -- 102
+if$ -- 1552
 int.to.chr$ -- 1
-int.to.str$ -- 14
-missing$ -- 157
-newline$ -- 178
-num.names$ -- 28
-pop$ -- 204
+int.to.str$ -- 3
+missing$ -- 51
+newline$ -- 98
+num.names$ -- 5
+pop$ -- 74
 preamble$ -- 1
-purify$ -- 23
-quote$ -- 10
-skip$ -- 17947
+purify$ -- 4
+quote$ -- 2
+skip$ -- 293
 stack$ -- 0
-substring$ -- 13687
-swap$ -- 113
-text.length$ -- 91
+substring$ -- 1142
+swap$ -- 30
+text.length$ -- 13
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 208
+type$ -- 26
 warning$ -- 0
-while$ -- 173
+while$ -- 52
 width$ -- 0
-write$ -- 216
-(There was 1 warning)
+write$ -- 126
