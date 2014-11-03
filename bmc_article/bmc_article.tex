@@ -249,7 +249,7 @@ Text for this section.
 %% Background %%
 %%
 \section*{Background}
-In this article we present software that leverages genome maps assembled from ultra-long single molecule maps to improve the contiguity of the NGS assemblies. We report the results of applying these tools to the \textit{Tribolium castaneum} genome.
+In this article we present software that leverages genome maps assembled from ultra-long single molecule maps to improve the contiguity of NGS assemblies. We report the results of applying these tools to the \textit{Tribolium castaneum} genome.
 
 \subsection*{Data formats}
 The tools described make use of three file formats developed by BNG. The Irys platform images ultra-long molecules of genomic DNA that are nick-labeled at 7 (bp) motifs using one or more nicking endonucleases and fluorescently labeled nucleotides. Molecules captured in the TIFF images are converted to BNX format text files that include label position for each molecule (steps 1 and 2 Figure 1). Consensus Map (CMAP) files include the length and label position for long genomic regions that are either inferred from assembly of BNX molecules (steps 7 and 8 figure 1) or from \textit{in silico} labeling of a NGS scaffolds (steps 3 and 4 figure 1). The two types of CMAPs are referred to as BioNano genome maps and \textit{in silico} genome maps respectively. The alignment of two CMAPs is stored as an XMAP text file which includes alignment coordinates and an alignment confidence score (step 10 Figure 1).
@@ -262,7 +262,7 @@ The first stage of AssembleIrysCluster is to adjust molecule stretch (section C 
 
 \subsubsection*{Customization of Assembly Scripts}
 
-In the next stage of AssembleIrysCluster various assembly scripts are created to explore a range of parameters with the goal of selecting the optimal assembly for downstream analysis (sections F-G Figure 2). The merged adjusted BNX file is aligned to the \textit{in silico} genome map. The alignment error profile is used with the estimated genome length to calculate default assembly parameters and the eight other scripts include variants of these. Initially three assemblies are run with $p-Value Threshold = \frac{1e-5}{Genome Length (Mb)}$, $p-Value Threshold Strict = \frac{p-Value Threshold}{10}$ and $p-Value Threshold Relaxed = {p-Value Threshold} \times {10}$ (section F Figure 2). Minimum molecule length is set to 150 kb. If these do not produce a satisfactory assembly than two minimum molecule length variants (180 kb and 100 kb) are tested with the $p-Value Threshold$ of the current best assembly (section G Figure 2). Ultimately up to nine assemblies are run until an assembly is produced that is satisfactory.
+In the next stage of AssembleIrysCluster various assembly scripts are created to explore a range of parameters with the goal of selecting the optimal assembly for downstream analysis (sections F-G Figure 2). The merged adjusted BNX file is aligned to the \textit{in silico} genome map. The alignment error profile is used with the estimated genome length to calculate default assembly parameters and the eight other scripts include variants of these. Initially three assemblies are run with $p-Value Threshold = \frac{1e-5}{Genome Length (Mb)}$, $p-Value Threshold Strict = \frac{p-Value Threshold}{10}$ and $p-Value Threshold Relaxed = {p-Value Threshold} \times {10}$ (section F Figure 2). Minimum molecule length is set to 150 kb. If these do not produce a satisfactory assembly than two minimum molecule length variants (180 kb and 100 kb) are tested with the $p-Value Threshold$ of the current best assembly (section G Figure 2). Between three and nine assemblies are run until an assembly is produced that is satisfactory.
 
 \subsubsection*{Assembly Optimization}
 
@@ -385,7 +385,7 @@ Text
 \section*{Figures}
   \begin{figure}[h!]
   	\caption{\csentence{Data analysis steps.}
-  		(1) Autonoise converts TIFF images of molecules to (2) BNX text files. (3) NGS scaffolds are \textit{in silico} labeled with fa2cmap\_multi producing (4) a \textit{in silico} genome map. (5) AssembleIryscluster uses \textit{in silico} genome maps, BNX files and estimated genome size to (6) adjust molecule stretch and set assembly parameters. (7) Assembler produces (8) a BioNano genome map. (9) RefAligner aligns the BioNano genome map to the \textit{in silico} genome map producing (10) an XMAP. (11) XMAP, \textit{in silico} genome map and BioNano genome map are used by stitch to produce super scaffolded NGS scaffolds. (13) Until no more super scaffolds are created the super scaffolded NGS scaffolds are \textit{in silico} labeled with fa2cmap\_multi producing (14) a CMAP that is aligned to (9) the BioNano genome map and steps 10-15 are iterated.}
+  		(1) Autonoise converts TIFF images of molecules to (2) BNX text files. (3) NGS scaffolds are \textit{in silico} labeled with fa2cmap\_multi producing (4) a \textit{in silico} genome map. (5) AssembleIryscluster uses \textit{in silico} genome maps, BNX files and estimated genome size to (6) adjust molecule stretch and set assembly parameters. (7) Assembler produces (8) a BioNano genome map. (9) RefAligner aligns the BioNano genome map to the \textit{in silico} genome map producing (10) an XMAP. (11) XMAP, \textit{in silico} genome map and BioNano genome map are used by stitch to produce super scaffolded (stitched) NGS scaffolds. (13) Until no more super scaffolds are created the stitched NGS scaffolds are \textit{in silico} labeled with fa2cmap\_multi producing (14) a CMAP that is aligned to (9) the BioNano genome map and steps 10-15 are iterated.}
   \end{figure}
   \begin{figure}[h!]
   	\caption{\csentence{Assembly workflow for assemble\_SGE\_cluster.pl.}
@@ -393,7 +393,7 @@ Text
   \end{figure}
   \begin{figure}[h!]
   \caption{\csentence{Steps of the stitch.pl algorithm.}
-      BioNano genome maps (blue) are shown aligned to \textit{in silico} genome maps (green). Alignments are indicated with grey lines. CMAP orientation for \textit{in silico} genome maps is indicated with a "+" or "-" for positive or negative orientation respectively. (A) The \textit{in silico} genome map is aligned as the reference. (B) The alignment is inverted and used as input for stitch.pl. (C) The alignments are filtered based on alignment length (purple) relative to total possible alignment length (black) and confidence. Here assuming all alignments have a high confidence score and the minimum percent aligned is 30\% two alignments fail for aligning over less than 30\% of the potential alignment length for that alignment. (D) Filtering produces an XMAP of high quality alignments with short (local) alignments removed. (E) High quality scaffolding alignments are filtered for longest and highest confidence alignment for each \textit{in silico} genome map. Third alignment (unshaded) is filtered because the second alignment is the longest alignment for {in silico} CMAP 2. (F) Passing alignments are used to super scaffold (captured gaps indicated in dark green). (G) Stitch is iterated and additional super scaffolding alignments are found using second best scaffolding alignments. (H) Iteration takes advantage of cases where \textit{in silico} genome maps scaffold BioNano genome maps as \textit{in silico} genome map 2 does. Stitch is run iteratively until super scaffolding alignments are found.}
+      BioNano genome maps (blue) are shown aligned to \textit{in silico} genome maps (green). Alignments are indicated with grey lines. CMAP orientation for \textit{in silico} genome maps is indicated with a "+" or "-" for positive or negative orientation respectively. (A) The \textit{in silico} genome map is aligned as the reference. (B) The alignment is inverted and used as input for stitch.pl. (C) The alignments are filtered based on alignment length (purple) relative to total possible alignment length (black) and confidence. Here assuming all alignments have a high confidence score and the minimum percent aligned is 30\% two alignments fail for aligning over less than 30\% of the potential alignment length for that alignment. (D) Filtering produces an XMAP of high quality alignments with short (local) alignments removed. (E) High quality scaffolding alignments are filtered for longest and highest confidence alignment for each \textit{in silico} genome map. Third alignment (unshaded) is filtered because the second alignment is the longest alignment for {in silico} genome map 2. (F) Passing alignments are used to super scaffold (captured gaps indicated in dark green). (G) Stitch is iterated and additional super scaffolding alignments are found using second best scaffolding alignments. (H) Iteration takes advantage of cases where \textit{in silico} genome maps scaffold BioNano genome maps as \textit{in silico} genome map 2 does. Stitch is run iteratively all until super scaffolding alignments are found.}
       \end{figure}      
 \begin{figure}[h!]
 	\caption{\csentence{Putative haplotypes assembled as BioNano genome maps.}
@@ -443,17 +443,17 @@ Text
 	\caption{Chromosome linkage groups before and after super scaffolding. The number of NGS scaffolds in the Tcas5.0 ChLG bins and the number of NGS super scaffolds and scaffolds in the Tcas5.2 ChLG bins. The number of NGS scaffolds  that were unplaced in Tcas5.0 and placed with a ChLG in Tcas5.2 is also listed. }
 	\begin{tabular}{cccc}
 		\hline
-		Chromosome linkage group (ChLG) & Tcas5.0 NGS scaffolds  & Tcas5.2 NGS super scaffolds & Unplaced NGS scaffolds added in Tcas5.2\\ \hline
-		X & 13 & 2 & 2\\
-		2 & 18 & 10 & 1\\
-		3 & 29 & 20 & 4\\
-		4 & 6 & 2 & 2\\
-		5 & 17 & 4 & 1\\
-		6 & 12 & 6 & 6\\
-		7 & 15 & 6 & 0\\
-		8 & 14 & 8 & 1\\
-		9 & 21 & 9 & 0\\
-		10 & 12 & 11 & 2\\ \hline
+		Chromosome linkage group (ChLG) & Tcas5.0 NGS scaffolds & Unplaced NGS scaffolds added in Tcas5.2 & Tcas5.2 NGS super scaffolds \\ \hline
+		X & 13 & +2 & 2\\
+		2 & 18 & +1 & 10\\
+		3 & 29 & +4 & 20\\
+		4 & 6 & +2 & 2\\
+		5 & 17 & +1 & 4\\
+		6 & 12 & +6 & 6\\
+		7 & 15 & - & 6\\
+		8 & 14 & +1 & 8\\
+		9 & 21 & - & 9\\
+		10 & 12 & +2 & 11\\ \hline
 		Total & 157 & 78 & 19\\ \hline
 	\end{tabular}
 \end{table}
