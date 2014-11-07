@@ -1,10 +1,17 @@
 ##agp-version   2.0
+# 
+# StructuredCommentPrefix	##Genome-Assembly-Data-START##
+# Assembly Method	ALLPATHS-LG , ATLAS-LINK, GapFiller, stitch v. Sept 2014
+# Assembly Name	Tcas5.2
+# Long Assembly Name	Tribolium castaneum 5.2
+# Genome Coverage	7x
+# Sequencing Technology	Sanger; Illumina LDJ
+# 
 # ORGANISM: Tribolium castaneum
 # TAX_ID: 7070
-# ASSEMBLY NAME: Tcas_5.2
-# ASSEMBLY DATE: 11-November-2014
-# GENOME CENTER: Bioinformatics Center at Kansas State University
+# GENOME CENTER: K-INBRE Bioinformatics Core at Kansas State University
 # DESCRIPTION: AGP specifying the assembly of ChLGs from WGS scaffolds
+# 
 ChLGX	1	255324	1	W	scaffold_seqid1	1	255324	+
 ChLGX	255325	255424	2	U	100	scaffold	yes	map
 ChLGX	255425	8676460	3	W	scaffold_seqid2	1	8421036	+
@@ -150,55 +157,55 @@ ChLG10	6178812	6912819	17	W	scaffold_seqid76	1	734008	+
 ChLG10	6912820	6912919	18	U	100	scaffold	yes	map
 ChLG10	6912920	7222678	19	W	scaffold_seqid77	1	309759	+
 ChLGY	1	119034	1	W	scaffold_seqid78	1	119034	?
-ChLGY	119035	119134	2	U	100	contig	no	map
+ChLGY	119035	119134	2	U	100	contig	na	map
 ChLGY	119135	187395	3	W	scaffold_seqid79	1	68261	?
-ChLGY	187396	187495	4	U	100	contig	no	map
+ChLGY	187396	187495	4	U	100	contig	na	map
 ChLGY	187496	279970	5	W	scaffold_seqid80	1	92475	?
-ChLGY	279971	280070	6	U	100	contig	no	map
+ChLGY	279971	280070	6	U	100	contig	na	map
 ChLGY	280071	287035	7	W	scaffold_seqid81	1	6965	?
-ChLGY	287036	287135	8	U	100	contig	no	map
+ChLGY	287036	287135	8	U	100	contig	na	map
 ChLGY	287136	442223	9	W	scaffold_seqid82	1	155088	?
-ChLGY	442224	442323	10	U	100	contig	no	map
+ChLGY	442224	442323	10	U	100	contig	na	map
 ChLGY	442324	496714	11	W	scaffold_seqid83	1	54391	?
-ChLGY	496715	496814	12	U	100	contig	no	map
+ChLGY	496715	496814	12	U	100	contig	na	map
 ChLGY	496815	517991	13	W	scaffold_seqid84	1	21177	?
-ChLGY	517992	518091	14	U	100	contig	no	map
+ChLGY	517992	518091	14	U	100	contig	na	map
 ChLGY	518092	534840	15	W	scaffold_seqid85	1	16749	?
-ChLGY	534841	534940	16	U	100	contig	no	map
+ChLGY	534841	534940	16	U	100	contig	na	map
 ChLGY	534941	560199	17	W	scaffold_seqid86	1	25259	?
-ChLGY	560200	560299	18	U	100	contig	no	map
+ChLGY	560200	560299	18	U	100	contig	na	map
 ChLGY	560300	599685	19	W	scaffold_seqid87	1	39386	?
-ChLGY	599686	599785	20	U	100	contig	no	map
+ChLGY	599686	599785	20	U	100	contig	na	map
 ChLGY	599786	633389	21	W	scaffold_seqid88	1	33604	?
-ChLGY	633390	633489	22	U	100	contig	no	map
+ChLGY	633390	633489	22	U	100	contig	na	map
 ChLGY	633490	675583	23	W	scaffold_seqid89	1	42094	?
-ChLGY	675584	675683	24	U	100	contig	no	map
+ChLGY	675584	675683	24	U	100	contig	na	map
 ChLGY	675684	676677	25	W	scaffold_seqid90	1	994	?
-ChLGY	676678	676777	26	U	100	contig	no	map
+ChLGY	676678	676777	26	U	100	contig	na	map
 ChLGY	676778	685888	27	W	scaffold_seqid91	1	9111	?
-ChLGY	685889	685988	28	U	100	contig	no	map
+ChLGY	685889	685988	28	U	100	contig	na	map
 ChLGY	685989	696202	29	W	scaffold_seqid92	1	10214	?
-ChLGY	696203	696302	30	U	100	contig	no	map
+ChLGY	696203	696302	30	U	100	contig	na	map
 ChLGY	696303	720452	31	W	scaffold_seqid93	1	24150	?
-ChLGY	720453	720552	32	U	100	contig	no	map
+ChLGY	720453	720552	32	U	100	contig	na	map
 ChLGY	720553	739192	33	W	scaffold_seqid94	1	18640	?
-ChLGY	739193	739292	34	U	100	contig	no	map
+ChLGY	739193	739292	34	U	100	contig	na	map
 ChLGY	739293	761909	35	W	scaffold_seqid95	1	22617	?
-ChLGY	761910	762009	36	U	100	contig	no	map
+ChLGY	761910	762009	36	U	100	contig	na	map
 ChLGY	762010	768397	37	W	scaffold_seqid96	1	6388	?
-ChLGY	768398	768497	38	U	100	contig	no	map
+ChLGY	768398	768497	38	U	100	contig	na	map
 ChLGY	768498	780825	39	W	scaffold_seqid97	1	12328	?
-ChLGY	780826	780925	40	U	100	contig	no	map
+ChLGY	780826	780925	40	U	100	contig	na	map
 ChLGY	780926	790341	41	W	scaffold_seqid98	1	9416	?
-ChLGY	790342	790441	42	U	100	contig	no	map
+ChLGY	790342	790441	42	U	100	contig	na	map
 ChLGY	790442	806670	43	W	scaffold_seqid99	1	16229	?
-ChLGY	806671	806770	44	U	100	contig	no	map
+ChLGY	806671	806770	44	U	100	contig	na	map
 ChLGY	806771	855430	45	W	scaffold_seqid100	1	48660	?
-ChLGY	855431	855530	46	U	100	contig	no	map
+ChLGY	855431	855530	46	U	100	contig	na	map
 ChLGY	855531	856901	47	W	scaffold_seqid101	1	1371	?
-ChLGY	856902	857001	48	U	100	contig	no	map
+ChLGY	856902	857001	48	U	100	contig	na	map
 ChLGY	857002	872019	49	W	scaffold_seqid102	1	15018	?
-ChLGY	872020	872119	50	U	100	contig	no	map
+ChLGY	872020	872119	50	U	100	contig	na	map
 ChLGY	872120	877656	51	W	scaffold_seqid103	1	5537	?
 unplaced_seqid1	1	542199	1	W	scaffold_seqid104	1	542199	?
 unplaced_seqid2	1	885624	1	W	scaffold_seqid105	1	885624	?

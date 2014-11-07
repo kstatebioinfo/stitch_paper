@@ -1,10 +1,17 @@
 ##agp-version   2.0
+# 
+# StructuredCommentPrefix	##Genome-Assembly-Data-START##
+# Assembly Method	ALLPATHS-LG , ATLAS-LINK, GapFiller, stitch v. Sept 2014
+# Assembly Name	Tcas5.2
+# Long Assembly Name	Tribolium castaneum 5.2
+# Genome Coverage	7x
+# Sequencing Technology	Sanger; Illumina LDJ
+# 
 # ORGANISM: Tribolium castaneum
 # TAX_ID: 7070
-# ASSEMBLY NAME: Tcas_5.2
-# ASSEMBLY DATE: 11-November-2014
-# GENOME CENTER: Bioinformatics Center at Kansas State University
-# DESCRIPTION: AGP specifying the assembly of scaffolds from WGS contigs
+# GENOME CENTER: K-INBRE Bioinformatics Core at Kansas State University
+# DESCRIPTION: AGP specifying the assembly of ChLGs from WGS scaffolds
+# 
 scaffold_seqid1	1	18156	1	W	contig_seqid1	1	18156	+
 scaffold_seqid1	18157	18200	2	N	44	scaffold	yes	unspecified
 scaffold_seqid1	18201	114802	3	W	contig_seqid2	1	96602	+
