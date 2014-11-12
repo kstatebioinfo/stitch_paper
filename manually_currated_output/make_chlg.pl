@@ -60,14 +60,17 @@ while(<$chlg_from_scaffolds_in>)
             my $id = "$columns[5]";
             $new_seq = "$new_seq".$db->seq("$id:$start,$stop"); ## add the new sequence to the growing superscaffold
             $old_mol=$new_mol; ## now the current molecule will be listed as the last molecule we have seen
-            if (eof) ## if this is the last row in the stitchmap table
-            {
-                my $scaffold_obj = Bio::Seq->new( -display_id =>  $scaffold_id, -seq => $new_seq, -alphabet => 'dna');
-                $seq_out->write_seq($scaffold_obj); ## Write the final sequence object
-            }
+#            if (eof) ## if this is the last row in the stitchmap table
+#            {
+#                my $scaffold_obj = Bio::Seq->new( -display_id =>  $scaffold_id, -seq => $new_seq, -alphabet => 'dna');
+#                $seq_out->write_seq($scaffold_obj); ## Write the final sequence object
+#            }
         }
     }
 }
+my $scaffold_obj = Bio::Seq->new( -display_id =>  $scaffold_id, -seq => $new_seq, -alphabet => 'dna');
+$seq_out->write_seq($scaffold_obj); ## Write the final sequence object
+
 
 #my $fasta_out_file = "/homes/bioinfo/bionano/Trib_cast_0002_september_2014/ncbi/Tcas5.2_chlg_pre_header.fasta";
 open (my $fasta_out, "<", $fasta_out_file) or die "can't open $fasta_out_file: $!";

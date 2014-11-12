@@ -14,42 +14,6 @@ use Text::Wrap;
 ## 7) Get type of gap for those in new AGP that are from BNG
 ## 8) Write new ChLG with 100 bp spacers and genetic map as the type
 
-## ISSUE with collapse AGP?
-#Super_scaffold_63	1	847447	1	W	scaffold_99	1	847447	+
-#Super_scaffold_63	847448	851048	2	N	3601	scaffold	yes	map
-#Super_scaffold_63	851049	2184743	3	W	scaffold_100	1	1333695	-
-#Super_scaffold_63	2184744	2265261	4	N	80518	scaffold	yes	map
-#Super_scaffold_63	2265262	2911381	5	W	scaffold_101	1	646120	+
-#Super_scaffold_63	2911382	2944542	6	N	33161	scaffold	yes	map
-#Super_scaffold_63	2944543	3336913	7	W	scaffold_102	1	392371	-
-#Super_scaffold_63	3336914	3782898	8	N	445985	scaffold	yes	map
-#Super_scaffold_63	3782899	4456720	9	W	scaffold_103	1	673822	-
-#
-#Super_scaffold_55	1	324174	1	W	scaffold_1203	1	324174	+
-#Super_scaffold_55	324175	572800	2	N	248626	scaffold	yes	map
-#Super_scaffold_55	572801	883697	3	W	scaffold_3	1	310897	-
-#Super_scaffold_55	883698	917448	4	N	33751	scaffold	yes	map
-#Super_scaffold_55	917449	1131550	5	W	scaffold_4	1	214102	-
-#Super_scaffold_55	1131551	1171393	6	N	39843	scaffold	yes	map
-#Super_scaffold_55	1171394	1634415	7	W	scaffold_5	1	463022	+
-#Super_scaffold_55	1634416	1675674	8	N	41259	scaffold	yes	map
-#Super_scaffold_55	1675675	1897757	9	W	scaffold_6	1	222083	-
-#Super_scaffold_55	1897758	2230651	10	N	332894	scaffold	yes	map
-#Super_scaffold_55	2230652	3389387	11	W	scaffold_7	1	1158736	+
-#Super_scaffold_55	3389388	3497099	12	N	107712	scaffold	yes	map
-#Super_scaffold_55	3497100	3749323	13	W	scaffold_977	1	252224	+
-#Super_scaffold_55	3749324	3786090	14	N	36767	scaffold	yes	map
-#Super_scaffold_55	3786091	3887837	15	W	scaffold_8	1	101747	+
-#Super_scaffold_55	3887838	3913286	16	N	25449	scaffold	yes	map
-#Super_scaffold_55	3913287	4286656	17	W	scaffold_9	1	373370	-
-#Super_scaffold_55	4286657	4303960	18	N	17304	scaffold	yes	map
-#Super_scaffold_55	4303961	4461328	19	W	scaffold_10	1	157368	-
-#Super_scaffold_55	4461329	4506698	20	N	45370	scaffold	yes	map
-#Super_scaffold_55	4506699	5870923	21	W	scaffold_11	1	1364225	-
-#Super_scaffold_55	5870924	5945417	22	N	74494	scaffold	yes	map
-#Super_scaffold_55	5945418	7260238	23	W	scaffold_12	1	1314821	-
-#Super_scaffold_55	7260239	7260338	24	U	100	scaffold	yes	map
-#Super_scaffold_55	7260339	8421036	25	W	scaffold_13	1	1160698	-
 my $app_in_file = "/homes/bioinfo/bionano/Trib_cast_0002_september_2014/ncbi/pre_Tcas5.2_1.agp";
 open (my $agp_in , "<", $app_in_file) or die "can't open $app_in_file: $!";
 my $agp_out_file = "/homes/bioinfo/bionano/Trib_cast_0002_september_2014/ncbi/pre_Tcas5.2_1.5.agp";
@@ -71,7 +35,9 @@ while (<$agp_in>)
     }
 }
 
-my $fasta_in_file = "/homes/bioinfo/bionano/Trib_cast_0002_september_2014/ncbi/pre_Tcas5.2_1.fasta";
+#my $fasta_in_file = "/homes/bioinfo/bionano/Trib_cast_0002_september_2014/ncbi/pre_Tcas5.2_1.fasta"; # replaced with new fasta after removing two Bos frontalis sequences
+
+my $fasta_in_file = "/homes/bioinfo/bionano/Trib_cast_0002_september_2014/ncbi/pre_Tcas5_minus_1.fasta";
 my $db = Bio::DB::Fasta->new("$fasta_in_file");
 my $fasta_out_file = "/homes/bioinfo/bionano/Trib_cast_0002_september_2014/ncbi/pre_Tcas5.2_2.fasta";
 my $seq_out = Bio::SeqIO->new('-file' => ">$fasta_out_file",'-format' => 'fasta');		#Create new fasta outfile object.
@@ -207,7 +173,7 @@ open (my $new_input_agp, "<", $output_agp) or die "Can't open $output_agp: $!";
 ###############################################################################
 ##############           Make raw contig AGP and fasta       ##################
 ###############################################################################
-my $make_contigs = `perl /homes/bioinfo/bioinfo_software/bionano/Irys-scaffolding/KSU_bioinfo_lab/stitch/make_contigs_from_fasta.pl /homes/bioinfo/bionano/Trib_cast_0002_september_2014/ncbi/pre_Tcas5.2_2.fasta`;
+my $make_contigs = `perl make_contigs_from_fasta.pl /homes/bioinfo/bionano/Trib_cast_0002_september_2014/ncbi/pre_Tcas5.2_2.fasta`;
 print "$make_contigs\n";
 ###############################################################################
 ##############      add BNG map info to raw contig AGP       ##################
@@ -231,11 +197,14 @@ open (my $raw_contig_agp, "<", $raw_contig_agp_file) or die "can't open $raw_con
 my $bng_contig_agp_file = "/homes/bioinfo/bionano/Trib_cast_0002_september_2014/ncbi/pre_Tcas5.2_2_bng_contig.agp";
 open (my $bng_contig_agp, ">", $bng_contig_agp_file) or die "can't open $bng_contig_agp_file:$!";
 print $bng_contig_agp "##agp-version   2.0\n";
+print $bng_contig_agp "# Assembly Method	ALLPATHS-LG , ATLAS-LINK, GapFiller, stitch v. 11-September-2014\n";
+print $bng_contig_agp "# Assembly Name	Tcas5.2\n";
+print $bng_contig_agp "# Long Assembly Name	Tribolium castaneum 5.2\n";
+print $bng_contig_agp "# Genome Coverage	7x\n";
+print $bng_contig_agp "# Sequencing Technology	Sanger; Illumina LDJ\n";
 print $bng_contig_agp "# ORGANISM: Tribolium castaneum\n";
 print $bng_contig_agp "# TAX_ID: 7070\n";
-print $bng_contig_agp "# ASSEMBLY NAME: Tcas_5.2\n";
-print $bng_contig_agp "# ASSEMBLY DATE: 11-November-2014\n";
-print $bng_contig_agp "# GENOME CENTER: Bioinformatics Center at Kansas State University\n";
+print $bng_contig_agp "# GENOME CENTER: K-INBRE Bioinformatics Core at Kansas State University\n";
 print $bng_contig_agp "# DESCRIPTION: AGP specifying the assembly of scaffolds from WGS contigs\n";
 while (<$raw_contig_agp>)
 {
@@ -256,7 +225,22 @@ while (<$raw_contig_agp>)
         }
         else
         {
-            print $bng_contig_agp "$_\n";
+            my $Linkage_evidence = (split(/\t/))[8];
+            if (($Linkage_evidence eq "unspecified") && ($component_type ne "W"))
+            {
+                my @columns= split(/\t/);
+                $columns[8] = "paired-ends";
+                if ($columns[5] == 100)
+                {
+                    $columns[4] = "U";
+                }
+                my $line = join("\t",@columns);
+                print $bng_contig_agp "$line\n";
+            }
+            else
+            {
+                print $bng_contig_agp "$_\n";
+            }
         }
     }
 }
@@ -266,11 +250,14 @@ while (<$raw_contig_agp>)
 my $chlg_agp_file = "/homes/bioinfo/bionano/Trib_cast_0002_september_2014/ncbi/pre_Tcas5.2_2_chlg.agp";
 open (my $chlg_agp, ">", $chlg_agp_file) or die "can't open $chlg_agp_file:$!";
 print $chlg_agp "##agp-version   2.0\n";
+print $chlg_agp "# Assembly Method	ALLPATHS-LG , ATLAS-LINK, GapFiller, stitch v. 11-September-2014\n";
+print $chlg_agp "# Assembly Name	Tcas5.2\n";
+print $chlg_agp "# Long Assembly Name	Tribolium castaneum 5.2\n";
+print $chlg_agp "# Genome Coverage	7x\n";
+print $chlg_agp "# Sequencing Technology	Sanger; Illumina LDJ\n";
 print $chlg_agp "# ORGANISM: Tribolium castaneum\n";
 print $chlg_agp "# TAX_ID: 7070\n";
-print $chlg_agp "# ASSEMBLY NAME: Tcas_5.2\n";
-print $chlg_agp "# ASSEMBLY DATE: 11-November-2014\n";
-print $chlg_agp "# GENOME CENTER: Bioinformatics Center at Kansas State University\n";
+print $chlg_agp "# GENOME CENTER: K-INBRE Bioinformatics Core at Kansas State University\n";
 print $chlg_agp "# DESCRIPTION: AGP specifying the assembly of ChLGs from WGS scaffolds\n";
 my $current_chlg;
 my $pos = 1;
@@ -280,6 +267,7 @@ my %seen;
 my $placed = 1;
 $chlg_in_file = "/homes/bioinfo/bionano/Trib_cast_0002_september_2014/ncbi/ChLG_order.txt";
 open ($chlg_in, "<", $chlg_in_file) or die "can't open $chlg_in_file: $!";
+my $y_count = 1;
 while (<$chlg_in>)
 {
     chomp;
@@ -294,7 +282,10 @@ while (<$chlg_in>)
         }
         elsif (/^#/)
         {
-            pop(@current_chlg_agp);
+            unless( $current_chlg eq "ChLGY")
+            {
+                pop(@current_chlg_agp);
+            }
             print $chlg_agp join('',@current_chlg_agp);
             s/#//;
             $current_chlg = $_;
@@ -314,19 +305,17 @@ while (<$chlg_in>)
                 $pos = $end_pos + 1;
                 ++$agp_element;
                 $end_pos = $pos + 99;
-                push (@current_chlg_agp, "$current_chlg\t$pos\t$end_pos\t$agp_element\tU\t100\tscaffold\tyes\tmap\n");
+                push (@current_chlg_agp, "$current_chlg\t$pos\t$end_pos\t$agp_element\tU\t100\tcontig\tno\tna\n"); #changed from map to na as per WGS submission example http://www.ncbi.nlm.nih.gov/projects/genome/assembly/agp/chr_from_scaffold_WGS.agp.v2.0.txt
                 $pos = $end_pos + 1;
                 ++$agp_element;
             }
             else
             {
-                push (@current_chlg_agp, "$current_chlg\t$pos\t$end_pos\t$agp_element\tW\t$_\t1\t$length\t?\n");
-                $pos = $end_pos + 1;
-                ++$agp_element;
-                $end_pos = $pos + 99;
-                push (@current_chlg_agp, "$current_chlg\t$pos\t$end_pos\t$agp_element\tU\t100\tcontig\tna\tmap\n");
-                $pos = $end_pos + 1;
-                ++$agp_element;
+                $pos = 1;
+                $agp_element = 1;
+                $end_pos = $pos + $length - 1;
+                push (@current_chlg_agp, "${current_chlg}_seqid${y_count}\t$pos\t$end_pos\t$agp_element\tW\t$_\t1\t$length\t?\n");
+                ++$y_count;
             }
         }
         if (/Unplaced/)
