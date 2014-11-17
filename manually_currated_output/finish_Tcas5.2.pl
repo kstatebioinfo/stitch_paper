@@ -23,11 +23,11 @@ print $agp_out "##agp-version   2.0\n";
 my %agp;
 while (<$agp_in>)
 {
-#    chomp;
+    #    chomp;
     my $object = (split(/\t/))[0];
     if ($agp{$object})
     {
-         $agp{$object} .= $_;
+        $agp{$object} .= $_;
     }
     else
     {
@@ -345,7 +345,7 @@ while (my $seq = $seq_in->next_seq)
     
     unless ($seen{$id})
     {
-#        $seq_out->write_seq($seq);
+        #        $seq_out->write_seq($seq);
         my $seq_obj = $db->get_Seq_by_id($id); #get fasta record
         my $length = $seq_obj->length;
         print $chlg_agp "unplaced_seqid${unplaced_count}\t1\t$length\t1\tW\t$id\t1\t$length\t?\n";
@@ -386,7 +386,7 @@ while (<$contig_in>)
     else
     {
         
-#        print $contig_out "$_";
+        #        print $contig_out "$_";
         chomp;
         $Text::Wrap::columns = 60;
         print $contig_out wrap('', '', $_) . "\n";
@@ -414,7 +414,7 @@ while (<$scaffold_in>)
     if (/^>/)
     {
         #>scaffold_seqid1 [organism=Tribolium castaneum] [strain=Georgia GA2] [country=USA: Kansas] [collection-date=Apr-2003]
-
+        
         chomp;
         s/>//;
         my $new_header = "scaffold_seqid${scaffold_counter}";
@@ -499,8 +499,3 @@ while (<$chlg_agp_in>)
 #awk '/Scaffold/{i++}i==206' /homes/bioinfo/bionano/Trib_cast_0002_september_2014/tcas4_scaffolds.fa | head
 
 print "Done\n";
-
-#export PERL5LIB=/usr/lib/perl5:/usr/lib/perl5/site_perl:/usr/lib/perl5/vendor_perl:/usr/lib64/perl5:/usr/lib64/perl5/site_perl:/usr/lib64/perl5/vendor_perl:/homes/bioinfo/perl5/lib/perl5:/homes/bioinfo/perl5/lib/perl5/x86_64-linux::/homes/bioinfo/bioinfo_software/perl/lib64/perl5:/homes/bioinfo/bioinfo_software/perl/lib64/perl5/site_perl:/homes/bioinfo/bioinfo_software/BioPerl/lib64/perl5/site_perl:/homes/bioinfo/bioinfo_software/BioPerl/lib64/perl5/site_perl/5.8.8/Bio:/homes/bioinfo/bioinfo_software/BioPerl/lib64/perl5/site_perl/5.8.8/x86_64-linux
-
-
-
