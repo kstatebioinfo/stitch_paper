@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.5.25)  3 NOV 2014 16:08
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.5.25)  11 JAN 2015 16:34
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -524,36 +524,51 @@ Overfull \hbox (1.0pt too wide) has occurred while \output is active
 [1{/usr/local/texlive/2014/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
 
 ]
+
+LaTeX Warning: Citation `ProbFPMishra' on page 2 undefined on input line 275.
+
 [2]
-Underfull \hbox (badness 3646) in paragraph at lines 287--288
+Underfull \hbox (badness 3646) in paragraph at lines 296--297
 \OT1/cmr/m/n/10 at [][]$\OT1/cmtt/m/n/10 https : / / github . com / i5K-[]KINBR
 E-[]script-[]share / Irys-[]scaffolding / tree /
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 303--304
+[3]
+Underfull \hbox (badness 10000) in paragraph at lines 312--313
 \OT1/cmtt/m/n/10 github . com / i5K-[]KINBRE-[]script-[]share / Irys-[]scaffold
 ing / tree / master / KSU _
  []
 
 
-Overfull \hbox (3.24684pt too wide) in paragraph at lines 319--320
+Overfull \hbox (3.24684pt too wide) in paragraph at lines 328--329
 \OT1/cmtt/m/n/10 com / i5K-[]KINBRE-[]script-[]share / Irys-[]scaffolding / tre
 e / master / KSU _ bioinfo _
  []
 
-(./bmc_article.bbl [3])
+(./bmc_article.bbl)
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 388.
+(Font)              <8> on input line 397.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 388.
+(Font)              <6> on input line 397.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
 LaTeX Font Warning: Font shape `OT1/cmss/bx/it' undefined
-(Font)              using `OT1/cmss/bx/n' instead on input line 408.
+(Font)              using `OT1/cmss/bx/n' instead on input line 417.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
@@ -562,7 +577,7 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-Overfull \hbox (143.57147pt too wide) in paragraph at lines 435--441
+Overfull \hbox (143.57147pt too wide) in paragraph at lines 444--450
  [][] 
  []
 
@@ -570,7 +585,7 @@ Overfull \hbox (143.57147pt too wide) in paragraph at lines 435--441
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-Overfull \hbox (142.82024pt too wide) in paragraph at lines 444--459
+Overfull \hbox (142.82024pt too wide) in paragraph at lines 453--468
  [][] 
  []
 
@@ -579,12 +594,16 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
 AED: lastpage setting LastPage
-[4] [5]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 480.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 480.
+[4]
+
+LaTeX Warning: Text page 5 contains only floats.
+
+[5] [6]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 489.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 489.
  (./bmc_article.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 480.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 480.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 489.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 489.
 Package rerunfilecheck Info: File `bmc_article.out' has not changed.
 (rerunfilecheck)             Checksum: ED3CDF9133C37D676C26CC0D4896F289;44.
 
@@ -595,16 +614,19 @@ LaTeX Font Warning: Size substitutions with differences
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 480.
+
+LaTeX Warning: There were undefined references.
+
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 489.
  ) 
 Here is how much of TeX's memory you used:
- 6106 strings out of 493117
- 86830 string characters out of 6135433
- 190131 words of memory out of 5000000
- 9495 multiletter control sequences out of 15000+600000
+ 6108 strings out of 493117
+ 86850 string characters out of 6135433
+ 195123 words of memory out of 5000000
+ 9496 multiletter control sequences out of 15000+600000
  10851 words of font info for 38 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 30i,9n,37p,1728b,418s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 30i,8n,37p,1728b,418s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 ></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb>
 </usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></
@@ -620,10 +642,10 @@ texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/te
 xlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texl
 ive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texli
 ve/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on bmc_article.pdf (5 pages, 197579 bytes).
+Output written on bmc_article.pdf (6 pages, 201299 bytes).
 PDF statistics:
- 159 PDF objects out of 1000 (max. 8388607)
- 135 compressed objects within 2 object streams
- 44 named destinations out of 1000 (max. 500000)
+ 164 PDF objects out of 1000 (max. 8388607)
+ 139 compressed objects within 2 object streams
+ 45 named destinations out of 1000 (max. 500000)
  9 words of extra memory for PDF output out of 10000 (max. 10000000)
 

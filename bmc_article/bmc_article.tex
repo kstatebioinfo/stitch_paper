@@ -262,14 +262,25 @@ The first stage of AssembleIrysCluster is to adjust molecule stretch (section C 
 
 \subsubsection*{Customization of Assembly Scripts}
 
-In the next stage of AssembleIrysCluster various assembly scripts are created to explore a range of parameters with the goal of selecting the optimal assembly for downstream analysis (sections F-G Figure 2). The merged adjusted BNX file is aligned to the \textit{in silico} genome map. The alignment error profile is used with the estimated genome length to calculate default assembly parameters and the eight other scripts include variants of these. Initially three assemblies are run with $p-Value Threshold = \frac{1e-5}{Genome Length (Mb)}$, $p-Value Threshold Strict = \frac{p-Value Threshold}{10}$ and $p-Value Threshold Relaxed = {p-Value Threshold} \times {10}$ (section F Figure 2). Minimum molecule length is set to 150 kb. If these do not produce a satisfactory assembly than two minimum molecule length variants (180 kb and 100 kb) are tested with the $p-Value Threshold$ of the current best assembly (section G Figure 2). Between three and nine assemblies are run until an assembly is produced that is satisfactory.
+In the next stage of AssembleIrysCluster various assembly scripts are created to explore a range of parameters with the goal of selecting the optimal assembly for downstream analysis (sections F-G Figure 2). The merged adjusted BNX file is aligned to the \textit{in silico} genome map. The alignment error profile is used with the estimated genome length to calculate default assembly parameters and the eight other scripts include variants of these. Initially three assemblies are run with $p-Value Threshold Default = \frac{1e-5}{Genome Length (Mb)}$, $p-Value Threshold Strict = \frac{p-Value Threshold}{10}$ and $p-Value Threshold Relaxed = {p-Value Threshold} \times {10}$ (section F Figure 2). Minimum molecule length is set to 150 kb. If these do not produce a satisfactory assembly than two minimum molecule length variants (180 kb and 100 kb) are tested with the $p-Value Threshold$ of the current best assembly (section G Figure 2). Between three and nine assemblies are run until an assembly is produced that is satisfactory.
 
 \subsubsection*{Assembly Optimization}
 
 Ultimately the goal is to produce a CMAP that can be used to guide sequence-based haploid reference genome assembly. While BioNano genome maps can be used to reconstruct haplotypes \cite{MHCLam} genome assembly involves collapsing polymorphisms arbitrarily into a consensus reference genome. Therefore for an ideal BioNano genome map $Length (Mb) = Genome Length (Mb)$. Additionally, 100\% of the BioNano genome map would align non-redundantly to 100\% of the \textit{in silico} genome map. When BioNano genome maps are imperfect optimal assembly length is balanced against alignment quality when selecting the best CMAP.
 
-\subsubsection*{Super scaffolding}
-Text
+\subsubsection*{Super scaffolding: Alignment Filters}
+
+Alignments, XMAPs, of the \textit{in silico} genome maps and the BioNano genome maps are used the predict the higher order arrangement of genome scaffolds with Stitch (section A and B Figure 3). 
+
+Before inferring superscaffolds from XMAPs, Stitch filters low quality alignments by confidence score. Alignments of \textit{in silico} and BioNano genome maps are assigned a confidence score that is the $-log10$ of the False Positive  p-Value. Misaligned labels and sizing error increase the alignment False Positive p-Value decreasing confidence scores \cite{ProbFPMishra}.
+
+Alignments are also filtered based on the percent of the total possible alignment length that is aligned (section C Figure 3). Superscaffolds are built from overlapping alignments. Overlapping alignments are similar to global alignments, i.e. alignments spanning from end to end for two maps of roughly equal length, but to search for overlap alignments gaps after the ends of either map are not penalized. The RefAligner scoring scheme does not have a parameter to favor overlapping alignments, e.g. to initialize the dynamic programming matrix with no penalties and take the maximum score of the final row or column in the matrix. Refaligner reports local alignments between two maps and applies a fixed penalty based on the user defined likelihood of unaligned labels at the ends of an alignment. Raising or lowering this penalty selects for local or global alignments respectively but neither option favors overlapping alignments specifically. To approximate scoring that favors overlapping alignments Stitch uses thresholds for minimum percent of total possible aligned length or the percent aligned threshold (PAT). 
+
+Like a scoring structure that favors overlapping alignments the PAT filters out local alignments. However, unlike a scoring structure the PAT is applied after alignment and therefore cannot result in the aligner exploring possible extensions into an overlap in favor of a shorter local alignment with a higher cumulative score. Therefore Stitch accepts alignments with less than 100\% of the potential aligned length. Default values for the PAT were determined empirically after reviewing the degree to which filtered alignments agreed with the independent genetic maps of \textit{Tribolium} and visual inspection.
+
+\subsubsection*{Super scaffolding: Flagging Potential Misassemblies}
+
+This algorithm is meant to be an intermediate refinement of draft genomes prior to further finer scale refinement at the sequence level. 
  
 \section*{Results and Discussion}
 Text
@@ -286,7 +297,7 @@ Text
 
 \textbf{Project home page:} AssembleIrysCluster scripts are available on Github at \url{https://github.com/i5K-KINBRE-script-share/Irys-scaffolding/tree/master/KSU\_bioinfo\_lab/assemble\_SGE\_cluster}
 
-\textbf{Operating system(s):} SGE Linux (Gentoo) cluster
+\textbf{Operating system(s):} SGE Linux (tested on a Gentoo) cluster
 
 \textbf{Programming language:} Perl, Rscript, Bash
 
