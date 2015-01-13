@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.5.25)  12 JAN 2015 16:49
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.5.25)  13 JAN 2015 11:56
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -564,11 +564,11 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
 LaTeX Font Warning: Font shape `OT1/cmss/bx/it' undefined
 (Font)              using `OT1/cmss/bx/n' instead on input line 429.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
@@ -589,9 +589,13 @@ Overfull \hbox (142.82024pt too wide) in paragraph at lines 465--480
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
+[5]
 
+LaTeX Warning: Text page 6 contains only floats.
+
+[6] 
 AED: lastpage setting LastPage
-[5] [6] [7]
+[7]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 501.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 501.
  (./bmc_article.aux)
@@ -615,7 +619,7 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 501.
 Here is how much of TeX's memory you used:
  6111 strings out of 493117
  86878 string characters out of 6135433
- 194747 words of memory out of 5000000
+ 195014 words of memory out of 5000000
  9496 multiletter control sequences out of 15000+600000
  10851 words of font info for 38 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -635,7 +639,7 @@ texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/te
 xlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texl
 ive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texli
 ve/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on bmc_article.pdf (7 pages, 205386 bytes).
+Output written on bmc_article.pdf (7 pages, 205311 bytes).
 PDF statistics:
  173 PDF objects out of 1000 (max. 8388607)
  147 compressed objects within 2 object streams
