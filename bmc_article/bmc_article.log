@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.5.25)  13 JAN 2015 11:56
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.5.25)  13 JAN 2015 13:10
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -513,7 +513,7 @@ LaTeX Font Warning: Font shape `OMS/cmss/m/n' undefined
 
 
 LaTeX Font Warning: Font shape `OT1/cmss/m/it' in size <8> not available
-(Font)              Font shape `OT1/cmss/m/sl' tried instead on input line 262.
+(Font)              Font shape `OT1/cmss/m/sl' tried instead on input line 263.
 
 
 
@@ -525,31 +525,31 @@ Overfull \hbox (1.0pt too wide) has occurred while \output is active
 
 ]
 
-LaTeX Warning: Citation `ProbFPMishra' on page 2 undefined on input line 275.
+LaTeX Warning: Citation `ProbFPMishra' on page 2 undefined on input line 276.
 
 [2] [3]
-Underfull \hbox (badness 3646) in paragraph at lines 308--309
+Underfull \hbox (badness 3646) in paragraph at lines 309--310
 \OT1/cmr/m/n/10 at [][]$\OT1/cmtt/m/n/10 https : / / github . com / i5K-[]KINBR
 E-[]script-[]share / Irys-[]scaffolding / tree /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 324--325
+Underfull \hbox (badness 10000) in paragraph at lines 325--326
 \OT1/cmtt/m/n/10 github . com / i5K-[]KINBRE-[]script-[]share / Irys-[]scaffold
 ing / tree / master / KSU _
  []
 
 [4]
-Overfull \hbox (3.24684pt too wide) in paragraph at lines 340--341
+Overfull \hbox (3.24684pt too wide) in paragraph at lines 341--342
 \OT1/cmtt/m/n/10 com / i5K-[]KINBRE-[]script-[]share / Irys-[]scaffolding / tre
 e / master / KSU _ bioinfo _
  []
 
 (./bmc_article.bbl)
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 409.
+(Font)              <8> on input line 410.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 409.
+(Font)              <6> on input line 410.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
@@ -568,13 +568,13 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
 LaTeX Font Warning: Font shape `OT1/cmss/bx/it' undefined
-(Font)              using `OT1/cmss/bx/n' instead on input line 429.
+(Font)              using `OT1/cmss/bx/n' instead on input line 430.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-Overfull \hbox (143.57147pt too wide) in paragraph at lines 456--462
+Overfull \hbox (143.57147pt too wide) in paragraph at lines 457--463
  [][] 
  []
 
@@ -582,7 +582,7 @@ Overfull \hbox (143.57147pt too wide) in paragraph at lines 456--462
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-Overfull \hbox (142.82024pt too wide) in paragraph at lines 465--480
+Overfull \hbox (188.26253pt too wide) in paragraph at lines 466--481
  [][] 
  []
 
@@ -596,11 +596,11 @@ LaTeX Warning: Text page 6 contains only floats.
 [6] 
 AED: lastpage setting LastPage
 [7]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 501.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 501.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 502.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 502.
  (./bmc_article.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 501.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 501.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 502.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 502.
 Package rerunfilecheck Info: File `bmc_article.out' has not changed.
 (rerunfilecheck)             Checksum: ED3CDF9133C37D676C26CC0D4896F289;44.
 
@@ -614,12 +614,12 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 LaTeX Warning: There were undefined references.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 501.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 502.
  ) 
 Here is how much of TeX's memory you used:
  6111 strings out of 493117
  86878 string characters out of 6135433
- 195014 words of memory out of 5000000
+ 195134 words of memory out of 5000000
  9496 multiletter control sequences out of 15000+600000
  10851 words of font info for 38 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -639,7 +639,7 @@ texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/te
 xlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texl
 ive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texli
 ve/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on bmc_article.pdf (7 pages, 205311 bytes).
+Output written on bmc_article.pdf (7 pages, 205396 bytes).
 PDF statistics:
  173 PDF objects out of 1000 (max. 8388607)
  147 compressed objects within 2 object streams
