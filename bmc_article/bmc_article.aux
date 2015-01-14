@@ -33,10 +33,11 @@
 \gdef\hy@subject{}
 \gdef\hy@keywords{Genome map, BioNano, Genome scaffolding, Genome validation, Genome finishing}
 \citation{MHCLam}
-\citation{ProbFPMishra}
+\citation{ProbFP}
 \bibstyle{bmc-mathphys}
 \bibdata{bmc_article}
 \bibcite{MHCLam}{1}
+\bibcite{ProbFP}{2}
 \@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces Assembly Results. Assembly metrics for Tcas5.0 (the starting sequence scaffolds), the \textit  {in silico} genome map, the BioNano genome map of assembled molecules and the final super scaffolded sequence scaffolds (Tcas5.2) produced using stitch.pl for the \textit  {Tribolium} genome.}}{5}{table.1}}
 \@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces {\mathversion  {bold}\bfseries  Data analysis steps.} (1) Autonoise converts TIFF images of molecules to (2) BNX text files. (3) Sequence scaffolds are \textit  {in silico} labeled with fa2cmap\_multi producing (4) a \textit  {in silico} genome map. (5) AssembleIryscluster uses \textit  {in silico} genome maps, BNX files and estimated genome size to (6) adjust molecule stretch and set assembly parameters. (7) Assembler produces (8) a BioNano genome map. (9) RefAligner aligns the BioNano genome map to the \textit  {in silico} genome map producing (10) an XMAP. (11) XMAP, \textit  {in silico} genome map and BioNano genome map (see arrows with dashed lines) are used by stitch to produce super scaffolded (stitched) sequence scaffolds. (13) Until no more super scaffolds are created the stitched sequence scaffolds are \textit  {in silico} labeled with fa2cmap\_multi producing (14) a CMAP that is aligned to (9) the BioNano genome map and steps 10-15 are iterated. Arrows with dotted rather than dashed lines are used to as input durring iterations.}}{6}{figure.1}}
 \@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces {\mathversion  {bold}\bfseries  Assembly workflow for assemble\_SGE\_cluster.pl.} (A) The Irys instrument produces tiff files that are converted into BNX text files. (B) Each chip produces one BNX file for each of two flowcells. (C) BNX files are split by scan and aligned to the sequence reference. Stretch (bases per pixel) is recalculated from the alignment. (D) Quality check graphs are created for each pre-adjusted flowcell BNX. (E) Adjusted flowcell BNXs are merged. (F) The first assemblies are run with a variety of p-value thresholds. (G) The best of the first assemblies (red oval) is chosen and a version of this assembly is produced with a variety of minimum molecule length filters.}}{6}{figure.2}}

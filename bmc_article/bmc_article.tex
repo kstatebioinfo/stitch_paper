@@ -263,7 +263,7 @@ The first stage of AssembleIrysCluster is to adjust molecule stretch (section C 
 
 \subsubsection*{Customization of Assembly Scripts}
 
-In the next stage of AssembleIrysCluster various assembly scripts are created to explore a range of parameters with the goal of selecting the optimal assembly for downstream analysis (sections F-G Figure 2). The merged adjusted BNX file is aligned to the \textit{in silico} genome map. The alignment error profile is used with the estimated genome length to calculate default assembly parameters and the eight other scripts include variants of these. Initially three assemblies are run with $p-Value Threshold Default = \frac{1e-5}{Genome Length (Mb)}$, $p-Value Threshold Strict = \frac{p-Value Threshold}{10}$ and $p-Value Threshold Relaxed = {p-Value Threshold} \times {10}$ (section F Figure 2). Minimum molecule length is set to 150 kb. If these do not produce a satisfactory assembly then two minimum molecule length variants (180 kb and 100 kb) are tested with the $p-Value Threshold$ of the current best assembly (section G Figure 2). Between three and nine assemblies are run until an assembly is produced that is satisfactory.
+In the next stage of AssembleIrysCluster various assembly scripts are created to explore a range of parameters with the goal of selecting the optimal assembly for downstream analysis (sections F-G Figure 2). The merged adjusted BNX file is aligned to the \textit{in silico} genome map. The alignment error profile is used with the estimated genome length to calculate default assembly parameters and the eight other scripts include variants of these. Initially three assemblies are run with $p\textnormal{-}Value Threshold Default = \frac{1e-5}{Genome Length (Mb)}$, $p\textnormal{-}Value Threshold Strict = \frac{p\textnormal{-}Value Threshold}{10}$ and $p\textnormal{-}Value Threshold Relaxed = {p\textnormal{-}Value Threshold} \times {10}$ (section F Figure 2). Minimum molecule length is set to 150 kb. If these do not produce a satisfactory assembly then two minimum molecule length variants (180 kb and 100 kb) are tested with the $p\textnormal{-}Value Threshold$ of the current best assembly (section G Figure 2). Between three and nine assemblies are run until an assembly is produced that is satisfactory.
 
 \subsubsection*{Assembly Optimization}
 
@@ -273,7 +273,7 @@ Ultimately the goal is to produce a CMAP that can be used to guide sequence-base
 
 Alignments, XMAPs, of the \textit{in silico} genome maps and the BioNano genome maps are used the predict the higher order arrangement of genome scaffolds with Stitch (Figure 3). RefAligner is designed to treat the reference genome map as an \textit{in silico} genome map and the query as the BioNano genome map. Therefore alignment XMAPs are first inverted and sorted by BioNano genome map coordinates for efficient parsing by Stitch (section A and B Figure 3). 
 
-Before inferring super scaffolds from XMAPs, Stitch filters low quality alignments by confidence score. Alignments of \textit{in silico} and BioNano genome maps are assigned a confidence score that is the $-log10$ of the False Positive  p-Value. Misaligned labels and sizing error increase the alignment False Positive p-Value decreasing confidence scores \cite{ProbFPMishra}.
+Before inferring super scaffolds from XMAPs, Stitch filters low quality alignments by confidence score. Alignments of \textit{in silico} and BioNano genome maps are assigned a confidence score that is the $-log10$ of the $False\textnormal{ }Positive\textnormal{ }p\textnormal{-}Value$. Misaligned labels and sizing error increase the alignment $False\textnormal{ }Positive\textnormal{ }p\textnormal{-}Value$ decreasing confidence scores \cite{ProbFP} .
 
 Alignments are also filtered by the percent of the total possible alignment length that is aligned (section C Figure 3). Super scaffolds are built from overlapping alignments. Overlapping alignments are similar to global alignments, i.e. alignments spanning from end to end for two maps of roughly equal length, but to search for overlap alignments gaps after the ends of either map are not penalized. The RefAligner scoring scheme does not currently have a parameter to favor overlapping alignments, e.g. to initialize the dynamic programming matrix with no penalties and take the maximum score of the final row or column in the matrix. Refaligner reports local alignments between two maps and applies a fixed penalty based on the user defined likelihood of unaligned labels at the ends of an alignment. Raising or lowering this penalty selects for local or global alignments respectively but neither option favors overlapping alignments specifically. To approximate scoring that favors overlapping alignments Stitch uses thresholds for minimum percent of total possible aligned length or the percent aligned threshold (PAT). 
 
@@ -294,7 +294,12 @@ Stitch only makes use of one alignment per \textit{in silico} map per iteration.
 This algorithm is meant to be an intermediate refinement of draft genomes prior to further fine scale refinement at the sequence level. Inconsistencies between the BioNano genome maps and the \textit{in silico} genome maps are reported in output logs to facilitate downstream sequence editing. If an alignment passes initial confidence score and PAT filtering but has a PAT less then 60\% this is reported as a partial alignment. A partial alignment may occur if either the sequence scaffold or the BioNano genome map contained a chimeric assembly. Additionally, if a gap length is estimated to be negative it may indicate that the sequence scaffolds can be joined with a local assembly or that a chimeric sequence mis-assembly needs to be broken within a scaffold. Assembly errors in the BioNano genome maps or spurious alignments could also result in either of these cases. Ideally researchers could make use of the alignment of genomic sequence reads to the genome sequence assembly and the alignment of BioNano molecule maps to the BioNano assembled genome map to determine which assembly is likely to be incorrect.
  
 \section*{Results and Discussion}
-Text
+
+\subsubsection*{Datasets}
+
+For 7x draft reference 2008 paper. Add that X bases were added and 
+Number of flowcells
+Coverage
 
 \section*{Conclusions}
 Text

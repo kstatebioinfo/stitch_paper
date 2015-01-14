@@ -1,6 +1,6 @@
 %% BioMed_Central_Bib_Style_v1.01
 
-\begin{thebibliography}{1}
+\begin{thebibliography}{2}
 % BibTex style file: bmc-mathphys.bst (version 2.1), 2014-07-24
 \ifx \bisbn   \undefined \def \bisbn  #1{ISBN #1}\fi
 \ifx \binits  \undefined \def \binits#1{#1}\fi
@@ -65,6 +65,18 @@ doi:10.1038/nbt.2303
 \end{botherref}
 \endbibitem
 
+%%% 2
+\bibitem{ProbFP}
+\begin{bchapter}
+\bauthor{\bsnm{Anantharaman}, \binits{T.}},
+\bauthor{\bsnm{Mishra}, \binits{B.}}:
+\bctitle{A probabilistic analysis of false positives in optical map alignment
+  and validation}.
+(\byear{2001}).
+\bcomment{https://cs.nyu.edu/mishra/PUBLICATIONS/01.falsepos.ps}
+\end{bchapter}
+\endbibitem
+
 \end{thebibliography}
 
 \newcommand{\BMCxmlcomment}[1]{}
@@ -94,6 +106,18 @@ doi:10.1038/nbt.2303
   <volume>30</volume>
   <issue>8</issue>
   <note>doi:10.1038/nbt.2303</note>
+</bibl>
+
+<bibl id="B2">
+  <title><p>A Probabilistic Analysis of False Positives in Optical Map
+  Alignment and Validation</p></title>
+  <aug>
+    <au><snm>Anantharaman</snm><fnm>T</fnm></au>
+    <au><snm>Mishra</snm><fnm>B</fnm></au>
+  </aug>
+  <source>WABI2001</source>
+  <pubdate>2001</pubdate>
+  <note>https://cs.nyu.edu/mishra/PUBLICATIONS/01.falsepos.ps</note>
 </bibl>
 
 </refgrp>
