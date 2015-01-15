@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.5.25)  14 JAN 2015 13:58
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.5.25)  15 JAN 2015 09:35
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -479,25 +479,6 @@ LaTeX Font Warning: Font shape `OT1/cmss/bx/n' in size <13> not available
 LaTeX Font Warning: Font shape `OT1/cmss/m/n' in size <24> not available
 (Font)              size <24.88> substituted on input line 100.
 
-LaTeX Font Info:    Calculating math sizes for size <11> on input line 120.
-
-LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <5.5> not available
-(Font)              size <5> substituted on input line 120.
-
-
-LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <5.5> not available
-(Font)              size <5> substituted on input line 120.
-
-
-LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <5.5> not available
-(Font)              size <5> substituted on input line 120.
-
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <11> on input line 120.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7.69997> on input line 120.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5.5> on input line 120.
 \address@aff1=\toks21
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <7> on input line 174.
@@ -512,8 +493,13 @@ LaTeX Font Warning: Font shape `OMS/cmss/m/n' undefined
 (Font)              for symbol `textdagger' on input line 174.
 
 
+LaTeX Font Warning: Font shape `OT1/cmss/m/it' in size <10> not available
+(Font)              Font shape `OT1/cmss/m/sl' tried instead on input line 193.
+
+
+
 LaTeX Font Warning: Font shape `OT1/cmss/m/it' in size <8> not available
-(Font)              Font shape `OT1/cmss/m/sl' tried instead on input line 263.
+(Font)              Font shape `OT1/cmss/m/sl' tried instead on input line 261.
 
 
 
@@ -542,23 +528,11 @@ Overfull \hbox (3.24684pt too wide) in paragraph at lines 348--349
 e / master / KSU _ bioinfo _
  []
 
-(./bmc_article.bbl)
+(./bmc_article.bbl [5])
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <8> on input line 417.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 417.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
@@ -591,10 +565,6 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
 AED: lastpage setting LastPage
-[5]
-
-LaTeX Warning: Text page 6 contains only floats.
-
 [6] [7]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 509.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 509.
@@ -611,16 +581,19 @@ LaTeX Font Warning: Size substitutions with differences
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 509.
  ) 
 Here is how much of TeX's memory you used:
- 6115 strings out of 493117
- 86920 string characters out of 6135433
- 195629 words of memory out of 5000000
- 9498 multiletter control sequences out of 15000+600000
- 10851 words of font info for 38 fonts, out of 8000000 for 9000
+ 6097 strings out of 493117
+ 86637 string characters out of 6135433
+ 190532 words of memory out of 5000000
+ 9481 multiletter control sequences out of 15000+600000
+ 10291 words of font info for 36 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 30i,9n,37p,1728b,418s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 30i,9n,37p,1728b,534s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 ></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb>
 </usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></
@@ -630,16 +603,17 @@ ocal/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/lo
 cal/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmss17.pfb></usr/loc
 al/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/local
 /texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/loca
+l/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi10.pfb></usr/loca
 l/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi8.pfb></usr/local
 /texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/
 texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/te
 xlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texl
 ive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texli
 ve/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on bmc_article.pdf (7 pages, 206459 bytes).
+Output written on bmc_article.pdf (7 pages, 215494 bytes).
 PDF statistics:
- 177 PDF objects out of 1000 (max. 8388607)
- 151 compressed objects within 2 object streams
- 50 named destinations out of 1000 (max. 500000)
+ 176 PDF objects out of 1000 (max. 8388607)
+ 149 compressed objects within 2 object streams
+ 48 named destinations out of 1000 (max. 500000)
  9 words of extra memory for PDF output out of 10000 (max. 10000000)
 

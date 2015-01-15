@@ -187,11 +187,11 @@ email={nanyan@ksu.edu}   % email address
 \begin{abstractbox}
 
 \begin{abstract} % abstract
-\parttitle{First part title} %if any
+\parttitle{Background} %if any
 Text for this section.
-
-\parttitle{Second part title} %if any
-Text for this section.
+\parttitle{Results} %if any
+In this article we present software that leverages BioNano genome maps assembled from ultra-long single molecule maps to improve the contiguity of sequence assemblies. We report the results of applying these tools to a 7x Sanger draft of the \textit{Tribolium castaneum} genome.
+\parttitle{Conclusions} %if any
 \end{abstract}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -250,7 +250,7 @@ Text for this section.
 %% Background %%
 %%
 \section*{Background}
-In this article we present software that leverages BioNano genome maps assembled from ultra-long single molecule maps to improve the contiguity of sequence assemblies. We report the results of applying these tools to a 7x Sanger draft of the \textit{Tribolium castaneum} genome.
+The quality of genome assemblies varies greatly. Initial assembly drafts, whether based on lower coverage Sanger or higher coverage NGS reads, are often highly fragmented. Physical maps of BAC clones are often use to validate and scaffold sequence assemblies, but the molecular, human and computational resources required to significantly improve a draft genome are not often available to researchers working on non-model organisms. The BioNano Irys platform provides affordable, high throughput physical maps with significantly higher contiguitywith which to validate draft assemblies and extend scaffolds.
 
 \subsection*{Data formats}
 The tools described make use of three file formats developed by BNG. The Irys platform images ultra-long molecules of genomic DNA that are nick-labeled at 7 (bp) motifs using one or more nicking endonucleases and fluorescently labeled nucleotides. Molecules captured in the TIFF images are converted to BNX format text files that include label position for each molecule (steps 1 and 2 Figure 1). These BNX files are referred to as molecule maps. Consensus Map (CMAP) files include the molecule length and label position for long genomic regions that are either inferred from assembly of BNX molecules (steps 7 and 8 figure 1) or \textit{in silico} from sequence scaffolds (steps 3 and 4 figure 1). These two types of CMAPs are referred to as BioNano genome maps and \textit{in silico} genome maps respectively. The alignment of two CMAPs is stored as an XMAP text file that includes alignment coordinates and an alignment confidence score (step 10 Figure 1).
