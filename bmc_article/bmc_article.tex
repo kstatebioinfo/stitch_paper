@@ -250,7 +250,7 @@ In this article we present software that leverages BioNano genome maps assembled
 %% Background %%
 %%
 \section*{Background}
-The quality of genome assemblies varies greatly. Initial assembly drafts, whether based on lower coverage Sanger or higher coverage NGS reads, are often highly fragmented. Physical maps of BAC clones are often use to validate and scaffold sequence assemblies, but the molecular, human and computational resources required to significantly improve a draft genome are not often available to researchers working on non-model organisms. The BioNano Irys platform provides affordable, high throughput physical maps with significantly higher contiguitywith which to validate draft assemblies and extend scaffolds.
+The quality of genome assemblies varies greatly. Initial assembly drafts, whether based on lower coverage Sanger or higher coverage NGS reads, are often highly fragmented. Physical maps of BAC clones are often use to validate and scaffold sequence assemblies, but the molecular, human and computational resources required to significantly improve a draft genome are not often available to researchers working on non-model organisms. The BioNano Irys platform provides affordable, high throughput physical maps with significantly higher contiguity with which to validate draft assemblies and extend scaffolds.
 
 \subsection*{Data formats}
 The tools described make use of three file formats developed by BNG. The Irys platform images ultra-long molecules of genomic DNA that are nick-labeled at 7 (bp) motifs using one or more nicking endonucleases and fluorescently labeled nucleotides. Molecules captured in the TIFF images are converted to BNX format text files that include label position for each molecule (steps 1 and 2 Figure 1). These BNX files are referred to as molecule maps. Consensus Map (CMAP) files include the molecule length and label position for long genomic regions that are either inferred from assembly of BNX molecules (steps 7 and 8 figure 1) or \textit{in silico} from sequence scaffolds (steps 3 and 4 figure 1). These two types of CMAPs are referred to as BioNano genome maps and \textit{in silico} genome maps respectively. The alignment of two CMAPs is stored as an XMAP text file that includes alignment coordinates and an alignment confidence score (step 10 Figure 1).
@@ -299,9 +299,16 @@ This algorithm is meant to be an intermediate refinement of draft genomes prior 
 
 \subsubsection*{Datasets}
 
-For 7x draft reference 2008 paper. Add that X bases were added and 
-Number of flowcells
-Coverage
+For 7x draft reference 2008 paper...
+
+The reference genome scaffolds are from version 5.0 of the \textit{Tribolium castaneum} genome. Between version 3.0 and version 5.0 of the \textit{Tribolium castaneum} genome 1,025,047 bases were added and 2,221 scaffolds remained after scaffold linking with Atlas-Link (version 0.01) and gap filling with GapFiller (version 1.10). The version 5.0 assembly has 2240 scaffolds with a cumulative length of 160.74 Mb and an N50 of 1.16 Mb (Table 1).
+
+Young pupae from an inbred Ga-I line of \textit{Tribolium castaneum} (inbred 20 generations) was harvested and 0.5 g was vacuum cleaned through a seive to remove contaminants. Pupae were ground in liquid nitrogen with a cryogenic mortar. After filtration and differential centifugation clean nuclei were embedded in agarose plugs. Subsequent protein digestion and wash steps included gelase and dialysis to clean DNA. DNA was nick, label repaired with nt.BspQI and nt.BbvCI from NEB and run in 96 flowcells on the Iyrs genome mapping platform. 
+
+The 563,140 molecule maps with lengths of equal to or longer than 100kb had an N50 of 165.35 kb and a cummulative length of 827,738.48 Mb. Molecule maps with a minimum length of 150 kb had... More detailed quality metrics for molecule maps after appling a minimum molecule map filter of either 100 kb or 150 kb are reported in Supplemental\_x\_MapStatsHistograms\_min\_100kb and Supplemental\_x\_MapStatsHistograms\_min\_150kb respectively.
+
+
+
 
 \section*{Conclusions}
 Text
