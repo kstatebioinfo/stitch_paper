@@ -1,6 +1,6 @@
 %% BioMed_Central_Bib_Style_v1.01
 
-\begin{thebibliography}{2}
+\begin{thebibliography}{3}
 % BibTex style file: bmc-mathphys.bst (version 2.1), 2014-07-24
 \ifx \bisbn   \undefined \def \bisbn  #1{ISBN #1}\fi
 \ifx \binits  \undefined \def \binits#1{#1}\fi
@@ -77,6 +77,28 @@ doi:10.1038/nbt.2303
 \end{bchapter}
 \endbibitem
 
+%%% 3
+\bibitem{Beetle2008}
+\begin{barticle}
+\bauthor{\bsnm{Richards}, \binits{S.}},
+\bauthor{\bsnm{Gibbs}, \binits{R.A.}},
+\bauthor{\bsnm{Weinstock}, \binits{G.M.}},
+\bauthor{\bsnm{Brown}, \binits{S.J.}},
+\bauthor{\bsnm{Denell}, \binits{R.}},
+\bauthor{\bsnm{Beeman}, \binits{R.W.}},
+\bauthor{\bsnm{Gibbs}, \binits{R.}},
+\bauthor{\bsnm{Bucher}, \binits{G.}},
+\bauthor{\bsnm{Friedrich}, \binits{M.}},
+\bauthor{\bsnm{Grimmelikhuijzen}, \binits{C.J.e.a.}}:
+\batitle{The genome of the model beetle and pest tribolium castaneum}.
+\bjtitle{Nature}
+\bvolume{452},
+\bfpage{949}--\blpage{955}
+(\byear{2008}).
+\bcomment{http://dx.doi.org/10.1038/nature06784}
+\end{barticle}
+\endbibitem
+
 \end{thebibliography}
 
 \newcommand{\BMCxmlcomment}[1]{}
@@ -118,6 +140,29 @@ doi:10.1038/nbt.2303
   <source>WABI2001</source>
   <pubdate>2001</pubdate>
   <note>https://cs.nyu.edu/mishra/PUBLICATIONS/01.falsepos.ps</note>
+</bibl>
+
+<bibl id="B3">
+  <title><p>The genome of the model beetle and pest Tribolium
+  castaneum</p></title>
+  <aug>
+    <au><snm>Richards</snm><fnm>S</fnm></au>
+    <au><snm>Gibbs</snm><fnm>R A</fnm></au>
+    <au><snm>Weinstock</snm><fnm>G M</fnm></au>
+    <au><snm>Brown</snm><fnm>S J</fnm></au>
+    <au><snm>Denell</snm><fnm>R</fnm></au>
+    <au><snm>Beeman</snm><fnm>R W</fnm></au>
+    <au><snm>Gibbs</snm><fnm>R</fnm></au>
+    <au><snm>Bucher</snm><fnm>G</fnm></au>
+    <au><snm>Friedrich</snm><fnm>M</fnm></au>
+    <au><snm>Grimmelikhuijzen</snm><fnm>CJea</fnm></au>
+  </aug>
+  <source>Nature</source>
+  <pubdate>2008</pubdate>
+  <volume>452</volume>
+  <fpage>949</fpage>
+  <lpage>955</lpage>
+  <note>http://dx.doi.org/10.1038/nature06784</note>
 </bibl>
 
 </refgrp>

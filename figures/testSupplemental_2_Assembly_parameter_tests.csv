@@ -1,0 +1,6 @@
+Genome_map,Breadth_of_alignment,Total_alignment_length,Cumulative_length,N50,Number,Percent_in_silico_aligned,Percent_BioNano_aligned
+Relaxed-T,129.28,165.53,291.38,1.46,250,85,56
+Default-T,127.19,140.25,233.23,1.42,225,83,60
+Strict-T_relaxed-minlen,124.19,133.40,205.52,1.16,228,81,65
+Strict-T,124.29,132.97,200.47,1.35,216,81,66
+Strict-T_strict-minlen,119.95,125.98,178.55,1.36,180,79,70
