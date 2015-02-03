@@ -299,22 +299,38 @@ This algorithm is meant to be an intermediate refinement of draft genomes prior 
 
 \subsubsection*{Datasets}
 
-Young pupae from an inbred Ga-I line of \textit{Tribolium castaneum} (inbred 20 generations) were harvested and 0.5 g of tissue was vacuum cleaned through a seive to remove contaminants. Pupae were ground in liquid nitrogen with a cryogenic mortar. After filtration and differential centrifugation clean nuclei were embedded in agarose plugs. Subsequent protein digestion and wash steps included gelase and dialysis to clean DNA. DNA was nick, label repaired with nt.BspQI and nt.BbvCI from New England BioLabs and run in 94 flowcells on the Irys genome mapping platform. 
+Young pupae from an inbred Ga-I line of \textit{Tribolium castaneum} (inbred 20 generations) were harvested and 0.5 g of tissue was vacuum cleaned through a sieve to remove contaminants. Pupae were ground in liquid nitrogen with a cryogenic mortar. After filtration and differential centrifugation clean nuclei were embedded in agarose plugs. Subsequent protein digestion and wash steps included gelase and dialysis to clean DNA. DNA was nick, label repaired with nt.BspQI and nt.BbvCI from New England BioLabs and run in 94 flowcells on the Irys genome mapping platform. 
 
 The flowcells generated $\sim$250x coverage of the \textit{Tribolium} genome for molecule maps $>$150 kb, the default minimum molecule map length. The 239,558 molecule maps with lengths $>$150kb had an N50 of 202.63 kb and a cumulative length of 50,579.12 Mb (Table 1). 
 
 Molecule map quality metrics were calculated using bnx\_stats (version 1.0). Histograms of per-molecule quality metrics for maps after applying a minimum length filter of either 100 kb, 150 kb and 180kb are reported in Additional file 2.
 
-Sequence-based assembly scaffolds are from version 5.0 of the \textit{Tribolium castaneum} genome (Tcas5.0). Between version 3.0 \cite{Beetle2008} and version 5.0 of the \textit{Tribolium} genome 1.03 Mb of sequence was added and 2,240 scaffolds remained after scaffold linking with Atlas-Link (version 0.01) and gap filling with GapFiller (version 1.10). The Tcas5.0 assembly has a cumulative length of 160.74 Mb and an N50 of 1.16 Mb (Table 1). Tcas5.0 was converted into an \textit{in silico} genome map with 223 contigs, a cumulative length of 152.53 Mb and an N50 of 1.20 Mb (Table 2).
+Sequence-based assembly scaffolds are from version 5.0 of the \textit{Tribolium castaneum} genome (Tcas5.0). Between version 3.0 \cite{Beetle2008} and version 5.0 (Table 2) of the \textit{Tribolium} genome 1.03 Mb of sequence was added for a length of 160.74 Mb in 2,240 scaffolds after linking with Atlas-Link (version 0.01) and gap filling with GapFiller (version 1.10). Tcas5.0 was converted into an \textit{in silico} genome map with 223 contigs, a cumulative length of 152.53 Mb (Table 2).
 
-\subsubsection*{Assembly optimization}
-Molecule maps were assembled into five distinct BioNano genome maps for \textit{Tribolium}. First, molecule maps were prepped for assembly and noise parameters were estimated using AssembleIrysCluster (version 1.0). Second, three genome maps were assembled using the relaxed, default and strict ”-T” parameters (5e-08, 5e-09 and 5e-10) as well as the stretch-adjusted molecule maps and customized noise parameters. Assemblies with these p-value thresholds are named $Relaxed\textnormal{-}T$, $Default\textnormal{-}T$ and $Strict\textnormal{-}T$ respectively. The $Strict\textnormal{-}T$ assembly was selected as the best of these three assemblies because it has a cumulative length close to 200 Mb, the estimated size of the \textit{Tribolium} genome, and a small difference between non-redundant aligned length, breath of alignment, and total aligned length (Figure 4 and Additional file 3). The best ”-T” parameter was used for two further assemblies that had relaxed minimum molecule length ($Relaxed\textnormal{-}Minlen$) of 100 kb rather than the 150 kb default or a strict minimum molecule length ($Strict\textnormal{-}Minlen$) of 180 kb. The $Strict\textnormal{-}TAndStrict\textnormal{-}Minlen$ assembly improves alignment redundancy slightly. However the cumulative length of the assembly is 21.45 Mb smaller than the estimated genome size. The $Strict\textnormal{-}TAndRelaxed\textnormal{-}Minlen$ assembly has a worse cumulative length and alignment redundancy than the $Strict\textnormal{-}T$ assembly. Because neither of the assemblies using 100 or 180 kb as the minimum molecule length improved both assembly metrics when compared to the $Strict\textnormal{-}T$ assembly, $Strict\textnormal{-}T$ was selected as the final \textit{Tribolium} genome map.
+\subsubsection*{Assembly: selecting the optimal assembly}
+Molecule maps were assembled into five distinct BioNano genome maps for \textit{Tribolium}. First, molecule maps were prepped for assembly and noise parameters were estimated using AssembleIrysCluster (version 1.0). Second, three genome maps were assembled using the relaxed, default and strict ”-T” parameters (5e-08, 5e-09 and 5e-10) as well as the stretch-adjusted molecule maps and customized noise parameters. Assemblies with these p-value thresholds are named $Relaxed\textnormal{-}T$, $Default\textnormal{-}T$ and $Strict\textnormal{-}T$ respectively. 
+
+The $Strict\textnormal{-}T$ assembly was selected as the best of these three assemblies because it has a cumulative length close to 200 Mb, the estimated size of the \textit{Tribolium} genome, and a small difference between non-redundant aligned length, breath of alignment, and total aligned length (Figure 4 and Additional file 3). The best ”-T” parameter was used for two further assemblies that had relaxed minimum molecule length ($Relaxed\textnormal{-}Minlen$) of 100 kb rather than the 150 kb default or a strict minimum molecule length ($Strict\textnormal{-}Minlen$) of 180 kb. The $Strict\textnormal{-}TAndStrict\textnormal{-}Minlen$ assembly improves alignment redundancy slightly. However the cumulative length of the assembly is 21.45 Mb smaller than the estimated genome size. The $Strict\textnormal{-}TAndRelaxed\textnormal{-}Minlen$ assembly has a worse cumulative length and alignment redundancy than the $Strict\textnormal{-}T$ assembly. Because neither of the assemblies using 100 or 180 kb as the minimum molecule length improved both assembly metrics when compared to the $Strict\textnormal{-}T$ assembly, $Strict\textnormal{-}T$ was selected as the final \textit{Tribolium} genome map.
 
 Assembly metrics were calculated using the BNGCompare script (version 1.0). More detailed assembly metrics for all five assembled genome maps are available in Additional file 2.
 
-\section*{Conclusions}
-Text
+\subsubsection*{Assembly: putative haplotypes}
 
+Although overall alignment redundancy was low for the $Strict\textnormal{-}T$ assembly, where redundant alignments of BioNano genome map contigs occurred often two contigs aligned to the same \textit{in silico} genome map contig. Redundancy in alignment to the \textit{in silico} genome map contig could indicate genomic duplications in the pupae used to generate molecule maps, assembly of alternative haplotypes in the BioNano genome map contigs, mis-assembly producing redundant contigs in the BioNano genome map or collapsed repeats in the sequence-based assembly. In Figure 5, a typical redundant alignment is shown. Only a portion of one BioNano genome map contig aligns to the \textit{in silico} genome map contig and molecule map coverage dips in the region where the only one BioNano genome map contig aligns for both contigs. Taken together the lower coverage in the partially aligned region and the number of contigs aligning may indicate the assembly of two haplotypes. 
+
+\subsubsection*{Stitch: automated and manually edited assemblies}
+
+Tcas5.1 is the output of Stitch (version 1.4.4) run for five iterations with a first minimum confidence of 13 and $PAT$ of 30 and a second minimum confidence of 8 and $PAT$ of 90. This resulted in a greater than three fold increase in N50 (Table 2). Tcas5.1 had an additional 66 gaps estimated to have positive lengths and 26 gaps where gap length is estimated to be negative (Figure 6). All extremely small negative gap lengths were flagged for further evaluation at a sequence level. In some cases alignments suggest that a chimeric sequence scaffold may need to be broken at the sequence level and its fragments incorporated into different ChLGs. For example, half of scaffold 81 from Tcas5.0 aligns between the scaffolds 80 and 82 on ChLG5 while the other half aligns between scaffolds 102 and 103 from ChLG7 (Figure 7). In cases like this for version 5.2 the arrangement supported by the genetic map was manually selected. Joins were also manually accepted if they agree with the genetic map but the alignment quality was low. Ultimately, Tcas5.2 had a higher N50 than the automated Stitch output, 4.46 Mb (Table 2), with 66 gaps with positive estimated lengths and 24 negative length gaps. 
+
+Nearly every ChLG was less fragmented in the Tcas5.2 assembly. The number of scaffolds was reduced for each ChLG (Table 4) except for the 26 highly fragmented and unlocalized scaffolds from ChLGY. For example, ChLGX was reduced from 13 scaffolds to 2 and 5 scaffolds were reoriented in the final super scaffold (Figure 8). Several scaffolds were reordered based on alignment to the BioNano genome maps. For example, scaffold 2 from ChLGX aligned between scaffold 36 and 37 of ChLG 3 and was therefore moved in Tcas5.2 (Additional file 4). Also, 19 previously unplaced scaffolds were placed within a ChLG (Table 4). 
+ 
+Alignments of Tcas5.0 and Tcas5.2 \textit{in silico} genome maps to BioNano genome maps are shown for all ChLGs in Additional file 4.
+
+\subsubsection*{Stitch: Comparison to other software}
+
+\section*{Conclusions}
+
+Regions where BioNano genome map contigs disagree with sequence assemblies (e.g. negative gap lengths or partial alignments) have been flagged by Stitch for investigation at a sequence level. Bioinformatics tools that could automate assembly editing based on such discrepancies are needed. 
 
 \section*{Availability and requirements}
 
@@ -342,7 +358,7 @@ Text
 
 \textbf{Operating system(s):} MAC and LINUX (tested on Gentoo and Ubuntu)
 
-\textbf{Programming language:} Perl, Bash
+\textbf{Programming language:} Perl, Rscript, Bash
 
 \textbf{License}: stitch.pl is available free of charge to academic and non-profit institutions.
 
@@ -352,19 +368,19 @@ Text
 
 \subsection*{\textbf{Map summary scripts}}
 
-\textbf{Project name:} cmap\_stats.pl and xmap\_stats.pl
+\textbf{Project name:} BNGCompare.pl, bnx\_stats.pl, cmap\_stats.pl and xmap\_stats.pl
 
-\textbf{Project home page:} all scripts are available on Github at \url{https://github.com/i5K-KINBRE-script-share/Irys-scaffolding/tree/master/KSU\_bioinfo\_lab/map\_editing}
+\textbf{Project home page:} all scripts are available on Github at \url{https://github.com/i5K-KINBRE-script-share/Irys-scaffolding/tree/master/KSU\_bioinfo\_lab/map\_tools} and \url{https://github.com/i5K-KINBRE-script-share/BNGCompare}
 
 \textbf{Operating system(s):} MAC and LINUX (tested on Gentoo and Ubuntu)
 
-\textbf{Programming language:} Perl
+\textbf{Programming language:} Perl, Rscript, Bash
 
-\textbf{License}: cmap\_stats.pl and xmap\_stats.pl are available free of charge to academic and non-profit institutions.
+\textbf{License}: bnx\_stats.pl, cmap\_stats.pl and xmap\_stats.pl are available free of charge to academic and non-profit institutions.
 
 \textbf{Any restrictions to use by non-academics:} Please contact authors for commercial use.
 
-\textbf{Dependencies:} cmap\_stats.pl and xmap\_stats.pl have no dependencies.
+\textbf{Dependencies:} bnx\_stats.pl, cmap\_stats.pl and xmap\_stats.pl have no dependencies.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%                                          %%
@@ -474,30 +490,31 @@ Text
 \end{table}
 
 \begin{table}[h!]
-	\caption{\textit{Tribolium} assembly Results. Assembly metrics for Tcas5.0 (the starting sequence scaffolds), the \textit{in silico} genome map, the BioNano genome map of assembled molecules and the final super scaffolded sequence scaffolds (Tcas5.2) produced using stitch.pl for the \textit{Tribolium} genome.}
+	\caption{\textit{Tribolium} assembly Results. Assembly metrics for Tcas5.0 (the starting sequence scaffolds), the \textit{in silico} genome map, the BioNano genome map of assembled molecules, the automated output of Stitch (Tcas5.1) and the manually currated sequence assembly (Tcas5.2) for the \textit{Tribolium} genome.}
 	\begin{tabular}{cccc}
 		\hline
 		& N50 (Mb)  & Number & Cumulative Length (Mb)\\ \hline
-		Sequence scaffolds & 1.16 & 2240 & 160.74\\
+		Tcas5.0 sequence scaffolds & 1.16 & 2240 & 160.74\\
 		\textit{in silico} genome map & 1.20 &  223 & 152.53\\
 		BioNano genome map & 1.35 &  216 & 200.47\\
-		Super scaffolded sequence scaffolds & 4.46 & 2150 & 165.92\\ \hline
+		Tcas5.1 sequence scaffolds & 3.85 & 2148 & 165.72\\
+		Tcas5.2 sequence scaffolds & 4.46 & 2150 & 165.92\\ \hline
 	\end{tabular}
 \end{table}
 \begin{table}[h!]
-\caption{Alignment of BioNano assembly to reference genome for \textit{Tribolium} genome. Breadth of alignment coverage (non-redundant alignment), length of total alignment (including redundant alignments) and percent of CMAP covered (non-redundantly) were calculated for the \textit{in silico} genome map and the BioNano genome map of the \textit{Tribolium} genome the using xmap\_stats.pl.}
+\caption{Alignment of BioNano assembly to the \textit{in silico} genome map of Tcas5.0. Breadth of alignment coverage (non-redundant alignment), length of total alignment (including redundant alignments) and percent of CMAP covered (non-redundantly) were calculated for the \textit{in silico} genome map and the BioNano genome map of the \textit{Tribolium} genome the using xmap\_stats.pl.}
       \begin{tabular}{cccc}
         \hline
            & Breadth of alignment coverage (Mb) & Length of total alignment (Mb) & Percent of CMAP aligned \\ \hline
-        \textit{in silico} genome map from FASTA & 124.04 & 132.40 & 81 \\
+        \textit{in silico} genome map & 124.04 & 132.40 & 81 \\
         BioNano genome map & 131.64 & 132.34 & 67 \\ \hline
       \end{tabular}
 \end{table}
 \begin{table}[h!]
-	\caption{\textit{Tribolium} chromosome linkage groups before and after super scaffolding. The number of sequence scaffolds in the Tcas5.0 ChLG bins and the number of sequence super scaffolds and scaffolds in the Tcas5.2 ChLG bins. The number of sequence scaffolds  that were unplaced in Tcas5.0 and placed with a ChLG in Tcas5.2 is also listed. }
+	\caption{\textit{Tribolium} chromosome linkage groups before and after super scaffolding. The number of sequence scaffolds in the ordered Tcas5.0 ChLG bins and the number of sequence super scaffolds and scaffolds in the Tcas5.2 ChLG bins. The number of sequence scaffolds that were unplaced in Tcas5.0 and placed with a ChLG in Tcas5.2 is also listed. }
 	\begin{tabular}{cccc}
 		\hline
-		Chromosome linkage group (ChLG) & Tcas5.0 sequence scaffolds & Unplaced sequence scaffolds added in Tcas5.2 & Tcas5.2 sequence super scaffolds \\ \hline
+		Chromosome linkage group (ChLG) & Tcas5.0 scaffolds & Unplaced scaffolds added in Tcas5.2 & Tcas5.2 super scaffolds \\ \hline
 		X & 13 & +2 & 2\\
 		2 & 18 & +1 & 10\\
 		3 & 29 & +4 & 20\\
@@ -507,8 +524,8 @@ Text
 		7 & 15 & - & 6\\
 		8 & 14 & +1 & 8\\
 		9 & 21 & - & 9\\
-		10 & 12 & +2 & 11\\ \hline
-		Total & 157 & 78 & 19\\ \hline
+		10 & 12 & +2 & 10\\ \hline
+		Total & 157 & 19 & 77\\ \hline
 	\end{tabular}
 \end{table}
 
@@ -530,8 +547,9 @@ Text
   \subsection*{Additional file 3 --- Assembly of \textit{Tribolium} genome maps with range of parameters}
     Detailed assembly metrics for assembled genome maps using strict, default and relaxed "-T" parameter, p-value threshold are named Relaxed-T, Default-T and Strict-T respectively. The best "-T" parameter was used for two additional assemblies with either relaxed minimum molecule length (relaxed-minlen) of 100 kb, rather than the 150 kb default, or a strict minimum molecule length (strict-minlen) of 180 kb. 
 
-  \subsection*{Additional file 4 --- Sample additional file title}
-    Additional file descriptions text.
+  \subsection*{Additional file 4 --- ChLGs before and after super scaffolding }
+    Alignments of Tcas5.0 and Tcas5.2 \textit{in silico} genome maps to BioNano genome maps for all ChLGs. BioNano genome maps (blue with molecule coverage shown in dark blue) aligned to the \textit{in silico} genome maps (green with contigs overlaid as translucent colored squares). Alignment to both Tcas5.2 super scaffolds (top alignment) and Tcas5.0 scaffolds (bottom alignment) are shown.
+
 
 
 \end{backmatter}
