@@ -37,7 +37,7 @@ print "###########################################################\n";
 ###############################################################################
 ##############                get arguments                  ##################
 ###############################################################################
-my $bnx_list_file = "/Users/jennifer_shelton/Desktop/stitch_paper/figures/flowcell_date.csv";
+my $bnx_list_file = "/home/irys/stitch_paper/figures/flowcell_date.csv";
 open (my $read_in_bnx_list, "<", $bnx_list_file) or die "Can't open $bnx_list_file: $!";
 
 my $input_bnx;
@@ -72,21 +72,14 @@ sub next_three # take the next three lines in a subroutine
 ##############              run                              ##################
 ###############################################################################
 use bignum;
-open (my $temp_bnx_lengths, ">", 'temp_bnx_by_date_lengths.tab') or die "Can't open temp_bnx_by_date_lengths.tab: $!"; # Open temp files
-
+open (my $temp_bnx_lengths, ">", '/home/irys/stitch_paper/figures/flowcell_date_and_metrics.csv') or die "Can't open /home/irys/stitch_paper/figures/flowcell_date_and_metrics.csv: $!"; # Open temp files
+print $temp_bnx_lengths "date,input_bnx,total_flowcell_length_Mb,bnx_count\n";
 my (@lengths,@mol_intensities,@mol_snrs,@mol_NumberofLabels);
 my $total_length =0;
 my ($bnx_count,$scan_count);
 print "Reading BNX files of molecule maps...\n";
-#my $file_count = scalar(@ARGV); # get number of bnx files
-#my $current_file_count = $file_count;
-#if ($file_count == 0)
-#{
-#    print "No BNX files have been given exiting.\n";
-#    exit;
-#}
 my $bnx_file_num = 1;
-while ($read_in_bnx_list)
+while (<$read_in_bnx_list>)
 {
     print "Reading BNX files of molecule map $bnx_file_num ...\n";
     ++$bnx_file_num;
@@ -141,28 +134,15 @@ while ($read_in_bnx_list)
             }
         }
     }
-    print "$date,$input_bnx,$total_flowcell_length,$bnx_count\n";
-    my $new_total_length = $total_length + $total_flowcell_length;
-    $total_length = $new_total_length;
+    if ($total_flowcell_length) #skip aborted chips
+    {
+        my $total_flowcell_length_Mb = $total_flowcell_length / 1000;
+        print $temp_bnx_lengths "$date,$input_bnx,$total_flowcell_length_Mb,$bnx_count\n";
+        my $new_total_length = $total_length + $total_flowcell_length_Mb;
+        $total_length = $new_total_length;
+    }
 }
-##############################################################################
-# CALCULATE N50:
-# Now calculate the N50 from the array of map lengths and the total length
-###############################################################################
-#@lengths=sort{$b<=>$a} @lengths; #Sort lengths largest to smallest
-##print scalar(@lengths)."\n";
-##print "$total_length\n";
-#my $current_length; #create a new variable for N50
-#my $fraction=$total_length;
-#foreach(my $j=0; $fraction>$total_length/2; $j++) #until $fraction is greater than half the total length increment the index value $j for @lengths
-#{
-#    $current_length=$lengths[$j];
-#    $fraction -= $current_length; # subtract current length from $fraction
-#}
-#$current_length = $current_length;
-#$total_length = $total_length/1000;
-#
-#print "Molecule map N50: $current_length (kb)\n";
+
 print "Cumulative length of molecule maps: $total_length (Mb)\n";
 print "Number of molecule maps: $bnx_count\n";
 
@@ -170,9 +150,10 @@ print "Number of molecule maps: $bnx_count\n";
 ##############               Graph data                      ##################
 ###############################################################################
 print "Graphing data...\n";
+
 #
-#my $graph_data = `Rscript ${dirname}/histograms.R temp_bnx_lengths.tab temp_bnx_mol_intensities.tab temp_bnx_mol_snrs.tab temp_bnx_mol_NumberofLabels.tab temp_mean_label_snr.tab temp_mean_label_intensity.tab 'Molecule map N50: $current_length (kb)' 'Cumulative length of molecule maps: $total_length (Mb)' 'Number of molecule maps: $bnx_count'`;
-#print "$graph_data\n";
+my $graph_data = `Rscript /home/irys/stitch_paper/figures/graph_flowcell_by_date.R`;
+print "$graph_data\n";
 #unlink qw/temp_bnx_lengths.tab temp_bnx_mol_intensities.tab temp_bnx_mol_snrs.tab temp_bnx_mol_NumberofLabels.tab temp_mean_label_snr.tab temp_mean_label_intensity.tab Rplots.pdf/;
 
 print "Done\n";
