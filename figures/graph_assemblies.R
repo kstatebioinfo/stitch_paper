@@ -1,8 +1,8 @@
 #!/usr/local/bin/Rscript
-# Makes a histogram from a CSV list of gap lengths
+# Makes a histogram from BioNano genome map assembly metrics
 
 pdf('/Users/jennifer_shelton/Desktop/stitch_paper/figures/Fig_4_assembly_metrics.pdf', bg='white', width=9, height=9)
-assemblymetrics <- read.csv("/Users/jennifer_shelton/Desktop/stitch_paper/figures/testSupplemental_2_Assembly_parameter_tests.csv", header=TRUE)
+assemblymetrics <- read.csv("/Users/jennifer_shelton/Desktop/stitch_paper/figures/Supplemental_2_Assembly_parameter_tests.csv", header=TRUE)
 
 y1 <- (assemblymetrics$Breadth_of_alignment)
 
