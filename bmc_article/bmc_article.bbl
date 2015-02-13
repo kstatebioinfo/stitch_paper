@@ -1,6 +1,6 @@
 %% BioMed_Central_Bib_Style_v1.01
 
-\begin{thebibliography}{3}
+\begin{thebibliography}{4}
 % BibTex style file: bmc-mathphys.bst (version 2.1), 2014-07-24
 \ifx \bisbn   \undefined \def \bisbn  #1{ISBN #1}\fi
 \ifx \binits  \undefined \def \binits#1{#1}\fi
@@ -99,6 +99,54 @@ doi:10.1038/nbt.2303
 \end{barticle}
 \endbibitem
 
+%%% 4
+\bibitem{Assem22013}
+\begin{botherref}
+\oauthor{\bsnm{Bradnam}, \binits{K.}},
+\oauthor{\bsnm{Faas}, \binits{J.}},
+\oauthor{\bsnm{Alexandrov}, \binits{A.}},
+\oauthor{\bsnm{Baranay}, \binits{P.}},
+\oauthor{\bsnm{Bechner}, \binits{M.}},
+\oauthor{\bsnm{Birol}, \binits{I.}},
+\oauthor{\bsnm{Boisvert}, \binits{S.}},
+\oauthor{\bsnm{Chapman}, \binits{J.}},
+\oauthor{\bsnm{Chapuis}, \binits{G.}},
+\oauthor{\bsnm{Chikhi}, \binits{R.}},
+\oauthor{\bsnm{Chitsaz}, \binits{H.}},
+\oauthor{\bsnm{Chou}, \binits{W.}},
+\oauthor{\bsnm{Corbeil}, \binits{J.}},
+\oauthor{\bsnm{Del~Fabbro}, \binits{C.}},
+\oauthor{\bsnm{Docking}, \binits{T.R.}},
+\oauthor{\bsnm{Durbin}, \binits{R.}},
+\oauthor{\bsnm{Earl}, \binits{D.E.}},
+\oauthor{\bsnm{Emrich}, \binits{S.}},
+\oauthor{\bsnm{Fedotov}, \binits{P.}},
+\oauthor{\bsnm{Fonseca}, \binits{N.A.}},
+\oauthor{\bsnm{Ganapathy}, \binits{G.}},
+\oauthor{\bsnm{Gibbs}, \binits{R.A.}},
+\oauthor{\bsnm{Gnerre}, \binits{S.}},
+\oauthor{\bsnm{Godzaridis}, \binits{E.}},
+\oauthor{\bsnm{Goldstein}, \binits{S.}},
+\oauthor{\bsnm{Haimel}, \binits{M.}},
+\oauthor{\bsnm{Hall}, \binits{G.}},
+\oauthor{\bsnm{Haussler}, \binits{D.}},
+\oauthor{\bsnm{Hiatt}, \binits{J.B.}},
+\oauthor{\bsnm{Ho}, \binits{I.Y.}},
+\oauthor{\bsnm{Howard}, \binits{J.}},
+\oauthor{\bsnm{Hunt}, \binits{M.}},
+\oauthor{\bsnm{Jackman}, \binits{S.D.}},
+\oauthor{\bsnm{Jaffe}, \binits{D.B.}},
+\oauthor{\bsnm{Jarvis}, \binits{E.}},
+\oauthor{\bsnm{Jiang}, \binits{H.e.a.}}:
+Assemblathon 2: evaluating de novo methods of genome assembly in three
+  vertebrate species.
+GigaScience
+\textbf{2}(10)
+(2013).
+10.1186/2047-217X-2-10
+\end{botherref}
+\endbibitem
+
 \end{thebibliography}
 
 \newcommand{\BMCxmlcomment}[1]{}
@@ -163,6 +211,54 @@ doi:10.1038/nbt.2303
   <fpage>949</fpage>
   <lpage>955</lpage>
   <note>http://dx.doi.org/10.1038/nature06784</note>
+</bibl>
+
+<bibl id="B4">
+  <title><p>Assemblathon 2: evaluating de novo methods of genome assembly in
+  three vertebrate species</p></title>
+  <aug>
+    <au><snm>Bradnam</snm><fnm>K</fnm></au>
+    <au><snm>Faas</snm><fnm>J</fnm></au>
+    <au><snm>Alexandrov</snm><fnm>A</fnm></au>
+    <au><snm>Baranay</snm><fnm>P</fnm></au>
+    <au><snm>Bechner</snm><fnm>M</fnm></au>
+    <au><snm>Birol</snm><fnm>I</fnm></au>
+    <au><snm>Boisvert</snm><fnm>S</fnm></au>
+    <au><snm>Chapman</snm><fnm>J</fnm></au>
+    <au><snm>Chapuis</snm><fnm>G</fnm></au>
+    <au><snm>Chikhi</snm><fnm>R</fnm></au>
+    <au><snm>Chitsaz</snm><fnm>H</fnm></au>
+    <au><snm>Chou</snm><fnm>W</fnm></au>
+    <au><snm>Corbeil</snm><fnm>J</fnm></au>
+    <au><snm>Del Fabbro</snm><fnm>C</fnm></au>
+    <au><snm>Docking</snm><fnm>T R</fnm></au>
+    <au><snm>Durbin</snm><fnm>R</fnm></au>
+    <au><snm>Earl</snm><fnm>D E</fnm></au>
+    <au><snm>Emrich</snm><fnm>S</fnm></au>
+    <au><snm>Fedotov</snm><fnm>P</fnm></au>
+    <au><snm>Fonseca</snm><fnm>N A</fnm></au>
+    <au><snm>Ganapathy</snm><fnm>G</fnm></au>
+    <au><snm>Gibbs</snm><fnm>R A</fnm></au>
+    <au><snm>Gnerre</snm><fnm>S</fnm></au>
+    <au><snm>Godzaridis</snm><fnm>E</fnm></au>
+    <au><snm>Goldstein</snm><fnm>S</fnm></au>
+    <au><snm>Haimel</snm><fnm>M</fnm></au>
+    <au><snm>Hall</snm><fnm>G</fnm></au>
+    <au><snm>Haussler</snm><fnm>D</fnm></au>
+    <au><snm>Hiatt</snm><fnm>J B</fnm></au>
+    <au><snm>Ho</snm><fnm>I Y</fnm></au>
+    <au><snm>Howard</snm><fnm>J</fnm></au>
+    <au><snm>Hunt</snm><fnm>M</fnm></au>
+    <au><snm>Jackman</snm><fnm>S D</fnm></au>
+    <au><snm>Jaffe</snm><fnm>D B</fnm></au>
+    <au><snm>Jarvis</snm><fnm>E</fnm></au>
+    <au><snm>Jiang</snm><fnm>Hea</fnm></au>
+  </aug>
+  <source>GigaScience</source>
+  <pubdate>2013</pubdate>
+  <volume>2</volume>
+  <issue>10</issue>
+  <note>10.1186/2047-217X-2-10</note>
 </bibl>
 
 </refgrp>
