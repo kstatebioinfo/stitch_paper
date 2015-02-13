@@ -134,9 +134,17 @@ addressref={aff1},                   % id's of addresses, e.g. {aff1,aff2}
 email={nanyan@ksu.edu}   % email address
 ]{\inits{N}\fnm{Nanyan} \snm{Lu}}
 \author[
+   addressref={aff2},
+   email={Elam@bionanogenomics.com} % email address
+]{\inits{ET}\fnm{Ernest E} \snm{Lam}}
+\author[
+   addressref={aff2},
+   email={tanantharaman@bionanogenomics.com} % email address
+]{\inits{T}\fnm{Thomas} \snm{Anantharaman}}
+\author[
    addressref={aff1},
       corref={aff1},                       % id of corresponding address, if any
-   email={sjbrown@ksu.edu}
+   email={sjbrown@ksu.edu} % email address
 ]{\inits{SJ}\fnm{Susan J} \snm{Brown}}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -150,10 +158,17 @@ email={nanyan@ksu.edu}   % email address
 
 \address[id=aff1]{%                           % unique id
   \orgname{Department of Biology, Kansas State University}, % university, etc
-  %\street{Waterloo Road},                     %
-  %\postcode{}                                % post or zip code
+  %\street{},                     %
+  %\postcode{66506}                                % post or zip code
   \city{Manhattan},                              % city
   \cny{KS, USA}                                    % country
+}
+\address[id=aff2]{%                           % unique id
+  \orgname{BioNano Genomics}, % university, etc
+  %\street{},                     %
+  %\postcode{92121}                                % post or zip code
+  \city{San Diego},                              % city
+  \cny{CA, USA}                                    % country
 }
 
 
@@ -255,6 +270,9 @@ The quality of genome assemblies varies greatly. Initial assembly drafts, whethe
 \subsection*{Data formats}
 The tools described make use of three file formats developed by BioNano. The Irys platform images ultra-long molecules of genomic DNA that are nick-labeled at 7 (bp) motifs using one or more nicking endonucleases and fluorescently labeled nucleotides. Molecules captured in the TIFF images are converted to BNX format text files that include label position for each molecule (steps 1 and 2 Figure 1). These BNX files are referred to as molecule maps. Consensus Map (CMAP) files include the molecule length and label position for long genomic regions that are either inferred from assembly of BNX molecules (steps 7 and 8 Figure 1) or \textit{in silico} from sequence scaffolds (steps 3 and 4 Figure 1). These two types of CMAPs are referred to as BioNano genome maps and \textit{in silico} genome maps respectively. The alignment of two CMAPs is stored as an XMAP text file that includes alignment coordinates and an alignment confidence score (step 10 Figure 1).
 
+\subsection*{Other software tools}
+The hybridScaffold software first creates hybrid \textit{in silico}/BioNano genome map contigs from the XMAP alignment file. The output genome maps are called hybrid scaffolds and are aligned to the original \textit{in silico} genome maps. This alignment is used to output a FASTA file of sequence super scaffolds. These sequences include ambiguous bases to indicated where labels occur within gaps. Because they include extensions into regions with genome maps but no sequence data they may begin or end with N gaps. HybridScaffold only generates  hybrid \textit{in silico}/BioNano genome map contigs and therefore super scaffolds if no conflict (e.g. negative gap lengths or otherwise conflicting alignments) are indicated by the alignment of \textit{in silico} and BioNano genome maps. All conflicting alignments are excluded from the hybrid scaffold genome map and flagged for further evaluation at the sequence level. For highly refined genome assemblies this lack of tolerance for noisy alignments has not hindered genome improvement projects. However, for genomes at an earlier stage of completion this may be too stringent.
+
 \section*{Implementation}
 \subsection*{Assembly preparation}
 We have developed AssembleIrysCluster to prepare BNX files for assembly and produce nine customized assembly scripts (sections C-G Figure 2).
@@ -298,9 +316,11 @@ This algorithm is meant to be an intermediate refinement of draft genomes prior 
 \section*{Results and Discussion}
 
 \subsubsection*{Datasets}
-High molecule weight DNA was isolated from young \textit{Tribolium castaneum} pupae from the GA2 line that was inbred 20 generations. The GA2 line was also used for the genome sequence based assembly.
+High molecular weight DNA was isolated from young \textit{Tribolium castaneum} pupae from the GA2 line that was inbred 20 generations. The GA2 line was also used for the genome sequence based assembly.
 
-Using Knickers, an \textit{in silico} label density calculator, we estimated that the \textit{Tribolium castaneum} genome had 8.66 nt.BspQI labels per 100 kb and 5.51nt.BbvCI labels per 100 kb. The ideal number of labels per 100 kb is between 10 and 15 therefore we dual nicked with both enzymes. DNA was nicked, labeled with flourescent nucleotides and repaired according to BioNano protocol and 94 BNX files, "flowcells", were produced from the Irys genome mapping platform (Figure 4 and Additional file 2). The high number of BNX files produced is due to several factors. First, while typically one BNX file is produced per flowcell if a run is aborted and restarted new files are produced for the same flowcell. Additionaly, data was originally generated using the Irys V1 chip while the Irys platform was under beta testing. Over time more cumulative length per "flowcell" was produced (Figure 4 and Additional file 2). After the upgrade to the V2 chip an increase was also observed in data per "flowcell" (Figure 4 and Additional file 2).
+Using Knickers, an \textit{in silico} label density calculator, we estimated that the \textit{Tribolium castaneum} genome had 8.66 nt.BspQI labels per 100 kb and 5.51nt.BbvCI labels per 100 kb. The ideal number of labels per 100 kb is between 10 and 15 therefore we dual nicked with both enzymes. DNA was nicked, labeled with flourescent nucleotides and repaired according to BioNano protocol and 93 BNX files were produced from the Irys genome mapping platform (Figure 4 and Additional file 2). Four corrupted files (cumulative length = 0) were excluded from this analysis. 
+
+The high number of BNX files produced is due to several factors. Typically one BNX file is produced per flowcell, however the Irys chips are reusable therefore if nano channels are clear after the initial number of scans additional scans are run producing an additional BNX file. Another reason for the large number of files is that data was originally generated using the Irys V1 chip while the Irys platform was under beta testing. Over time maximum cumulative length per BNX file increased (Figure 4 and Additional file 2). After the upgrade to the V2 chip an increase was also observed in maximum data per BNX file (Figure 4 and Additional file 2).
 
 Molecule map quality metrics were calculated using bnx\_stats (version 1.0). We generated $\sim$250x coverage of the \textit{T. castaneum} genome for molecule maps $>$150 kb, the default minimum molecule map length. The 239,558 molecule maps with lengths $>$150kb had an N50 of 202.63 kb and a cumulative length of 50,579.12 Mb (Table 1). Histograms of per-molecule quality metrics for maps after applying a minimum length filter of either 100 kb, 150 kb and 180kb are reported in Additional file 3. 
 
@@ -319,21 +339,26 @@ The \textit{T. castaneum} BioNano genome map has an N50 of 1.35 Mb, a cumulative
 
 \subsubsection*{Stitch: Automated and Manually Edited Assemblies}
 
-Tcas5.1 is the output of Stitch (version 1.4.4) run for five iterations with two sets of alingment filters. To select quality alignments from regions of high and low label density, the first minimum confidence was 13 and the $PAT$ was 30 and the second minimum confidence was 8 and the $PAT$ was 90. The resulting superscaffolds showed a greater than three fold increase in N50 from 1.16 to 3.85 Mb (Table 2). 
+Tcas5.1 is the output of Stitch (version 1.4.4) run for five iterations with two sets of alignment filters. To select quality alignments from regions of high and low label density, the first minimum confidence was 13 and the $PAT$ was 30 and the second minimum confidence was 8 and the $PAT$ was 90. The resulting superscaffolds showed a greater than three fold increase in N50 from 1.16 to 3.85 Mb (Table 2). 
 
-The Tcas5.1 super scaffolds captured an additional 92 gaps between Tcas5.0 sequence scaffolds. 66 gaps were estimated to have positive gap lengths and were represented in the sequence assembly with their estimated size (Figure 6). 26 gaps were estimated to be negative and were represented with spacers of 100 N's (Figure 6). Extremely small negative gap lengths (< -20 kb) were flagged for further evaluation at a sequence level. In some cases alignments suggest that a chimeric sequence scaffold may need to be broken at the sequence level and its fragments incorporated into different ChLGs. For example, half of scaffold 81 from Tcas5.0 aligns between the scaffolds 80 and 82 on ChLG5 while the other half aligns between scaffolds 102 and 103 from ChLG7 (Figure 7). In cases like this for version 5.2 the arrangement supported by the genetic map was manually selected. Joins were also manually accepted if they agree with the genetic map but the alignment quality was low. Ultimately, Tcas5.2 had a higher N50 than the automated Stitch output, 4.46 Mb (Table 2), with 66 gaps with positive estimated lengths and 24 negative length gaps. 
+The Tcas5.1 super scaffolds captured an additional 92 gaps between Tcas5.0 sequence scaffolds. Sixty-six gaps were estimated to have positive gap lengths and were represented in the sequence assembly with their estimated size (Figure 6). Twenty-six gaps were estimated to have negative lengths and were represented with spacers of 100 N's (Figure 6). Extremely small negative gap lengths ($< -20$ kb) were flagged for further evaluation at a sequence level. In some cases extremely small negative gaps lengths suggest that a chimeric sequence scaffold may need to be broken at the sequence level and its fragments incorporated into different ChLGs. For example, half of scaffold 81 from Tcas5.0 aligns between the scaffolds 80 and 82 on ChLG5 (section A Figure 7) while the other half aligns between scaffolds 102 and 103 from ChLG7 (section B Figure 7). Scaffold 81 from Tcas5.0 was placed in ChLG5 in the \textit{T. castaneum} genetic map. The arrangement supported by the genetic map was selected for cases like this where manual editing was required. The manually curated assembly is referred to as Tcas5.2. In Tcas5.2 joins were also manually accepted if they agree with the genetic map but the alignment quality was low. Ultimately, Tcas5.2 had a higher N50 than the automated Stitch output, 4.46 Mb (Table 2), with 66 gaps with positive estimated lengths and 24 negative length gaps. 
 
-Nearly every ChLG was less fragmented in the Tcas5.2 assembly. The number of scaffolds was reduced for each ChLG (Table 4) except for the 26 relatively short (N50 = 0.05 Mb) and unlocalized scaffolds from ChLGY. For example, ChLGX was reduced from 13 scaffolds to 2 and 5 scaffolds were reoriented in the final super scaffold or chromosome build (Figure 8). Several scaffolds were reordered based on alignment to the BioNano genome maps. For example, scaffold 2 from ChLGX aligned between scaffold 36 and 37 of ChLG 3 and was therefore moved in Tcas5.2 (Additional file 5). Also, 19 previously unplaced scaffolds were anchored within a ChLG (Table 4). Improvements in Tcas5.2 over Tcas5.0 are shown in alignments of the respective \textit{in silico} genome maps to BioNano genome maps  for all ChLGs in Additional file 5.
+Nearly every ChLG was less fragmented in the Tcas5.2 assembly than in the Tcas5.0 assembly. The number of scaffolds was reduced for each ChLG (Table 4) except for the 26 relatively short (N50 = 0.05 Mb) and unlocalized scaffolds from ChLGY. For example, ChLGX was reduced from 13 scaffolds (section B Figure 8) to 2 in the final super scaffold or chromosome build (section A Figure 8). Five scaffolds were reoriented in ChLGX based on alignment to the BioNano genome maps (section A and B Figure 8). Scaffolds were also reordered based on alignment to BioNano genome maps. For example, scaffold 2 from ChLGX aligned between scaffold 36 and 37 of ChLG 3 and was therefore moved in Tcas5.2 (Additional file 5). Also, 19 previously unplaced scaffolds were anchored within a ChLG (Table 4). Improvements in Tcas5.2 over Tcas5.0 are shown in alignments of the respective \textit{in silico} genome maps to BioNano genome maps  for all ChLGs in Additional file 5.
 
 The Tcas5.2 Whole Genome Shotgun project has been deposited at DDBJ/EMBL/GenBank under the accession AAJJ00000000. The version described in this paper is version AAJJ02000000. Two scaffolds were removed from the genome assembly because they were identified as contaminants after they blasted to the \textit{Bos frontalis} genome.
 
 \subsubsection*{Assembly: Putative Haplotypes}
 
-We found evidence of putative haplotypes during visual inspection of alignments. Although overall alignment redundancy was low for the $Strict\textnormal{-}T$ assembly, where redundant alignments of BioNano genome map contigs occurred often two contigs aligned to the same \textit{in silico} genome map contig. Redundancy in alignment to the \textit{in silico} genome map contig could indicate segmental duplications, assembly of alternative haplotypes in the BioNano genome map contigs, mis-assembly producing redundant contigs in the BioNano genome map or collapsed repeats in the sequence-based assembly. A typical redundant alignment is shown in Figure 9, where a small region of one BioNano genome map contig aligns while another aligns across most of the \textit{in silico} genome map contig(section A Figure 9). Molecule map coverage decreases for each BioNano map contig in the region where only one of them aligns to the \textit{in silico} genome map contig (section A,B and C Figure 9). Taken together the region of lower coverage and the number of contigs aligning (two) may indicate the assembly of two haplotypes. 
+We found evidence of putative haplotypes during visual inspection of alignments. Although overall alignment redundancy was low for the $Strict\textnormal{-}T$ assembly, where redundant alignments of BioNano genome map contigs occurred often two contigs aligned to the same \textit{in silico} genome map contig. Redundancy in alignment to the \textit{in silico} genome map contig could indicate segmental duplications, assembly of alternative haplotypes in the BioNano genome map contigs, mis-assembly producing redundant contigs in the BioNano genome map or collapsed repeats in the sequence-based assembly. A typical redundant alignment is shown in Figure 9, where a small region of one BioNano genome map contig aligns while another aligns across most of the \textit{in silico} genome map contig (section A Figure 9). Molecule map coverage decreases for each BioNano map contig in the region where only one of them aligns to the \textit{in silico} genome map contig (section A,B and C Figure 9). Taken together the region of lower coverage and the number of contigs aligning (two) may indicate the assembly of two haplotypes. 
 
 \subsubsection*{Stitch: Comparison to Other Software}
 
-We also tested hybridScaffold (version 3076) from BioNano. The hybridScaffold software was developed to scaffold the highly refined human genome. Super scaffolds are only generated if no conflict (e.g. negative gap lengths) is indicated at the sequence level
+We also ran hybridScaffold (version 3076) from BioNano to improve the \textit{T. castaneum} sequence assembly using the \textit{T. castaneum} BioNano genome map and the \textit{in silico} genome map from Tcas5.0. HybridScaffold improved sequence-based assembly N50 from 1.16 Mb for Tcas5.0 to 1.83 Mb however the increase in N50 was not as great as the increase after running Stitch ( N50 = 3.85 Mb) (Table 2). HybridScaffold decreased the total number of scaffolds in the sequence assembly by 30 scaffolds while Stitch reduced the number of scaffolds by 92. Hybrid scaffold increased the cumulative length of the assembly by 14.80 Mb while Stitch only increased the length of the assembly by 4.98 Mb. The increase in length from hybridScaffold may be due to extension of sequence-based scaffolds with genome map contigs that overlap the start of end of a sequence-based scaffold.
+
+Overall, we found hybridScaffold to be more aggressive than Stitch. In Figure 8 section B, 13 \textit{in silico} genome map contigs align to three BioNano map contigs. The order of 11 of these \textit{in silico} genome maps contigs agrees with the order suggested by the genetic map (after reorienting three \textit{in silico} genome maps contigs). The \textit{in silico} genome map contigs 12 and 13, for example, align with a negative gap length between them, suggesting they may be mis-assembled or that local assembly may collapse the assembly in this region. A genome refinement tool like Stitch or hybridScaffold could take several approaches to this kind of conflicting evidence. The approach of Stitch would be to record that we have confirmed the relative position of these scaffolds in the larger context of they genome in a new super scaffold using a 100 bp spacer gap to indicate that exact overlap or gap length is unclear (section A Figure 8). Stitch would also report the negative gap length to the user to allow further evaluation at the sequence level at a later date. Alternatively, hybridScaffold would only automate genome improvements that are unambiguously supported by all lines of evidence (e.g. sequence-based and BioNano map-based) and leave any ambiguous decisions to a human curator. Therefore hybridScaffold would only report the conflicting alignment. This is why only scaffold 13, for example, is not included in the hybrid map produced by hybridScaffold (section C Figure 8). 
+
+For highly refined genome assemblies this lack of tolerance for noisy alignments has not hindered genome improvement projects. However, for genomes at an earlier stage of completion this may be too stringent. The hybridScaffold software, for example, was developed to scaffold the human genome and found to work well for this application (CITE NATURE METHODS PAPER). For smaller genome projects assembly updates may need to be released in stages (e.g. first the general improvement in scaffold order and orientation followed by further refinement at the sequence level). For projects such as \textit{T. castaneum} a more aggressive algorithm such as Stitch may be preferred in order to release the bulk of the new information about the higher order arrangement of the genome to the community of \textit{T. castaneum} researchers quickly. Further refinement at a sequence level can be released in subsequent genome updates as they are completed.
+ 
 
 \section*{Conclusions}
 
@@ -458,7 +483,7 @@ Regions where BioNano genome map contigs disagree with sequence assemblies (e.g.
       \end{figure} 
 \begin{figure}[h!]
 	\caption{\csentence{Cumulative length per BNX file for \textit{T. castaneum} data generated over time.}
-		Cumulative length of molecule maps > 150 kb are ploted on the y-axis (purple X), the upgrade to the V2 Irys chip (grey dashed line) is ploted and date is indicated on the x-axis. Data was generated from 03-2013 to 01-2014.}
+		Cumulative length of molecule maps > 150 kb are ploted on the y-axis (purple X), the upgrade to the V2 Irys chip (grey dashed line) is ploted and date is indicated on the x-axis. Data was generated from 03-2013 to 01-2014. Aborted runs (cumulative length = 0) excluded. }
 \end{figure}
 \begin{figure}[h!]
 	\caption{\csentence{Comparison of the BioNano genome maps assembled from the \textit{T. castaneum} data using five sets of parameters.}
@@ -506,7 +531,7 @@ Regions where BioNano genome map contigs disagree with sequence assemblies (e.g.
 \end{table}
 
 \begin{table}[h!]
-	\caption{\textit{T. castaneum} assembly Results. Assembly metrics for Tcas5.0 (the starting sequence scaffolds), the \textit{in silico} genome map, the BioNano genome map of assembled molecules, the automated output of Stitch (Tcas5.1) and the manually currated sequence assembly (Tcas5.2) for the \textit{T. castaneum} genome.}
+	\caption{\textit{T. castaneum} assembly Results. Assembly metrics for Tcas5.0 (the starting sequence scaffolds), the \textit{in silico} genome map, the BioNano genome map of assembled molecules, the automated output of Stitch (Tcas5.1), the manually currated sequence assembly (Tcas5.2) and the sequence assembly produced by the BioNano hybridScaffold software for the \textit{T. castaneum} genome.}
 	\begin{tabular}{cccc}
 		\hline
 		& N50 (Mb)  & Number & Cumulative Length (Mb)\\ \hline
@@ -514,7 +539,8 @@ Regions where BioNano genome map contigs disagree with sequence assemblies (e.g.
 		\textit{in silico} genome map & 1.20 &  223 & 152.53\\
 		BioNano genome map & 1.35 &  216 & 200.47\\
 		Tcas5.1 sequence scaffolds & 3.85 & 2148 & 165.72\\
-		Tcas5.2 sequence scaffolds & 4.46 & 2150 & 165.92\\ \hline
+		Tcas5.2 sequence scaffolds & 4.46 & 2150 & 165.92\\ 
+		Tcas BioNano hybridScaffold & 1.83 & 2210 &175.54 \\ \hline
 	\end{tabular}
 \end{table}
 \begin{table}[h!]
@@ -558,7 +584,7 @@ Regions where BioNano genome map contigs disagree with sequence assemblies (e.g.
 \subsection*{Additional file 1 --- Molecule stretch per scan in recent flowcells.} Bases per pixel (bpp) is ploted for scans 1..$n$ for each flowcell of mouse lemur molecules (purple). The first scan of each flowcell is indicated with a grey dashed line. The pre-adjusted molecule map stretch was determined by aligning molecules to the \textit{in silico} genome map. Data made available by P.A. Larsen, J. Rogers, A.D. Yoder and the Duke Lemur Center.
 
 \subsection*{Additional file 2 --- Cumulative length and number of molecule maps per BNX file for \textit{T. castaneum} data generated over time}
-    Detailed metrics for molecule maps per BNX file (cumulative length and number of maps). Cumulative length of molecule maps  > 150 kb, number of molecule maps > 150 kb and date that BNX file was generated.
+    Detailed metrics for molecule maps per BNX file (cumulative length and number of maps). Columns include cumulative length of molecule maps  > 150 kb, number of molecule maps > 150 kb and date that BNX file was generated.
 
   \subsection*{Additional file 3 --- Molecule map metrics and histograms from \textit{T. castaneum} DNA}
     Detailed metrics for molecule maps including map N50, cumulative length and number of maps. Figures show histograms of per molecule map quality metrics including length, molecule map SNR and intensity, label count, label SNR and label intensity. Molecule maps are filter for minimum molecule lengths of 100, 150 or 180 kb.
