@@ -1,6 +1,6 @@
 %% BioMed_Central_Bib_Style_v1.01
 
-\begin{thebibliography}{4}
+\begin{thebibliography}{6}
 % BibTex style file: bmc-mathphys.bst (version 2.1), 2014-07-24
 \ifx \bisbn   \undefined \def \bisbn  #1{ISBN #1}\fi
 \ifx \binits  \undefined \def \binits#1{#1}\fi
@@ -43,6 +43,41 @@
 \csname PreBibitemsHook\endcsname
 
 %%% 1
+\bibitem{Nanopore2014}
+\begin{botherref}
+\oauthor{\bsnm{Quick}, \binits{J.}},
+\oauthor{\bsnm{Quinlan}, \binits{A.R.}},
+\oauthor{\bsnm{J}, \binits{L.N.}}:
+A reference bacterial genome dataset generated on the minion portable
+  single-molecule nanopore sequencer.
+GigaScience
+\textbf{3}(22)
+(2014).
+doi:10.1186/2047-217X-3-22
+\end{botherref}
+\endbibitem
+
+%%% 2
+\bibitem{Moleculo2014}
+\begin{botherref}
+\oauthor{\bsnm{McCoy}, \binits{R.C.}},
+\oauthor{\bsnm{Taylor}, \binits{R.W.}},
+\oauthor{\bsnm{Blauwkamp}, \binits{T.A.}},
+\oauthor{\bsnm{Kelley}, \binits{J.L.}},
+\oauthor{\bsnm{Kertesz}, \binits{M.}},
+\oauthor{\bsnm{Pushkarev}, \binits{D.}},
+\oauthor{\bsnm{Petrov}, \binits{D.A.}},
+\oauthor{\bsnm{A}, \binits{F.-L.}}:
+Illumina truseq synthetic long-reads empower de novo assembly and resolve
+  complex, highly-repetitive transposable elements.
+PLoS ONE
+\textbf{9}(9)
+(2014).
+DOI: 10.1371/journal.pone.0106689
+\end{botherref}
+\endbibitem
+
+%%% 3
 \bibitem{MHCLam}
 \begin{botherref}
 \oauthor{\bsnm{Lam}, \binits{E.T.}},
@@ -65,7 +100,7 @@ doi:10.1038/nbt.2303
 \end{botherref}
 \endbibitem
 
-%%% 2
+%%% 4
 \bibitem{ProbFP}
 \begin{bchapter}
 \bauthor{\bsnm{Anantharaman}, \binits{T.}},
@@ -77,7 +112,7 @@ doi:10.1038/nbt.2303
 \end{bchapter}
 \endbibitem
 
-%%% 3
+%%% 5
 \bibitem{Beetle2008}
 \begin{barticle}
 \bauthor{\bsnm{Richards}, \binits{S.}},
@@ -99,7 +134,7 @@ doi:10.1038/nbt.2303
 \end{barticle}
 \endbibitem
 
-%%% 4
+%%% 6
 \bibitem{Assem22013}
 \begin{botherref}
 \oauthor{\bsnm{Bradnam}, \binits{K.}},
@@ -156,6 +191,41 @@ GigaScience
 <refgrp>
 
 <bibl id="B1">
+  <title><p>A reference bacterial genome dataset generated on the MinION
+  portable single-molecule nanopore sequencer</p></title>
+  <aug>
+    <au><snm>Quick</snm><fnm>J</fnm></au>
+    <au><snm>Quinlan</snm><fnm>A R</fnm></au>
+    <au><snm>J</snm><fnm>LN</fnm></au>
+  </aug>
+  <source>GigaScience</source>
+  <pubdate>2014</pubdate>
+  <volume>3</volume>
+  <issue>22</issue>
+  <note>doi:10.1186/2047-217X-3-22</note>
+</bibl>
+
+<bibl id="B2">
+  <title><p>Illumina TruSeq Synthetic Long-Reads Empower De Novo Assembly and
+  Resolve Complex, Highly-Repetitive Transposable Elements</p></title>
+  <aug>
+    <au><snm>McCoy</snm><fnm>R C</fnm></au>
+    <au><snm>Taylor</snm><fnm>R W</fnm></au>
+    <au><snm>Blauwkamp</snm><fnm>T A</fnm></au>
+    <au><snm>Kelley</snm><fnm>J L</fnm></au>
+    <au><snm>Kertesz</snm><fnm>M</fnm></au>
+    <au><snm>Pushkarev</snm><fnm>D</fnm></au>
+    <au><snm>Petrov</snm><fnm>D A</fnm></au>
+    <au><snm>A</snm><fnm>FL</fnm></au>
+  </aug>
+  <source>PLoS ONE</source>
+  <pubdate>2014</pubdate>
+  <volume>9</volume>
+  <issue>9</issue>
+  <note>DOI: 10.1371/journal.pone.0106689</note>
+</bibl>
+
+<bibl id="B3">
   <title><p>Genome mapping on nanochannel arrays for structural variation
   analysis and sequence assembly</p></title>
   <aug>
@@ -178,7 +248,7 @@ GigaScience
   <note>doi:10.1038/nbt.2303</note>
 </bibl>
 
-<bibl id="B2">
+<bibl id="B4">
   <title><p>A Probabilistic Analysis of False Positives in Optical Map
   Alignment and Validation</p></title>
   <aug>
@@ -190,7 +260,7 @@ GigaScience
   <note>https://cs.nyu.edu/mishra/PUBLICATIONS/01.falsepos.ps</note>
 </bibl>
 
-<bibl id="B3">
+<bibl id="B5">
   <title><p>The genome of the model beetle and pest Tribolium
   castaneum</p></title>
   <aug>
@@ -213,7 +283,7 @@ GigaScience
   <note>http://dx.doi.org/10.1038/nature06784</note>
 </bibl>
 
-<bibl id="B4">
+<bibl id="B6">
   <title><p>Assemblathon 2: evaluating de novo methods of genome assembly in
   three vertebrate species</p></title>
   <aug>

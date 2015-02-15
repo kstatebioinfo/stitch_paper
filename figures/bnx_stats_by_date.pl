@@ -72,13 +72,14 @@ sub next_three # take the next three lines in a subroutine
 ##############              run                              ##################
 ###############################################################################
 use bignum;
-open (my $temp_bnx_lengths, ">", '/home/irys/stitch_paper/figures/flowcell_date_and_metrics.csv') or die "Can't open /home/irys/stitch_paper/figures/flowcell_date_and_metrics.csv: $!"; # Open temp files
-print $temp_bnx_lengths "date,input_bnx,total_flowcell_length_Mb,bnx_count\n";
+open (my $temp_bnx_lengths, ">", '/home/irys/stitch_paper/figures/bnx_date_and_metrics.csv') or die "Can't open /home/irys/stitch_paper/figures/bnx_date_and_metrics.csv: $!"; # Open temp files
+print $temp_bnx_lengths "date,input_bnx,total_bnx_length_Mb,bnx_count\n";
 my (@lengths,@mol_intensities,@mol_snrs,@mol_NumberofLabels);
 my $total_length =0;
 my ($bnx_count,$scan_count);
 print "Reading BNX files of molecule maps...\n";
 my $bnx_file_num = 1;
+my $max_length = 0;
 while (<$read_in_bnx_list>)
 {
     print "Reading BNX files of molecule map $bnx_file_num ...\n";
@@ -129,6 +130,10 @@ while (<$read_in_bnx_list>)
                     next;
                 }
                 ++$bnx_count; # count molecules
+                if ($max_lengthkb < $Lengthkb)
+                {
+                    $max_lengthkb = $Lengthkb; # find the longest molecul map
+                }
                 $total_flowcell_length += $Lengthkb;
 #                push (@lengths,$Lengthkb);
             }
@@ -145,6 +150,7 @@ while (<$read_in_bnx_list>)
 
 print "Cumulative length of molecule maps: $total_length (Mb)\n";
 print "Number of molecule maps: $bnx_count\n";
+print "The longest molecule map is $max_lengthkb (kb)\n";
 
 ###############################################################################
 ##############               Graph data                      ##################
@@ -152,7 +158,7 @@ print "Number of molecule maps: $bnx_count\n";
 print "Graphing data...\n";
 
 #
-my $graph_data = `Rscript /home/irys/stitch_paper/figures/graph_flowcell_by_date.R`;
+my $graph_data = `Rscript /home/irys/stitch_paper/figures/graph_bnx_by_date.R`;
 print "$graph_data\n";
 #unlink qw/temp_bnx_lengths.tab temp_bnx_mol_intensities.tab temp_bnx_mol_snrs.tab temp_bnx_mol_NumberofLabels.tab temp_mean_label_snr.tab temp_mean_label_intensity.tab Rplots.pdf/;
 
