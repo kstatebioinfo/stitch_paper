@@ -1,6 +1,6 @@
 %% BioMed_Central_Bib_Style_v1.01
 
-\begin{thebibliography}{12}
+\begin{thebibliography}{17}
 % BibTex style file: bmc-mathphys.bst (version 2.1), 2014-07-24
 \ifx \bisbn   \undefined \def \bisbn  #1{ISBN #1}\fi
 \ifx \binits  \undefined \def \binits#1{#1}\fi
@@ -129,6 +129,40 @@ GigaScience
 \endbibitem
 
 %%% 4
+\bibitem{BioNano2010}
+\begin{botherref}
+\oauthor{\bsnm{Das}, \binits{S.K.}},
+\oauthor{\bsnm{Austin}, \binits{M.D.}},
+\oauthor{\bsnm{Akana}, \binits{M.C.}},
+\oauthor{\bsnm{Deshpande}, \binits{P.}},
+\oauthor{\bsnm{Cao}, \binits{H.}},
+\oauthor{\bsnm{Xiao}, \binits{M.}}:
+Single molecule linear analysis of dna in nano-channel labeled with sequence
+  specific fluorescent probes.
+Nucleic Acids Research
+\textbf{38}(e177)
+(2010).
+doi: 10.1093/nar/gkq673
+\end{botherref}
+\endbibitem
+
+%%% 5
+\bibitem{PacBioSpecs}
+\begin{botherref}
+PacBio P6-C4 Chemistry Specifications.
+\url{http://investor.pacificbiosciences.com/releasedetail.cfm?ReleaseID=876252}
+\end{botherref}
+\endbibitem
+
+%%% 6
+\bibitem{LDJSpecs}
+\begin{botherref}
+Illumina Long Distance Jump Library Specifications.
+\url{http://www.operon.com/services/next-generation-sequencing/illumina/libraries.aspx}
+\end{botherref}
+\endbibitem
+
+%%% 7
 \bibitem{Nanopore2014}
 \begin{botherref}
 \oauthor{\bsnm{Quick}, \binits{J.}},
@@ -143,7 +177,7 @@ doi:10.1186/2047-217X-3-22
 \end{botherref}
 \endbibitem
 
-%%% 5
+%%% 8
 \bibitem{Moleculo2014}
 \begin{botherref}
 \oauthor{\bsnm{McCoy}, \binits{R.C.}},
@@ -163,7 +197,7 @@ DOI: 10.1371/journal.pone.0106689
 \end{botherref}
 \endbibitem
 
-%%% 6
+%%% 9
 \bibitem{Argos2009}
 \begin{botherref}
 \oauthor{\bsnm{Teague}, \binits{B.}},
@@ -194,7 +228,15 @@ doi: 10.1073/pnas.0914638107
 \end{botherref}
 \endbibitem
 
-%%% 7
+%%% 10
+\bibitem{OpgenSpecs}
+\begin{botherref}
+Opgen Argus MapCard Specifications.
+\url{http://www.tgac.ac.uk/sequencing-platforms/}
+\end{botherref}
+\endbibitem
+
+%%% 11
 \bibitem{SeqBias2013}
 \begin{botherref}
 \oauthor{\bsnm{Ross}, \binits{M.G.}},
@@ -213,7 +255,7 @@ doi:10.1186/gb-2013-14-5-r51
 \end{botherref}
 \endbibitem
 
-%%% 8
+%%% 12
 \bibitem{OpGenAnalysis2014}
 \begin{botherref}
 \oauthor{\bsnm{Mendelowitz}, \binits{L.}},
@@ -226,7 +268,7 @@ doi:10.1186/2047-217X-3-33
 \end{botherref}
 \endbibitem
 
-%%% 9
+%%% 13
 \bibitem{BioNanoSV2014}
 \begin{botherref}
 \oauthor{\bsnm{Cao}, \binits{H.}},
@@ -256,7 +298,51 @@ doi:10.1186/2047-217X-3-34
 \end{botherref}
 \endbibitem
 
-%%% 10
+%%% 14
+\bibitem{Beetle2008}
+\begin{barticle}
+\bauthor{\bsnm{Richards}, \binits{S.}},
+\bauthor{\bsnm{Gibbs}, \binits{R.A.}},
+\bauthor{\bsnm{Weinstock}, \binits{G.M.}},
+\bauthor{\bsnm{Brown}, \binits{S.J.}},
+\bauthor{\bsnm{Denell}, \binits{R.}},
+\bauthor{\bsnm{Beeman}, \binits{R.W.}},
+\bauthor{\bsnm{Gibbs}, \binits{R.}},
+\bauthor{\bsnm{Bucher}, \binits{G.}},
+\bauthor{\bsnm{Friedrich}, \binits{M.}},
+\bauthor{\bsnm{Grimmelikhuijzen}, \binits{C.J.e.a.}}:
+\batitle{The genome of the model beetle and pest tribolium castaneum}.
+\bjtitle{Nature}
+\bvolume{452},
+\bfpage{949}--\blpage{955}
+(\byear{2008}).
+\bcomment{http://dx.doi.org/10.1038/nature06784}
+\end{barticle}
+\endbibitem
+
+%%% 15
+\bibitem{BeetleGenMap2005}
+\begin{barticle}
+\bauthor{\bsnm{Lorenzen}, \binits{M.D.}},
+\bauthor{\bsnm{Doyungan}, \binits{Z.}},
+\bauthor{\bsnm{Savard}, \binits{J.}},
+\bauthor{\bsnm{Snow}, \binits{K.}},
+\bauthor{\bsnm{Crumly}, \binits{L.R.}},
+\bauthor{\bsnm{Shippy}, \binits{T.D.}},
+\bauthor{\bsnm{Stuart}, \binits{J.J.}},
+\bauthor{\bsnm{Brown}, \binits{S.J.}},
+\bauthor{\bsnm{Beeman}, \binits{R.W.}}:
+\batitle{Genetic linkage maps of the red flour beetle, tribolium castaneum,
+  based on bacterial artificial chromosomes and expressed sequence tags.}
+\bjtitle{Genetics}
+\bvolume{170}(\bissue{2}),
+\bfpage{741}--\blpage{747}
+(\byear{2005}).
+\bcomment{doi: 10.1534/genetics.104.032227}
+\end{barticle}
+\endbibitem
+
+%%% 16
 \bibitem{MHCLam}
 \begin{botherref}
 \oauthor{\bsnm{Lam}, \binits{E.T.}},
@@ -279,7 +365,7 @@ doi:10.1038/nbt.2303
 \end{botherref}
 \endbibitem
 
-%%% 11
+%%% 17
 \bibitem{ProbFP}
 \begin{bchapter}
 \bauthor{\bsnm{Anantharaman}, \binits{T.}},
@@ -289,28 +375,6 @@ doi:10.1038/nbt.2303
 (\byear{2001}).
 \bcomment{https://cs.nyu.edu/mishra/PUBLICATIONS/01.falsepos.ps}
 \end{bchapter}
-\endbibitem
-
-%%% 12
-\bibitem{Beetle2008}
-\begin{barticle}
-\bauthor{\bsnm{Richards}, \binits{S.}},
-\bauthor{\bsnm{Gibbs}, \binits{R.A.}},
-\bauthor{\bsnm{Weinstock}, \binits{G.M.}},
-\bauthor{\bsnm{Brown}, \binits{S.J.}},
-\bauthor{\bsnm{Denell}, \binits{R.}},
-\bauthor{\bsnm{Beeman}, \binits{R.W.}},
-\bauthor{\bsnm{Gibbs}, \binits{R.}},
-\bauthor{\bsnm{Bucher}, \binits{G.}},
-\bauthor{\bsnm{Friedrich}, \binits{M.}},
-\bauthor{\bsnm{Grimmelikhuijzen}, \binits{C.J.e.a.}}:
-\batitle{The genome of the model beetle and pest tribolium castaneum}.
-\bjtitle{Nature}
-\bvolume{452},
-\bfpage{949}--\blpage{955}
-(\byear{2008}).
-\bcomment{http://dx.doi.org/10.1038/nature06784}
-\end{barticle}
 \endbibitem
 
 \end{thebibliography}
@@ -410,6 +474,34 @@ doi:10.1038/nbt.2303
 </bibl>
 
 <bibl id="B4">
+  <title><p>Single molecule linear analysis of DNA in nano-channel labeled with
+  sequence specific fluorescent probes.</p></title>
+  <aug>
+    <au><snm>Das</snm><fnm>S K</fnm></au>
+    <au><snm>Austin</snm><fnm>M D</fnm></au>
+    <au><snm>Akana</snm><fnm>M C</fnm></au>
+    <au><snm>Deshpande</snm><fnm>P</fnm></au>
+    <au><snm>Cao</snm><fnm>H</fnm></au>
+    <au><snm>Xiao</snm><fnm>M</fnm></au>
+  </aug>
+  <source>Nucleic Acids Research</source>
+  <pubdate>2010</pubdate>
+  <volume>38</volume>
+  <issue>e177</issue>
+  <note>doi: 10.1093/nar/gkq673</note>
+</bibl>
+
+<bibl id="B5">
+  <title><p>PacBio P6-C4 chemistry specifications</p></title>
+  <url>http://investor.pacificbiosciences.com/releasedetail.cfm?ReleaseID=876252</url>
+</bibl>
+
+<bibl id="B6">
+  <title><p>Illumina Long Distance Jump Library specifications</p></title>
+  <url>http://www.operon.com/services/next-generation-sequencing/illumina/libraries.aspx</url>
+</bibl>
+
+<bibl id="B7">
   <title><p>A reference bacterial genome dataset generated on the MinION
   portable single-molecule nanopore sequencer</p></title>
   <aug>
@@ -424,7 +516,7 @@ doi:10.1038/nbt.2303
   <note>doi:10.1186/2047-217X-3-22</note>
 </bibl>
 
-<bibl id="B5">
+<bibl id="B8">
   <title><p>Illumina TruSeq Synthetic Long-Reads Empower De Novo Assembly and
   Resolve Complex, Highly-Repetitive Transposable Elements</p></title>
   <aug>
@@ -444,7 +536,7 @@ doi:10.1038/nbt.2303
   <note>DOI: 10.1371/journal.pone.0106689</note>
 </bibl>
 
-<bibl id="B6">
+<bibl id="B9">
   <title><p>High-resolution human genome structure by single-molecule
   analysis</p></title>
   <aug>
@@ -476,7 +568,12 @@ doi:10.1038/nbt.2303
   <note>doi: 10.1073/pnas.0914638107</note>
 </bibl>
 
-<bibl id="B7">
+<bibl id="B10">
+  <title><p>Opgen Argus MapCard specifications</p></title>
+  <url>http://www.tgac.ac.uk/sequencing-platforms/</url>
+</bibl>
+
+<bibl id="B11">
   <title><p>Characterizing and measuring bias in sequence data</p></title>
   <aug>
     <au><snm>Ross</snm><fnm>M G</fnm></au>
@@ -495,7 +592,7 @@ doi:10.1038/nbt.2303
   <note>doi:10.1186/gb-2013-14-5-r51</note>
 </bibl>
 
-<bibl id="B8">
+<bibl id="B12">
   <title><p>Computational methods for optical mapping</p></title>
   <aug>
     <au><snm>Mendelowitz</snm><fnm>L</fnm></au>
@@ -508,7 +605,7 @@ doi:10.1038/nbt.2303
   <note>doi:10.1186/2047-217X-3-33</note>
 </bibl>
 
-<bibl id="B9">
+<bibl id="B13">
   <title><p>Rapid detection of structural variation in a human genome using
   nanochannel-based genome mapping technology</p></title>
   <aug>
@@ -538,7 +635,54 @@ doi:10.1038/nbt.2303
   <note>doi:10.1186/2047-217X-3-34</note>
 </bibl>
 
-<bibl id="B10">
+<bibl id="B14">
+  <title><p>The genome of the model beetle and pest Tribolium
+  castaneum</p></title>
+  <aug>
+    <au><snm>Richards</snm><fnm>S</fnm></au>
+    <au><snm>Gibbs</snm><fnm>R A</fnm></au>
+    <au><snm>Weinstock</snm><fnm>G M</fnm></au>
+    <au><snm>Brown</snm><fnm>S J</fnm></au>
+    <au><snm>Denell</snm><fnm>R</fnm></au>
+    <au><snm>Beeman</snm><fnm>R W</fnm></au>
+    <au><snm>Gibbs</snm><fnm>R</fnm></au>
+    <au><snm>Bucher</snm><fnm>G</fnm></au>
+    <au><snm>Friedrich</snm><fnm>M</fnm></au>
+    <au><snm>Grimmelikhuijzen</snm><fnm>CJea</fnm></au>
+  </aug>
+  <source>Nature</source>
+  <pubdate>2008</pubdate>
+  <volume>452</volume>
+  <fpage>949</fpage>
+  <lpage>955</lpage>
+  <note>http://dx.doi.org/10.1038/nature06784</note>
+</bibl>
+
+<bibl id="B15">
+  <title><p>Genetic linkage maps of the red flour beetle, Tribolium castaneum,
+  based on bacterial artificial chromosomes and expressed sequence
+  tags.</p></title>
+  <aug>
+    <au><snm>Lorenzen</snm><fnm>M D</fnm></au>
+    <au><snm>Doyungan</snm><fnm>Z</fnm></au>
+    <au><snm>Savard</snm><fnm>J</fnm></au>
+    <au><snm>Snow</snm><fnm>K</fnm></au>
+    <au><snm>Crumly</snm><fnm>L R</fnm></au>
+    <au><snm>Shippy</snm><fnm>T D</fnm></au>
+    <au><snm>Stuart</snm><fnm>J J</fnm></au>
+    <au><snm>Brown</snm><fnm>S J</fnm></au>
+    <au><snm>Beeman</snm><fnm>R W</fnm></au>
+  </aug>
+  <source>Genetics</source>
+  <pubdate>2005</pubdate>
+  <volume>170</volume>
+  <issue>2</issue>
+  <fpage>741</fpage>
+  <lpage>747</lpage>
+  <note>doi: 10.1534/genetics.104.032227</note>
+</bibl>
+
+<bibl id="B16">
   <title><p>Genome mapping on nanochannel arrays for structural variation
   analysis and sequence assembly</p></title>
   <aug>
@@ -561,7 +705,7 @@ doi:10.1038/nbt.2303
   <note>doi:10.1038/nbt.2303</note>
 </bibl>
 
-<bibl id="B11">
+<bibl id="B17">
   <title><p>A Probabilistic Analysis of False Positives in Optical Map
   Alignment and Validation</p></title>
   <aug>
@@ -571,29 +715,6 @@ doi:10.1038/nbt.2303
   <source>WABI2001</source>
   <pubdate>2001</pubdate>
   <note>https://cs.nyu.edu/mishra/PUBLICATIONS/01.falsepos.ps</note>
-</bibl>
-
-<bibl id="B12">
-  <title><p>The genome of the model beetle and pest Tribolium
-  castaneum</p></title>
-  <aug>
-    <au><snm>Richards</snm><fnm>S</fnm></au>
-    <au><snm>Gibbs</snm><fnm>R A</fnm></au>
-    <au><snm>Weinstock</snm><fnm>G M</fnm></au>
-    <au><snm>Brown</snm><fnm>S J</fnm></au>
-    <au><snm>Denell</snm><fnm>R</fnm></au>
-    <au><snm>Beeman</snm><fnm>R W</fnm></au>
-    <au><snm>Gibbs</snm><fnm>R</fnm></au>
-    <au><snm>Bucher</snm><fnm>G</fnm></au>
-    <au><snm>Friedrich</snm><fnm>M</fnm></au>
-    <au><snm>Grimmelikhuijzen</snm><fnm>CJea</fnm></au>
-  </aug>
-  <source>Nature</source>
-  <pubdate>2008</pubdate>
-  <volume>452</volume>
-  <fpage>949</fpage>
-  <lpage>955</lpage>
-  <note>http://dx.doi.org/10.1038/nature06784</note>
 </bibl>
 
 </refgrp>
