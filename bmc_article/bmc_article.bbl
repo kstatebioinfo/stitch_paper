@@ -1,6 +1,6 @@
 %% BioMed_Central_Bib_Style_v1.01
 
-\begin{thebibliography}{17}
+\begin{thebibliography}{18}
 % BibTex style file: bmc-mathphys.bst (version 2.1), 2014-07-24
 \ifx \bisbn   \undefined \def \bisbn  #1{ISBN #1}\fi
 \ifx \binits  \undefined \def \binits#1{#1}\fi
@@ -237,38 +237,14 @@ Opgen Argus MapCard Specifications.
 \endbibitem
 
 %%% 11
-\bibitem{SeqBias2013}
+\bibitem{BioNanoSpecs}
 \begin{botherref}
-\oauthor{\bsnm{Ross}, \binits{M.G.}},
-\oauthor{\bsnm{Russ}, \binits{C.}},
-\oauthor{\bsnm{Costello}, \binits{M.}},
-\oauthor{\bsnm{Hollinger}, \binits{A.}},
-\oauthor{\bsnm{Lennon}, \binits{N.J.}},
-\oauthor{\bsnm{Hegarty}, \binits{R.}},
-\oauthor{\bsnm{Nusbaum}, \binits{C.}},
-\oauthor{\bsnm{Jaffe}, \binits{D.B.}}:
-Characterizing and measuring bias in sequence data.
-Genome Biology
-\textbf{14}(R51)
-(2013).
-doi:10.1186/gb-2013-14-5-r51
+BioNano IrysChips Specifications.
+\url{http://www.bionanogenomics.com/wp-content/uploads/2015/01/datasheet-web.pdf}
 \end{botherref}
 \endbibitem
 
 %%% 12
-\bibitem{OpGenAnalysis2014}
-\begin{botherref}
-\oauthor{\bsnm{Mendelowitz}, \binits{L.}},
-\oauthor{\bsnm{Pop}, \binits{M.}}:
-Computational methods for optical mapping.
-GigaScience
-\textbf{3}(33)
-(2014).
-doi:10.1186/2047-217X-3-33
-\end{botherref}
-\endbibitem
-
-%%% 13
 \bibitem{BioNanoSV2014}
 \begin{botherref}
 \oauthor{\bsnm{Cao}, \binits{H.}},
@@ -298,7 +274,39 @@ doi:10.1186/2047-217X-3-34
 \end{botherref}
 \endbibitem
 
+%%% 13
+\bibitem{SeqBias2013}
+\begin{botherref}
+\oauthor{\bsnm{Ross}, \binits{M.G.}},
+\oauthor{\bsnm{Russ}, \binits{C.}},
+\oauthor{\bsnm{Costello}, \binits{M.}},
+\oauthor{\bsnm{Hollinger}, \binits{A.}},
+\oauthor{\bsnm{Lennon}, \binits{N.J.}},
+\oauthor{\bsnm{Hegarty}, \binits{R.}},
+\oauthor{\bsnm{Nusbaum}, \binits{C.}},
+\oauthor{\bsnm{Jaffe}, \binits{D.B.}}:
+Characterizing and measuring bias in sequence data.
+Genome Biology
+\textbf{14}(R51)
+(2013).
+doi:10.1186/gb-2013-14-5-r51
+\end{botherref}
+\endbibitem
+
 %%% 14
+\bibitem{OpGenAnalysis2014}
+\begin{botherref}
+\oauthor{\bsnm{Mendelowitz}, \binits{L.}},
+\oauthor{\bsnm{Pop}, \binits{M.}}:
+Computational methods for optical mapping.
+GigaScience
+\textbf{3}(33)
+(2014).
+doi:10.1186/2047-217X-3-33
+\end{botherref}
+\endbibitem
+
+%%% 15
 \bibitem{Beetle2008}
 \begin{barticle}
 \bauthor{\bsnm{Richards}, \binits{S.}},
@@ -320,7 +328,7 @@ doi:10.1186/2047-217X-3-34
 \end{barticle}
 \endbibitem
 
-%%% 15
+%%% 16
 \bibitem{BeetleGenMap2005}
 \begin{barticle}
 \bauthor{\bsnm{Lorenzen}, \binits{M.D.}},
@@ -342,7 +350,7 @@ doi:10.1186/2047-217X-3-34
 \end{barticle}
 \endbibitem
 
-%%% 16
+%%% 17
 \bibitem{MHCLam}
 \begin{botherref}
 \oauthor{\bsnm{Lam}, \binits{E.T.}},
@@ -365,7 +373,7 @@ doi:10.1038/nbt.2303
 \end{botherref}
 \endbibitem
 
-%%% 17
+%%% 18
 \bibitem{ProbFP}
 \begin{bchapter}
 \bauthor{\bsnm{Anantharaman}, \binits{T.}},
@@ -574,38 +582,11 @@ doi:10.1038/nbt.2303
 </bibl>
 
 <bibl id="B11">
-  <title><p>Characterizing and measuring bias in sequence data</p></title>
-  <aug>
-    <au><snm>Ross</snm><fnm>M G</fnm></au>
-    <au><snm>Russ</snm><fnm>C</fnm></au>
-    <au><snm>Costello</snm><fnm>M</fnm></au>
-    <au><snm>Hollinger</snm><fnm>A</fnm></au>
-    <au><snm>Lennon</snm><fnm>N J</fnm></au>
-    <au><snm>Hegarty</snm><fnm>R</fnm></au>
-    <au><snm>Nusbaum</snm><fnm>C</fnm></au>
-    <au><snm>Jaffe</snm><fnm>D B</fnm></au>
-  </aug>
-  <source>Genome Biology</source>
-  <pubdate>2013</pubdate>
-  <volume>14</volume>
-  <issue>R51</issue>
-  <note>doi:10.1186/gb-2013-14-5-r51</note>
+  <title><p>BioNano IrysChips specifications</p></title>
+  <url>http://www.bionanogenomics.com/wp-content/uploads/2015/01/datasheet-web.pdf</url>
 </bibl>
 
 <bibl id="B12">
-  <title><p>Computational methods for optical mapping</p></title>
-  <aug>
-    <au><snm>Mendelowitz</snm><fnm>L</fnm></au>
-    <au><snm>Pop</snm><fnm>M</fnm></au>
-  </aug>
-  <source>GigaScience</source>
-  <pubdate>2014</pubdate>
-  <volume>3</volume>
-  <issue>33</issue>
-  <note>doi:10.1186/2047-217X-3-33</note>
-</bibl>
-
-<bibl id="B13">
   <title><p>Rapid detection of structural variation in a human genome using
   nanochannel-based genome mapping technology</p></title>
   <aug>
@@ -635,7 +616,39 @@ doi:10.1038/nbt.2303
   <note>doi:10.1186/2047-217X-3-34</note>
 </bibl>
 
+<bibl id="B13">
+  <title><p>Characterizing and measuring bias in sequence data</p></title>
+  <aug>
+    <au><snm>Ross</snm><fnm>M G</fnm></au>
+    <au><snm>Russ</snm><fnm>C</fnm></au>
+    <au><snm>Costello</snm><fnm>M</fnm></au>
+    <au><snm>Hollinger</snm><fnm>A</fnm></au>
+    <au><snm>Lennon</snm><fnm>N J</fnm></au>
+    <au><snm>Hegarty</snm><fnm>R</fnm></au>
+    <au><snm>Nusbaum</snm><fnm>C</fnm></au>
+    <au><snm>Jaffe</snm><fnm>D B</fnm></au>
+  </aug>
+  <source>Genome Biology</source>
+  <pubdate>2013</pubdate>
+  <volume>14</volume>
+  <issue>R51</issue>
+  <note>doi:10.1186/gb-2013-14-5-r51</note>
+</bibl>
+
 <bibl id="B14">
+  <title><p>Computational methods for optical mapping</p></title>
+  <aug>
+    <au><snm>Mendelowitz</snm><fnm>L</fnm></au>
+    <au><snm>Pop</snm><fnm>M</fnm></au>
+  </aug>
+  <source>GigaScience</source>
+  <pubdate>2014</pubdate>
+  <volume>3</volume>
+  <issue>33</issue>
+  <note>doi:10.1186/2047-217X-3-33</note>
+</bibl>
+
+<bibl id="B15">
   <title><p>The genome of the model beetle and pest Tribolium
   castaneum</p></title>
   <aug>
@@ -658,7 +671,7 @@ doi:10.1038/nbt.2303
   <note>http://dx.doi.org/10.1038/nature06784</note>
 </bibl>
 
-<bibl id="B15">
+<bibl id="B16">
   <title><p>Genetic linkage maps of the red flour beetle, Tribolium castaneum,
   based on bacterial artificial chromosomes and expressed sequence
   tags.</p></title>
@@ -682,7 +695,7 @@ doi:10.1038/nbt.2303
   <note>doi: 10.1534/genetics.104.032227</note>
 </bibl>
 
-<bibl id="B16">
+<bibl id="B17">
   <title><p>Genome mapping on nanochannel arrays for structural variation
   analysis and sequence assembly</p></title>
   <aug>
@@ -705,7 +718,7 @@ doi:10.1038/nbt.2303
   <note>doi:10.1038/nbt.2303</note>
 </bibl>
 
-<bibl id="B17">
+<bibl id="B18">
   <title><p>A Probabilistic Analysis of False Positives in Optical Map
   Alignment and Validation</p></title>
   <aug>

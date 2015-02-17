@@ -20,56 +20,58 @@ Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Database file #1: bmc_article.bib
-Warning--entry type for "PacBioSpecs" isn't style-file defined
+Warning--entry type for "BioNanoSpecs" isn't style-file defined
 --line 693 of file bmc_article.bib
-Warning--entry type for "OpgenSpecs" isn't style-file defined
+Warning--entry type for "PacBioSpecs" isn't style-file defined
 --line 711 of file bmc_article.bib
+Warning--entry type for "OpgenSpecs" isn't style-file defined
+--line 729 of file bmc_article.bib
 Warning--entry type for "LDJSpecs" isn't style-file defined
---line 745 of file bmc_article.bib
+--line 763 of file bmc_article.bib
 Reallocated wiz_functions (elt_size=4) to 9000 items from 6000.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
-You've used 17 entries,
+You've used 18 entries,
             7128 wiz_defined-function locations,
-            1241 strings with 13707 characters,
-and the built_in function-call counts, 211770 in all, are:
-= -- 32689
+            1245 strings with 13838 characters,
+and the built_in function-call counts, 231419 in all, are:
+= -- 36528
 > -- 728
 < -- 221
-+ -- 15434
-- -- 319
-* -- 12264
-:= -- 39468
-add.period$ -- 31
-call.type$ -- 17
-change.case$ -- 273
-chr.to.int$ -- 125
-cite$ -- 17
-duplicate$ -- 2217
-empty$ -- 8140
++ -- 17927
+- -- 321
+* -- 12616
+:= -- 42743
+add.period$ -- 32
+call.type$ -- 18
+change.case$ -- 282
+chr.to.int$ -- 126
+cite$ -- 18
+duplicate$ -- 2267
+empty$ -- 8273
 format.name$ -- 1393
-if$ -- 49607
+if$ -- 54748
 int.to.chr$ -- 1
-int.to.str$ -- 41
-missing$ -- 800
-newline$ -- 700
+int.to.str$ -- 43
+missing$ -- 832
+newline$ -- 713
 num.names$ -- 70
-pop$ -- 1130
+pop$ -- 1166
 preamble$ -- 1
-purify$ -- 74
-quote$ -- 34
-skip$ -- 16875
+purify$ -- 78
+quote$ -- 36
+skip$ -- 19200
 stack$ -- 0
-substring$ -- 25952
-swap$ -- 468
-text.length$ -- 231
-text.prefix$ -- 3
+substring$ -- 27820
+swap$ -- 470
+text.length$ -- 241
+text.prefix$ -- 4
 top$ -- 0
-type$ -- 514
+type$ -- 545
 warning$ -- 0
-while$ -- 775
+while$ -- 786
 width$ -- 0
-write$ -- 1158
-(There were 3 warnings)
+write$ -- 1172
+(There were 4 warnings)
