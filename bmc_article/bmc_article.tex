@@ -136,7 +136,7 @@ email={nanyan@ksu.edu}   % email address
 \author[
    addressref={aff2},
    email={Elam@bionanogenomics.com} % email address
-]{\inits{ET}\fnm{Ernest E} \snm{Lam}}
+]{\inits{ET}\fnm{Ernest T} \snm{Lam}}
 \author[
    addressref={aff2},
    email={tanantharaman@bionanogenomics.com} % email address
@@ -183,7 +183,7 @@ email={nanyan@ksu.edu}   % email address
 
 \begin{artnotes}
 %\note{Sample of title note}     % note to the article
-\note[id=n1]{Equal contributor} % note, connected to author
+%\note[id=n1]{Equal contributor} % note, connected to author
 \end{artnotes}
 
 \end{fmbox}% comment this for two column layout
@@ -205,9 +205,9 @@ email={nanyan@ksu.edu}   % email address
 \parttitle{Background} %if any
 Genome assembly remains an unsolved problem. Assembly projects face a range of hurdles that confound assembly. Thus a variety of tools and approaches are needed to improve draft genomes.
 \parttitle{Results} %if any
-We used a custom assembly workflow to optimize genome map assembly, resulting in a genome map equal to the estimated length of the \textit{T. castaneum} genome. We used this map to more than triple the N50 of the \textit{T. castaneum} sequence assembly with the program Stitch.
+We used a custom assembly workflow to optimize genome map assembly, resulting in a genome map assembly equal to the estimated length of the \textit{Tribolium castaneum} genome and with an N50 of more than 1 Mb. We used this map for scaffolding the \textit{T. castaneum} sequence assembly, more than tripling its N50 with the program Stitch.
 \parttitle{Conclusions} %if any
-In this article we present software that leverages BioNano genome maps assembled from ultra-long single molecule maps to increase the contiguity of sequence assemblies. We report the results of applying these tools to validate and improve a 7x Sanger draft of the \textit{Tribolium castaneum} genome.
+In this article we present software that leverages BioNano genome maps assembled from ultra-long single molecule maps to increase the contiguity of sequence assemblies. We report the results of applying these tools to validate and improve a 7x Sanger draft of the \textit{T. castaneum} genome.
 \end{abstract}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -267,9 +267,9 @@ In this article we present software that leverages BioNano genome maps assembled
 %%
 \section*{Background}
 
-The quality and contiguity of genome assemblies, which impacts downstream analysis, varies greatly \cite{Gage2012,Feature-by-F2012,Assem22013}. Initial assembly drafts, whether based on lower coverage Sanger or higher coverage NGS reads, are often highly fragmented. Physical maps of BAC clones are often used to validate and scaffold sequence assemblies, but the molecular, human and computational resources required to significantly improve a draft genome are not often available to researchers working on non-model organisms. The BioNano Irys platform provides affordable, high throughput physical maps of significantly higher contiguity with which to validate draft assemblies and extend scaffolds \cite{BioNano2010}.
+The quality and contiguity of genome assemblies, which impacts downstream analysis, varies greatly \cite{Gage2012,Feature-by-F2012,Assem22013}. Initial assembly drafts, whether based on lower coverage Sanger or higher coverage NGS reads, are often highly fragmented. Physical maps of BAC clones can be used to validate and scaffold sequence assemblies, but the molecular, human and computational resources required to significantly improve a draft genome are not often available to researchers working on non-model organisms. The BioNano Irys platform provides affordable, high throughput physical maps of significantly higher contiguity with which to validate draft assemblies and extend scaffolds \cite{BioNano2010}.
 
-Genome assembly and scaffolding algorithms are inherently limited by the length of the DNA molecules used as starting material to generate data. Specifically, if repetitive, polymorphic or low complexity regions are longer than the single molecules used to generate data then they can not be resolved by bioinformatics tools with certainty. The specifications for PacBio P6-C4 chemistry \cite{PacBioSpecs} indicate that PacBio reads have an N50 of 14 kb with a maximum length of 40 kb. Illumina Long Distance Jump Libraries can also span 40 kb \cite{LDJSpecs}. MinION nanopore sequence reads have an average read length of $< 7$ kb \cite{Nanopore2014}. Illumina TruSeq synthetic long-reads can span up to 18.5 kb however they fail to assemble if the sequence has problematic regions longer than the component reads used to assemble the synthetic reads (e.g. in the heterochromatin) \cite{Moleculo2014}. The OpGen Argus \cite{Argos2009} platform produces optical maps that have an average length of 150 kb to 2 Mb from up to 13 Gb data collected per run \cite{OpgenSpecs}. The Irys platform from BioNano Genomics produces single molecule maps that have an average length of 225 kb from up to 96Gb data collected per run \cite{BioNanoSpecs}. Genomic repeats can be much longer than the 5-40 kb that many technologies can span with a single molecule. In fact, a recent study used BioNano genome maps (assembled from single molecule maps $>$ 150 kb) to identify repeats that are hundreds of kb in the human genome \cite{BioNanoSV2014}.
+Genome assembly and scaffolding algorithms are inherently limited by the length of the DNA molecules used as starting material to generate data. Specifically, if repetitive, polymorphic or low complexity regions are longer than the single molecules used to generate data, then they can not be resolved by bioinformatics tools with certainty. The specifications for PacBio P6-C4 chemistry \cite{PacBioSpecs} indicate that PacBio reads have an N50 of 14 kb with a maximum length of 40 kb. Illumina Long Distance Jump Libraries can also span 40 kb \cite{LDJSpecs}. MinION nanopore sequence reads have an average read length of $< 7$ kb \cite{Nanopore2014}. Illumina TruSeq synthetic long-reads can span up to 18.5 kb however they fail to assemble if the sequence has problematic regions longer than the component reads used to assemble the synthetic reads (e.g. in the heterochromatin) \cite{Moleculo2014}. The OpGen Argus \cite{Argos2009} platform produces optical maps that have an average length of 150 kb to 2 Mb from up to 13 Gb data collected per run \cite{OpgenSpecs}. The Irys platform from BioNano Genomics produces single molecule maps that have an average length of 225 kb from up to 96Gb data collected per run \cite{BioNanoSpecs}. Genomic repeats can be much longer than the 5-40 kb that many technologies can span with a single molecule. In fact, a recent study used BioNano genome maps (assembled from single molecule maps $>$ 150 kb) to identify repeats that are hundreds of kb in the human genome \cite{BioNanoSV2014}.
 
  % Opgen specs: http://www.tgac.ac.uk/sequencing-platforms/ http://www.norwichresearchpark.com/researchfacilities/genomics-bioinformatics/genomicsbioinformatics/equipment/test1/opgenargus.aspx
 % Moleculo specs: http://investor.pacificbiosciences.com/releasedetail.cfm?ReleaseID=876252
@@ -453,6 +453,8 @@ MCC isolated the high molecular weight DNA and generated the image files on the 
   This project was supported by an Institutional Development Award (IDeA) from the National Institute of General Medical Sciences of the National Institutes of Health under grant number P20 GM103418. 
 
 Data for Additional file 1 was kindly made available by P.A. Larsen, J. Rogers, A.D. Yoder and the Duke Lemur Center.
+
+The \cite{Tribolium castaneum} genome project is part of the i5k Genome Sequencing Initiative for Insects and Other Arthropods.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%                  The Bibliography                       %%
