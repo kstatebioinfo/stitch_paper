@@ -1,8 +1,8 @@
 #!/usr/local/bin/Rscript
 # Makes a graph from flowcell dates and/or throughput
 
-pdf('/home/irys/stitch_paper/figures/bnx_date.pdf', bg='white', width=9, height=9)
-flowcellmetrics <- read.csv("/home/irys/stitch_paper/figures/bnx_date_and_metrics.csv", header=TRUE)
+pdf('/home/irys/stitch_paper/figures/Fig_4_flowcell_date.pdf', bg='white', width=9, height=9)
+flowcellmetrics <- read.csv("/home/irys/stitch_paper/figures/Supplemental_2_bnx_date_and_metrics.csv", header=TRUE)
 
 #print $temp_bnx_lengths "date,input_bnx,total_flowcell_length_Mb,bnx_count\n";
 

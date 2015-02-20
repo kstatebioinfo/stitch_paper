@@ -72,7 +72,7 @@ sub next_three # take the next three lines in a subroutine
 ##############              run                              ##################
 ###############################################################################
 use bignum;
-open (my $temp_bnx_lengths, ">", '/home/irys/stitch_paper/figures/bnx_date_and_metrics.csv') or die "Can't open /home/irys/stitch_paper/figures/bnx_date_and_metrics.csv: $!"; # Open temp files
+open (my $temp_bnx_lengths, ">", '/home/irys/stitch_paper/figures/Supplemental_2_bnx_date_and_metrics.csv') or die "Can't open /home/irys/stitch_paper/figures/Supplemental_2_bnx_date_and_metrics.csv: $!"; # Open temp files
 print $temp_bnx_lengths "date,input_bnx,total_bnx_length_Mb,bnx_count\n";
 my (@lengths,@mol_intensities,@mol_snrs,@mol_NumberofLabels);
 my $total_length =0;
