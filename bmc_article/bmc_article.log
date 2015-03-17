@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.5.25)  17 MAR 2015 15:48
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.5.25)  17 MAR 2015 17:05
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -619,6 +619,7 @@ Overfull \hbox (78.86089pt too wide) in paragraph at lines 549--556
  [][] 
  []
 
+[12]
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
@@ -646,7 +647,7 @@ LaTeX Font Warning: Font shape `OT1/cmss/m/it' in size <7> not available
 (Font)              Font shape `OT1/cmss/m/sl' tried instead on input line 609.
 
 
-[12] [13] [14] 
+[13] [14] 
 AED: lastpage setting LastPage
 [15]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 626.
@@ -672,11 +673,11 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 626.
 Here is how much of TeX's memory you used:
  6209 strings out of 493117
  88253 string characters out of 6135433
- 208724 words of memory out of 5000000
+ 203284 words of memory out of 5000000
  9548 multiletter control sequences out of 15000+600000
  12036 words of font info for 42 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 30i,9n,39p,1725b,411s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 30i,9n,39p,1725b,423s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 ></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx7.pfb><
 /usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></
@@ -695,10 +696,10 @@ ive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texliv
 e/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive
 /2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/
 2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb>
-Output written on bmc_article.pdf (15 pages, 267925 bytes).
+Output written on bmc_article.pdf (15 pages, 267998 bytes).
 PDF statistics:
- 305 PDF objects out of 1000 (max. 8388607)
- 267 compressed objects within 3 object streams
+ 306 PDF objects out of 1000 (max. 8388607)
+ 268 compressed objects within 3 object streams
  90 named destinations out of 1000 (max. 500000)
  9 words of extra memory for PDF output out of 10000 (max. 10000000)
 
