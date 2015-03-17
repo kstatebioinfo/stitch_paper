@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.5.25)  17 MAR 2015 18:18
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.5.25)  17 MAR 2015 18:24
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -536,7 +536,7 @@ Overfull \hbox (43.1674pt too wide) in paragraph at lines 362--363
  at DDBJ/EMBL/GenBank
  []
 
-[8] [9]
+[8] [9] [10]
 Overfull \hbox (50.15286pt too wide) in paragraph at lines 392--393
 []\OT1/cmr/bx/n/10 Project home page: \OT1/cmr/m/n/10 As-sem-bleIrysX-eon-Phi s
 cripts are avail-able at: https://github.com/i5K-
@@ -554,7 +554,7 @@ Underfull \hbox (badness 3646) in paragraph at lines 392--393
 E-[]script-[]share / Irys-[]scaffolding / tree /
  []
 
-[10]
+
 Underfull \hbox (badness 10000) in paragraph at lines 408--409
 \OT1/cmtt/m/n/10 github . com / i5K-[]KINBRE-[]script-[]share / Irys-[]scaffold
 ing / tree / master / KSU _
@@ -577,20 +577,11 @@ Overfull \hbox (7.55257pt too wide) in paragraph at lines 424--425
 LaTeX Warning: Citation `Tribolium castaneum' on page 12 undefined on input lin
 e 456.
 
-(./bmc_article.bbl)
+(./bmc_article.bbl [12])
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <8> on input line 499.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 499.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
 LaTeX Font Warning: Font shape `OT1/cmss/bx/it' undefined
@@ -609,17 +600,10 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
 Overfull \hbox (78.86089pt too wide) in paragraph at lines 549--556
  [][] 
  []
 
-[12]
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
@@ -673,11 +657,11 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 626.
 Here is how much of TeX's memory you used:
  6209 strings out of 493117
  88253 string characters out of 6135433
- 203284 words of memory out of 5000000
+ 195315 words of memory out of 5000000
  9548 multiletter control sequences out of 15000+600000
  12036 words of font info for 42 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 30i,9n,39p,1725b,423s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 30i,9n,39p,1725b,537s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 ></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx7.pfb><
 /usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></
@@ -696,7 +680,7 @@ ive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texliv
 e/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive
 /2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/
 2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb>
-Output written on bmc_article.pdf (15 pages, 268027 bytes).
+Output written on bmc_article.pdf (15 pages, 267853 bytes).
 PDF statistics:
  306 PDF objects out of 1000 (max. 8388607)
  268 compressed objects within 3 object streams
