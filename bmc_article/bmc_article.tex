@@ -142,6 +142,10 @@ email={nanyan@ksu.edu}   % email address
    email={tanantharaman@bionanogenomics.com} % email address
 ]{\inits{T}\fnm{Thomas} \snm{Anantharaman}}
 \author[
+   addressref={aff2},
+   email={psheth@bionanogenomics.com} % email address
+]{\inits{T}\fnm{Palak} \snm{Sheth}}
+\author[
    addressref={aff1},
       corref={aff1},                       % id of corresponding address, if any
    email={sjbrown@ksu.edu} % email address
@@ -306,7 +310,9 @@ The ultimate goal is to produce consensus genome maps that can be used to guide 
 
 \subsubsection*{Stitch: Alignment Filters}
 
-For each RefAligner alignment the user designates a reference file, \textit{in silico} maps from either a draft or reference quality genome, and a query file, either single molecule maps or consensus genome maps. We designed the Stitch algorithm to use alignments of query consensus genome maps to reference \textit{in silico} maps in order to predict the higher order arrangement of sequence scaffolds  (Figure 3). RefAligner assumes the alignment reference has the error profile of \textit{in silico} maps and the query has the error profile of consensus genome maps. Therefore alignments are run with the \textit{in silico} maps as the reference, and are inverted and sorted by consensus genome map coordinates for efficient parsing by Stitch (Figure 3A-B). 
+For each RefAligner alignment the user designates a reference file with \textit{in silico} maps from either a draft or reference quality genome or, if the user is aligning two files that both contain consensus genome maps, then a file of consensus genome maps. Additionally, the user specifies a query file with either single molecule maps or consensus genome maps. 
+
+We designed the Stitch algorithm to use alignments of query consensus genome maps to reference \textit{in silico} maps in order to predict the higher order arrangement of sequence scaffolds  (Figure 3). RefAligner assumes the alignment reference has the error profile of \textit{in silico} maps and the query has the error profile of consensus genome maps. Therefore alignments are run with the \textit{in silico} maps as the reference, and are inverted and sorted by consensus genome map coordinates for efficient parsing by Stitch (Figure 3A-B). 
 
 Before inferring super scaffolds from XMAP files, Stitch filters low quality alignments by confidence score. Alignments of \textit{in silico} and consensus genome maps are assigned a confidence score that is the $-log10$ of the $False\textnormal{ }Positive\textnormal{ }p\textnormal{-}Value$. Misaligned labels and sizing error increase the alignment $False\textnormal{ }Positive\textnormal{ }p\textnormal{-}Value$ and decrease confidence scores \cite{ProbFP}.
 
@@ -333,7 +339,7 @@ This algorithm is meant to be an intermediate refinement of draft genomes prior 
 \subsubsection*{Dataset generation}
 High molecular weight DNA was isolated from young \textit{Tribolium castaneum} pupae from the GA2 line that was inbred 20 generations. The GA2 line was also used for the genome sequence-based assembly.
 
-Using Knickers (BioNano Genomics), an \textit{in silico} label density calculator, we estimated that the \textit{Tribolium castaneum} genome had 8.66 and 5.51 labels per 100 kb for the nt.BspQI and nt.BbvCI enzymes (New England BioLabs) respectively. The ideal number of labels per 100 kb is between 10 and 15 therefore we nicked with both enzymes. DNA was nicked, labeled with fluorescent nucleotides, and repaired according to BioNano protocol; and 93 BNX files were produced from the Irys genome mapping system (Figure 4 and Additional file 2). Four corrupted files (cumulative length = 0) were excluded from this analysis. 
+Using Knickers (BioNano Genomics), an \textit{in silico} label density calculator, we estimated that the \textit{Tribolium castaneum} genome had 8.66 and 5.51 labels per 100 kb for the nt.BspQI and nt.BbvCI enzymes (New England BioLabs) respectively. The ideal number of labels per 100 kb is between 10 and 15 therefore we nicked with both enzymes. DNA was nicked, labeled with fluorescent nucleotides, and repaired according to BioNano protocol; and 93 BNX files were produced from the Irys genome mapping system (Figure 4 and Additional file 2). Four corrupted files (cumulative length = 0) were excluded from this analysis. All \textit{T. castaneum} BNX files have been deposited to labarchives (doi:10.6070/H4V69GK3). 
 
 The high number of BNX files produced is due to several factors. Typically one BNX file is produced per flowcell; however, in certain cases after the initial number of scans, additional scans were run producing an additional BNX file. Another reason for the large number of files is that data was originally generated using the IrysChip\textregistered\textnormal{ }V1 while the Irys System was under beta testing. Over time, maximum cumulative length per BNX file increased (Figure 4 and Additional file 2). After the upgrade to the IrysChip V2, an increase was also observed in maximum data per BNX file (Figure 4 and Additional file 2).
 
@@ -389,7 +395,7 @@ Regions where consensus genome maps disagree with sequence assemblies (e.g. nega
 
 \textbf{Project name:} AssembleIrysXeonPhi.pl / AssembleIrysCluster.pl
 
-\textbf{Project home page:} AssembleIrysXeonPhi scripts are available at: https://github.com/i5K-KINBRE-script-share/Irys-scaffolding/blob/master/KSU\_bioinfo\_lab/assemble\_XeonPhi/AssembleIrysXeonPhi.pl. The currently unsupported AssembleIrysCluster scripts are available on Github at \url{https://github.com/i5K-KINBRE-script-share/Irys-scaffolding/tree/master/KSU\_bioinfo\_lab/assemble\_SGE\_cluster}
+\textbf{Project home page:} AssembleIrysXeonPhi scripts are available at \url{https://github.com/i5K-KINBRE-script-share/Irys-scaffolding/blob/master/KSU\_bioinfo\_lab/assemble\_XeonPhi/AssembleIrysXeonPhi.pl}. The currently unsupported AssembleIrysCluster scripts are available on Github at \url{https://github.com/i5K-KINBRE-script-share/Irys-scaffolding/tree/master/KSU\_bioinfo\_lab/assemble\_SGE\_cluster}
 
 \textbf{Operating system(s):} SGE Linux (tested on a Gentoo) cluster
 
@@ -442,18 +448,18 @@ Regions where consensus genome maps disagree with sequence assemblies (e.g. nega
 \begin{backmatter}
 
 \section*{Competing interests}
-  The JMS, MCC, NH, NL, and SJB declare that they have no competing interests. ETL is an employee at BioNano Genomics and holds stock options.
+  The JMS, MCC, NH, NL, and SJB declare that they have no competing interests. ETL, PS and TA are employees at BioNano Genomics and hold stock options. 
 
 
 \section*{Author's contributions}
-MCC isolated the high molecular weight DNA and generated the image files on the Irys. ETL and JMS developed the assembly workflow. JMS wrote most of the code in the IrysScaffolding Github Repo (Stitch, AssembleIrysXeonPhi, AssembleIrysCluster, etc.). NH assisted with initial code review of analyze\_irys\_output (precursor to Stitch) and prepared Tcas5.0. JMS and NL manually edited Tcas5.1. JMS performed the data analyses. TA contributed to sections discussing BioNano RefAligner and Assembler. JMS and SJB did most of the writing with contributions from all authors. All authors read and approved the final manuscript.
+MCC isolated the high molecular weight DNA and generated the image files on the Irys. ETL and JMS developed the assembly workflow. JMS wrote most of the code in the IrysScaffolding Github Repo (Stitch, AssembleIrysXeonPhi, AssembleIrysCluster, etc.). NH assisted with initial code review of analyze\_irys\_output (precursor to Stitch) and prepared Tcas5.0. JMS and NL manually edited Tcas5.1. JMS performed the data analyses. TA contributed to sections discussing BioNano RefAligner and Assembler. PS contributed to interpretation of results. JMS and SJB did most of the writing with contributions from all authors. All authors read and approved the final manuscript.
 
 \section*{Acknowledgements}
   This project was supported by an Institutional Development Award (IDeA) from the National Institute of General Medical Sciences of the National Institutes of Health under grant number P20 GM103418. 
 
 Data for Additional file 1 was kindly made available by P.A. Larsen, J. Rogers, A.D. Yoder and the Duke Lemur Center.
 
-The \cite{Tribolium castaneum} genome project is part of the i5k Genome Sequencing Initiative for Insects and Other Arthropods.
+The \textit{Tribolium castaneum} genome project is part of the i5k Genome Sequencing Initiative for Insects and Other Arthropods.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%                  The Bibliography                       %%

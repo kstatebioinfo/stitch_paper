@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.5.25)  25 MAR 2015 15:20
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.5.25)  26 MAR 2015 17:22
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -501,25 +501,25 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 \address@aff1=\toks21
 \address@aff2=\toks22
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 189.
+(Font)              <7> on input line 193.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 189.
+(Font)              <5> on input line 193.
 
 LaTeX Font Warning: Font shape `OT1/cmss/m/it' in size <10> not available
-(Font)              Font shape `OT1/cmss/m/sl' tried instead on input line 208.
+(Font)              Font shape `OT1/cmss/m/sl' tried instead on input line 212.
 
 
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 270.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 274.
 
 (/usr/local/texlive/2014/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 270.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 274.
 
 
 LaTeX Font Warning: Font shape `OT1/cmss/m/it' in size <8> not available
-(Font)              Font shape `OT1/cmss/m/sl' tried instead on input line 273.
+(Font)              Font shape `OT1/cmss/m/sl' tried instead on input line 277.
 
 
 
@@ -531,70 +531,62 @@ Overfull \hbox (1.0pt too wide) has occurred while \output is active
 
 ]
 [2] [3] [4] [5] [6] [7]
-Overfull \hbox (43.1674pt too wide) in paragraph at lines 362--363
+Overfull \hbox (43.1674pt too wide) in paragraph at lines 368--369
 []\OT1/cmr/m/n/10 The Tcas5.2 Whole Genome Shot-gun project has been de-posited
  at DDBJ/EMBL/GenBank
  []
 
-[8] [9]
-Overfull \hbox (50.15286pt too wide) in paragraph at lines 392--393
-[]\OT1/cmr/bx/n/10 Project home page: \OT1/cmr/m/n/10 As-sem-bleIrysX-eon-Phi s
-cripts are avail-able at: https://github.com/i5K-
+[8] [9] [10]
+Underfull \hbox (badness 10000) in paragraph at lines 398--399
+\OT1/cmtt/m/n/10 github . com / i5K-[]KINBRE-[]script-[]share / Irys-[]scaffold
+ing / blob / master / KSU _
  []
 
 
-Overfull \hbox (137.02328pt too wide) in paragraph at lines 392--393
-\OT1/cmr/m/n/10 KINBRE-script-share/Irys-scaffolding/blob/master/KSU[]bioinfo[]
-lab/assemble[]XeonPhi/AssembleIrysXeonPhi.pl.
+Underfull \hbox (badness 1082) in paragraph at lines 398--399
+\OT1/cmr/m/n/10 sup-ported As-sem-bleIrysClus-ter scripts are avail-able on Git
+hub at [][]$\OT1/cmtt/m/n/10 https : / /
  []
 
 
-Underfull \hbox (badness 3646) in paragraph at lines 392--393
-\OT1/cmr/m/n/10 at [][]$\OT1/cmtt/m/n/10 https : / / github . com / i5K-[]KINBR
-E-[]script-[]share / Irys-[]scaffolding / tree /
- []
-
-[10]
-Underfull \hbox (badness 10000) in paragraph at lines 408--409
+Underfull \hbox (badness 10000) in paragraph at lines 398--399
 \OT1/cmtt/m/n/10 github . com / i5K-[]KINBRE-[]script-[]share / Irys-[]scaffold
 ing / tree / master / KSU _
  []
 
 
-Overfull \hbox (3.24684pt too wide) in paragraph at lines 424--425
+Underfull \hbox (badness 10000) in paragraph at lines 414--415
+\OT1/cmtt/m/n/10 github . com / i5K-[]KINBRE-[]script-[]share / Irys-[]scaffold
+ing / tree / master / KSU _
+ []
+
+
+Overfull \hbox (3.24684pt too wide) in paragraph at lines 430--431
 \OT1/cmtt/m/n/10 com / i5K-[]KINBRE-[]script-[]share / Irys-[]scaffolding / tre
 e / master / KSU _ bioinfo _
  []
 
 
-Overfull \hbox (7.55257pt too wide) in paragraph at lines 424--425
+Overfull \hbox (7.55257pt too wide) in paragraph at lines 430--431
 \OT1/cmtt/m/n/10 lab / map _ tools$[][] \OT1/cmr/m/n/10 and [][]$\OT1/cmtt/m/n/
 10 https : / / github . com / i5K-[]KINBRE-[]script-[]share / BNGCompare$[][] 
  []
 
 [11]
 
-LaTeX Warning: Citation `Tribolium castaneum' on page 12 undefined on input lin
-e 456.
+LaTeX Font Warning: Font shape `OT1/cmss/m/it' in size <7> not available
+(Font)              Font shape `OT1/cmss/m/sl' tried instead on input line 462.
 
-(./bmc_article.bbl)
+
+(./bmc_article.bbl [12])
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 499.
+(Font)              <8> on input line 505.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 499.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
+(Font)              <6> on input line 505.
 
 
 LaTeX Font Warning: Font shape `OT1/cmss/bx/it' undefined
-(Font)              using `OT1/cmss/bx/n' instead on input line 511.
+(Font)              using `OT1/cmss/bx/n' instead on input line 517.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
@@ -612,22 +604,7 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-Overfull \hbox (78.86089pt too wide) in paragraph at lines 549--556
- [][] 
- []
-
-[12]
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-Overfull \hbox (108.60861pt too wide) in paragraph at lines 573--579
+Overfull \hbox (78.86089pt too wide) in paragraph at lines 555--562
  [][] 
  []
 
@@ -638,22 +615,24 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-LaTeX Font Warning: Font shape `OT1/cmss/m/it' in size <7> not available
-(Font)              Font shape `OT1/cmss/m/sl' tried instead on input line 609.
+Overfull \hbox (108.60861pt too wide) in paragraph at lines 579--585
+ [][] 
+ []
 
 
-[13]
-Underfull \vbox (badness 10000) has occurred while \output is active []
+LaTeX Warning: `!h' float specifier changed to `!ht'.
 
- [14]
 
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[13] [14] 
 AED: lastpage setting LastPage
 [15]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 626.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 626.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 632.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 632.
  (./bmc_article.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 626.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 626.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 632.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 632.
 Package rerunfilecheck Info: File `bmc_article.out' has not changed.
 (rerunfilecheck)             Checksum: ED3CDF9133C37D676C26CC0D4896F289;44.
 
@@ -664,41 +643,37 @@ LaTeX Font Warning: Size substitutions with differences
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-
-LaTeX Warning: There were undefined references.
-
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 626.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 632.
  ) 
 Here is how much of TeX's memory you used:
- 6209 strings out of 493117
- 88253 string characters out of 6135433
- 202843 words of memory out of 5000000
- 9548 multiletter control sequences out of 15000+600000
- 12036 words of font info for 42 fonts, out of 8000000 for 9000
+ 6211 strings out of 493117
+ 88284 string characters out of 6135433
+ 195523 words of memory out of 5000000
+ 9551 multiletter control sequences out of 15000+600000
+ 11726 words of font info for 41 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 30i,9n,39p,1695b,423s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 30i,9n,39p,1695b,536s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
-></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx7.pfb><
-/usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></
-usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></us
-r/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/
-local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/lo
-cal/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local
-/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/local/
-texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmss17.pfb></usr/local/t
-exlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/local/tex
-live/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/local/te
-xlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi10.pfb></usr/local/te
-xlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi8.pfb></usr/local/tex
-live/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texl
-ive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texliv
-e/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive
-/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/
-2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb>
-Output written on bmc_article.pdf (15 pages, 268000 bytes).
+></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb>
+</usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></
+usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></us
+r/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/
+local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/loc
+al/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/loca
+l/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmss17.pfb></usr/local
+/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/local/t
+exlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/local/
+texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi10.pfb></usr/local/
+texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi8.pfb></usr/local/t
+exlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/te
+xlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texl
+ive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texli
+ve/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texliv
+e/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb>
+Output written on bmc_article.pdf (15 pages, 261411 bytes).
 PDF statistics:
- 306 PDF objects out of 1000 (max. 8388607)
- 268 compressed objects within 3 object streams
+ 307 PDF objects out of 1000 (max. 8388607)
+ 270 compressed objects within 3 object streams
  90 named destinations out of 1000 (max. 500000)
  9 words of extra memory for PDF output out of 10000 (max. 10000000)
 
