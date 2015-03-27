@@ -328,7 +328,7 @@ Scaffolding alignments are selected from the remaining high quality alignments (
 
 Gap lengths between \textit{in silico} maps are inferred from scaffolding alignments and used to create new super scaffolds (Figure 3F) in a new genome FASTA file and associated AGP file. If gap lengths are estimated to be negative, Stitch adds a 100 bp spacer gap to the sequence file and indicates that the gap is type "U" for unknown in the AGP. 
 
-Stitch only makes use of one alignment per \textit{in silico} map each iteration. Stitch can be run iteratively (Figure 1(1-10)) such that each successive output FASTA file is converted into \textit{in silico} maps and aligned to the original consensus genome maps. This alignment is inverted and used as input for the next iteration. Subsequent iterations of Stitch will make use of any \textit{in silico} maps that join growing super scaffolds, effectively using both sequence data and genome maps to stitch together the final super scaffolds (Figure 3G-H). 
+Stitch only makes use of one alignment per \textit{in silico} map each iteration. Stitch can be run iteratively (Figure 1(10-15)) such that each successive output FASTA file is converted into \textit{in silico} maps and aligned to the original consensus genome maps. This alignment is inverted and used as input for the next iteration. Subsequent iterations of Stitch will make use of any \textit{in silico} maps that join growing super scaffolds, effectively using both sequence data and genome maps to stitch together the final super scaffolds (Figure 3G-H). 
 
 \subsubsection*{Stitch: Flagging Potential Mis-assemblies}
 
