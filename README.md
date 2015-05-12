@@ -1,6 +1,18 @@
 stitch_paper
 ============
 
+#Tools and pipelines for BioNano data: molecule assembly pipeline and FASTA super scaffolding tool
+
+###Jennifer M Shelton, Michelle C Coleman, Nic Herndon, Nanyan Lu, Ernest T Lam, Thomas Anantharaman, Palak Sheth and Susan J Brown
+
+Abstract
+Background: Genome assembly remains an unsolved problem. Assembly projects face a range of hurdles that confound assembly. Thus a variety of tools and approaches are needed to improve draft genomes.
+Results: We used a custom assembly workflow to optimize consensus genome map assembly, resulting in an assembly equal to the estimated length of the Tribolium castaneum genome and with an N50 of more than 1 Mb. We used this map for super scaffolding the T. castaneum sequence assembly, more than tripling its N50 with the program Stitch.
+Conclusions: In this article we present software that leverages consensus genome maps assembled from extremely long single molecule maps to increase the contiguity of sequence assemblies. We report the results of applying these tools to validate and improve a 7x Sanger draft of the T. castaneum genome.
+
+Keywords: Genome map; BioNano; Genome scaffolding; Genome validation; Genome finishing
+
+
 Download PDF from [bmc_article.pdf](https://github.com/kstatebioinfo/stitch_paper/raw/master/bmc_article/bmc_article.pdf)
 
 View Figures at:
