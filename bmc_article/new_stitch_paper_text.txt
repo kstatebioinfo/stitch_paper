@@ -1,14 +1,36 @@
+A) Biplot for PCA of log transformed assembly metrics
+
+Biplot of the first and second principal components for the log transformed assembly metrics. Multicolored samples representing individual assemblies are identified by genus. The assembly metrics included as vectors are indicated in burgundy. 
+
+PC1 explained 41% of the variance in the included studies. Genome map N50, percent of length of \textit{in silico} map aligned with genome maps and molecule map coverage were positively  correlated with each other and negatively correlated with molecule map labels per 100 kb. If higher label density increased the number of fragile sites within the genome this could  negatively effect the proportion of the molecules that remain long enough for molecule length filters and could impede assembly across fragile sites in genome maps. 
+
+PC2 explained 25.6% of the variance. Primarily in PC2 molecule map coverage negatively correlated with the percent of the length of \textit{in silico} maps that align to genome maps. One possible contributor to this pattern could be that the Irys System and software is optimized for Human samples and therefore we often run less material and get very high quality alignments with these supported samples.
+
+Because many of the genomic metrics had very broad ranges with variance that increased often for higher values the genomic metrics were log transformed to compress the upper tails and stretch the lower tails.
+
+B) Biplot for PCA of log transformed assembly metrics (Draft only)
+
+Biplot of the first and second principal components for the log transformed assembly metrics. Multicolored samples representing individual assemblies are identified by genus. The assembly metrics included as vectors are indicated in burgundy.
+
+PC1 explained 42% of the variance in the included studies. In PC1, FASTA N50, genome map N50, increase in FASTA N50 after super scaffolding, percent of \textit{in silico} map length aligned to genome maps all showed a strong positive correlation to each other. Genome FASTA length also showed a positive correlation with these variables.
+
+PC1 explained 20.6% of the variance. In this PC molecule map coverage is negatively correlated with molecule map labels per 100 kb. Labels per 100 kb values are monitored as data is collected and compared to estimated label density. Lower than expected label density can occasionally lead to further labeling reactions or other adjustments to data collection and therefore greater depth of coverage. This may be more common for unsupported samples (i.e. a species that has not previously been used to create molecule maps).
+
+Because many of the genomic metrics had very broad ranges with variance that increased often for higher values the genomic metrics were log transformed to compress the upper tails and stretch the lower tails.
 
 C) Correlation matrix for log transformed assembly metrics
+
 Diagonal panels indicate the assembly metric used as the x-value in the respective column and the y-value in the respective row. Lower panels show XY scatter plots of each metric against all other metrics with a best fit line (red). Upper panels show the correlation coefficient (with font scaled based on the absolute value of the correlation coefficient). Significance of correlation coefficient is indicated in red (where "" means "p< 1", "." means "p< 0.1", "*" means "p< 0.05", "**" means p< 0.01 and "***" means p< 0.001).
 
-Length of the sequence assembly FASTA file (FASTA_Length) strongly negatively correlates with single molecule map coverage (Molecule_Coverage) (-0.74, "***"). However there was no significant correlation between genome sequence length and assembled genome map N50 . There was only a week positive correlation between genome map N50 and molecule map coverage (0.36, "."). 
+Length of the sequence assembly FASTA file (FASTA_Length) strongly negatively correlates with single molecule map coverage (Molecule_Coverage) (-0.74, "***"). However there was no significant correlation between genome sequence length and assembled genome map N50. There was only a week positive correlation between genome map N50 and molecule map coverage (0.36, "."). 
 
-N50 of the sequence assembly positively correlates with the percent of the total length of in silico maps that align to the genome maps (0.51, "**"). The longer genomes tended to have higher sequence N50 values (0.52, "**") which may explain the positive correlations between FASTA length and percent aligned (0.39, "*").
+N50 of the sequence assembly positively correlates with the percent of the total length of \textit{in silico} maps that align to the genome maps (0.51, "**"). The longer genomes tended to have higher sequence N50 values (0.52, "**") which may explain the positive correlations between FASTA length and percent aligned (0.39, "*").
 
-Interestingly, there was no significant correlation indicated between genome map N50 and sequence assembly N50 (0.15, ""). One might expect that a genome with sequence that assembles easily may have qualities that would also favor molecule map assembly (e.g. low repeat content, haploid cells are available, inbreed lines are available, etc.). However molecule assembly is also influenced by unique factors like frequency of fragile sites (two labels occurring on opposite strands in close proximity), labeling efficiency and ability to extract high molecule weight DNA (both of the later can vary for different organisms).
+Interestingly, there was no significant correlation indicated between genome map N50 and sequence assembly N50 (0.15, ""). One might expect that a genome with sequence that assembles easily may have qualities that would also favor molecule map assembly (e.g. low repeat content, low ploidy, inbreed lines, etc.). However molecule assembly is also influenced by unique factors like frequency of fragile sites (two labels occurring on opposite strands in close proximity), labeling efficiency and ability to extract high molecular weight DNA all of which vary for different organisms.
 
-Labels per 100 kb of molecule maps had no significant correlation with any other genomic metric.
+Labels per 100 kb of molecule maps had no significant correlation with any other single genomic metric.
+
+Because many of the genomic metrics had very broad ranges with variance that increased often for higher values the genomic metrics were log transformed to compress the upper tails and stretch the lower tails.
 
 D) Correlation matrix for log transformed assembly metrics (Draft only)
 
@@ -16,7 +38,7 @@ Diagonal panels indicate the assembly metric used as the x-value in the respecti
 
 Unlike the analysis of both draft and reference based assemblies, there was a weakly significant positive correlation between FASTA file length and genome map N50 (0.44, "."). 
 
-Again both FASTA length, FASTA N50 and genome map N50 positively correlate with the percent of the total length of in silico maps to align to genome maps (0.52, "*"; 0.50, "*"; 0.42, "."). 
+Again both FASTA length, FASTA N50 and genome map N50 positively correlate with the percent of the total length of \textit{in silico} maps to align to genome maps (0.52, "*"; 0.50, "*"; 0.42, "."). 
 
 The percent increase in FASTA N50 after super scaffolding with Stitch significantly positively correlated with genome map N50, FASTA length and FASTA N50 (0.70, "***").
 
@@ -24,5 +46,13 @@ Again, the longer genomes often have higher sequence N50 values (0.52, "**") so 
 
 For the projects with draft sequence assemblies there was no significant correlation between molecule map coverage and genome map N50. There was still a significant negative correlation between FASTA length and molecule map coverage (-0.51, "*").
 
-Again, labels per 100 kb of molecule maps had no significant correlation with any other genomic metric.
+Again, labels per 100 kb of molecule maps had no significant correlation with any other single genomic metric.
 
+Because many of the genomic metrics had very broad ranges with variance that increased often for higher values the genomic metrics were log transformed to compress the upper tails and stretch the lower tails.
+
+
+E) Assembly metrics for various genomes
+
+Raw assembly metrics are plotted along the x-axis with density on the y-axis. Plots include a density histogram (blue) and a smooth density estimate (black line). The x-axis value for the Tcas5.0 draft assembly is also indicated (dashed black line).
+
+In all plots the Tcas5.0 draft assembly is on the higher end of the distribution indicating that the initial draft assembly was relatively high quality and that the results of molecule map assembly and super scaffolding were also relatively high quality. In no plot was the Tcas5.0 draft assembly in the highest value bin. 
