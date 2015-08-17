@@ -115,17 +115,14 @@
 
 \author[
    addressref={aff1},                   % id's of addresses, e.g. {aff1,aff2}
-   %noteref={n1},                        % id's of article notes, if any
    email={sheltonj@ksu.edu}   % email address
 ]{\inits{JM}\fnm{Jennifer M} \snm{Shelton}}
 \author[
 addressref={aff1},                   % id's of addresses, e.g. {aff1,aff2}
-%noteref={n1},                        % id's of article notes, if any
 email={cmgordon@ksu.edu}   % email address
 ]{\inits{MC}\fnm{Michelle C} \snm{Coleman}}
 \author[
 addressref={aff1},                   % id's of addresses, e.g. {aff1,aff2}
-%noteref={n1},                        % id's of article notes, if any
 email={nherndon@ksu.edu}   % email address
 ]{\inits{N}\fnm{Nic} \snm{Herndon}}
 \author[
@@ -163,14 +160,14 @@ email={nanyan@ksu.edu}   % email address
 \address[id=aff1]{%                           % unique id
   \orgname{KSU/K-INBRE Bioinformatics Center, Division of Biology, Kansas State University}, % university, etc
   %\street{},                     %
-  %\postcode{66506}                                % post or zip code
+  %\postcode{66506},                                % post or zip code
   \city{Manhattan},                              % city
   \cny{KS, USA}                                    % country
 }
 \address[id=aff2]{%                           % unique id
   \orgname{BioNano Genomics}, % university, etc
   %\street{},                     %
-  %\postcode{92121}                                % post or zip code
+  %\postcode{92121},                                % post or zip code
   \city{San Diego},                              % city
   \cny{CA, USA}                                    % country
 }
@@ -271,7 +268,7 @@ In this article we present software that leverages consensus genome maps assembl
 %%
 \section*{Background}
 
-The quality and contiguity of genome assemblies, which impacts downstream analysis, varies greatly \cite{Gage2012,Feature-by-F2012,Assem22013}. Initial assembly drafts, whether based on lower coverage Sanger or higher coverage NGS reads, are often highly fragmented. Physical maps of BAC clones can be used to validate and scaffold sequence assemblies, but the molecular, human, and computational resources required to significantly improve a draft genome are often not available to researchers working on non-model organisms. The BioNano Irys\textregistered\textnormal{ }System linearizes and images nicked and fluorescently labeled long DNA strands to generate single molecule physical maps. The Irys System provides affordable, high throughput physical maps of significantly higher contiguity with which to validate draft assemblies and extend scaffolds \cite{BioNano2010}.
+The quality and contiguity of genome assemblies, which impacts downstream analysis, varies greatly \cite{Gage2012,Feature-by-F2012,Assem22013}. Initial assembly drafts, whether based on lower coverage Sanger or higher coverage next-generation sequencing (NGS) reads, are often highly fragmented. Physical maps of bacterial artificial chromosome (BAC) clones can be used to validate and scaffold sequence assemblies, but the molecular, human, and computational resources required to significantly improve a draft genome are often not available to researchers working on non-model organisms. The BioNano Irys\textregistered\textnormal{ }System linearizes and images nicked and fluorescently labeled long DNA strands to generate single molecule physical maps. The Irys System provides affordable, high throughput physical maps of significantly higher contiguity with which to validate draft assemblies and extend scaffolds \cite{BioNano2010}.
 
 
 Genome assembly and scaffolding algorithms are inherently limited by the length of the DNA molecules used as starting material to generate data. Specifically, if repetitive, polymorphic or low complexity regions are longer than the single molecules used to generate data, then they cannot be resolved by bioinformatics tools with certainty. The specifications for PacBio P6-C4 chemistry \cite{PacBioSpecs} indicate that PacBio reads have an N50 of 14 kb with a maximum length of 40 kb. Illumina Long Distance Jump Libraries can also span 40 kb \cite{LDJSpecs}. MinION nanopore sequence reads have an average read length of $< 7$ kb \cite{Nanopore2014}. Illumina TruSeq synthetic long-reads can span up to 18.5 kb; however, they fail to assemble if the sequence has problematic regions longer than the component reads used to assemble the synthetic reads (e.g. in the heterochromatin) \cite{Moleculo2014}. The OpGen Argus \cite{Argos2009} platform produces optical maps that have a length of 150 kb to 2 Mb from up to 13 Gb data collected per run \cite{OpgenSpecs}. The Irys System from BioNano Genomics produces single molecule maps that have an average length of 225 kb from up to 96 Gb data collected per run after filtering for molecules $<$ 150 kb \cite{BioNanoSpecs}. Genomic repeats can be much longer than the 5-40 kb that many technologies can span with a single molecule. In fact, a recent study used consensus genome maps (assembled from single molecule maps $>$ 150 kb) to identify repeats that are hundreds of kb in the human genome \cite{BioNanoSV2014}.
@@ -302,7 +299,7 @@ The tools described below take raw molecule maps as input, assemble genome maps,
 In the first stage, AssembleIrysCluster adjusts single molecule map stretch (Figure 2C). BioNano software operates under the assumption that imaged molecules contain 500 bases per pixel (bpp). Stretch, or bpp, can deviate from 500 bpp and this discrepancy can vary from scan to scan within a flowcell (Additional file 1). Sequence scaffolds are considered to be more accurate than raw BNX molecules in terms of label positions. Therefore molecule maps in BNX files are split by scan, and after alignment to the \textit{in silico} maps, an empirical average bpp value is determined for the molecule maps in each scan. The bpp indicated by this alignment is used by RefAligner to adjust molecule map bpp to 500. Once stretch has been evaluated and normalized, the split BNX files are merged into a single file (Figure 2E).
 
 
-We observed consistent patterns of empirically determined bpp between flowcells using the same flowcell model and chemistry when signal-to-noise ratios are optimal and the degree of genomic divergence between the samples used for the \textit{in silico} maps and molecule maps are low (Additional file 1). To identify the low quality flowcells, bpp observed in alignments of scans are plotted as a QC graph by AssembleIrysCluster (Figure 2D). 
+We observed consistent patterns of empirically determined bpp between flowcells using the same flowcell model and chemistry when signal-to-noise ratios are optimal and the degree of genomic divergence between the samples used for the \textit{in silico} maps and molecule maps are low (Additional file 1). To identify the low quality flowcells, bpp observed in alignments of scans are plotted as a quality control (QC) graph by AssembleIrysCluster (Figure 2D). 
 
 \subsubsection*{AssembleIrysCluster: Customization of BioNano Assembly Scripts}
 
@@ -361,7 +358,7 @@ Additionally, since completion of the \textit{T. castaneum} genome update we hav
 \section*{Results and Discussion}
 
 \subsubsection*{Dataset generation}
-High molecular weight DNA was isolated from young \textit{Tribolium castaneum} pupae from the GA2 line that was inbred 20 generations. The GA2 line was also used for the genome sequence-based assembly.
+High molecular weight DNA was isolated from young \textit{Tribolium castaneum} pupae from the GA2 line that was inbred 20 generations. The GA2 line was also used for the genome sequence-based assembly. Ethical approval was not sought for the study because the study organism is an insect.
 
 
 Using Knickers (BioNano Genomics), an \textit{in silico} label density calculator, we estimated that the \textit{Tribolium castaneum} genome had 8.66 and 5.51 labels per 100 kb for the nt.BspQI and nt.BbvCI enzymes (New England BioLabs) respectively. The ideal number of labels per 100 kb is between 10 and 15 therefore we nicked with both enzymes. DNA was nicked, labeled with fluorescent nucleotides, and repaired according to BioNano protocol; and 93 BNX files were produced from the Irys genome mapping system (Figure 4 and Additional file 2). Four corrupted files (cumulative length = 0) were excluded from this analysis. All \textit{T. castaneum} BNX files have been deposited to labarchives (doi:10.6070/H4V69GK3).
@@ -394,7 +391,7 @@ The \textit{T. castaneum} consensus genome maps have an N50 of 1.35 Mb, a cumula
 Tcas5.1 is the output of Stitch (version 1.4.4) run for five iterations with two sets of alignment filters. To select quality alignments from regions of high and low label density, the first minimum confidence was 13 and the $PAT$ was 30 and the second minimum confidence was 8 and the $PAT$ was 90. The resulting super scaffolds showed a greater than three-fold increase in N50 from 1.16 to 3.85 Mb (Table 2). 
 
 
-The Tcas5.1 super scaffolds captured an additional 92 gaps between Tcas5.0 sequence scaffolds. Sixty-six gaps were estimated to have positive gap lengths and were represented in the sequence assembly with their estimated size (Figure 6). Twenty-six gaps were estimated to have negative lengths and were represented with spacers of 100 N's (Figure 6). Extremely small negative gap lengths ($< -20$ kb) were flagged for further evaluation at a sequence level. In some cases, extremely small negative gaps lengths suggest that a chimeric sequence scaffold may need to be broken at the sequence level and its fragments incorporated into different ChLGs. For example, half of scaffold 81 from Tcas5.0 aligns between scaffolds 80 and 82 on ChLG5 (Figure 7A) while the other half aligns between scaffolds 102 and 103 from ChLG7 (Figure 7B). Scaffold 81 from Tcas5.0 was placed in ChLG5 in the \textit{T. castaneum} genetic map. The arrangement supported by the genetic map was selected for cases like this where manual editing was required. The manually curated assembly is referred to as Tcas5.2. In Tcas5.2, joins were also manually accepted if they agreed with the genetic map but the alignment quality was low. Ultimately, Tcas5.2 had a higher N50 than the automated Stitch output, 4.46 Mb (Table 2), with 66 gaps with positive estimated lengths and 24 negative length gaps. 
+The Tcas5.1 super scaffolds captured an additional 92 gaps between Tcas5.0 sequence scaffolds. Sixty-six gaps were estimated to have positive gap lengths and were represented in the sequence assembly with their estimated size (Figure 6). Twenty-six gaps were estimated to have negative lengths and were represented with spacers of 100 N's (Figure 6). Extremely small negative gap lengths ($< -20$ kb) were flagged for further evaluation at a sequence level. In some cases, extremely small negative gaps lengths suggest that a chimeric sequence scaffold may need to be broken at the sequence level and its fragments incorporated into different chromosome linkage groups (ChLGs). For example, half of scaffold 81 from Tcas5.0 aligns between scaffolds 80 and 82 on ChLG5 (Figure 7A) while the other half aligns between scaffolds 102 and 103 from ChLG7 (Figure 7B). Scaffold 81 from Tcas5.0 was placed in ChLG5 in the \textit{T. castaneum} genetic map. The arrangement supported by the genetic map was selected for cases like this where manual editing was required. The manually curated assembly is referred to as Tcas5.2. In Tcas5.2, joins were also manually accepted if they agreed with the genetic map but the alignment quality was low. Ultimately, Tcas5.2 had a higher N50 than the automated Stitch output, 4.46 Mb (Table 2), with 66 gaps with positive estimated lengths and 24 negative length gaps. 
 
 
 Nearly every ChLG was less fragmented in the Tcas5.2 assembly than in the Tcas5.0 assembly. The number of scaffolds was reduced for each ChLG (Table 4) except for the 26 relatively short (N50 = 0.05 Mb) and unlocalized scaffolds from ChLGY. For example, ChLGX was reduced from 13 scaffolds (Figure 8B) to 2 in the final super scaffold or chromosome build (Figure 8A). Five scaffolds were reoriented in ChLGX based on alignment to the consensus genome maps (Figure 8A-B). Scaffolds were also reordered based on alignment to consensus genome maps. For example, scaffold 2 from ChLGX aligned between scaffold 36 and 37 of ChLG 3 and was therefore moved in Tcas5.2 (Additional file 5). Also, 19 previously unplaced scaffolds were anchored within a ChLG (Table 4). Improvements in Tcas5.2 over Tcas5.0 are shown in alignments of the respective \textit{in silico} maps to consensus genome maps for all ChLGs in Additional file 5.
@@ -464,7 +461,7 @@ sites (two labels occurring on opposite strands in close proximity),
 labeling efficiency and ability to extract high molecular weight DNA all
 of which vary for different organisms.
 
-Principal component analysis suggests a negative correlation between
+Principal component analysis (PCA) suggests a negative correlation between
 labels per 100 kb and molecule coverage (Additional file 6: Sections
 2-3). The correlation between labels per 100 kb and molecule coverage
 was weakly significant in individual regression (Additional file 6; Sections
@@ -596,6 +593,20 @@ Regions where consensus genome maps disagree with sequence assemblies (e.g. nega
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{backmatter}
+
+\section*{Abbreviations}
+
+NGS - next-generation sequencing
+
+BAC - bacterial artificial chromosome
+
+QC - quality control
+
+PAT - percent aligned threshold
+
+ChLG - chromosome linkage groups
+
+PCA - principal component analysis
 
 \section*{Competing interests}
   The JMS, MCC, NH, NL, and SJB declare that they have no competing interests. ETL, PS and TA are employees at BioNano Genomics and hold stock options. 
